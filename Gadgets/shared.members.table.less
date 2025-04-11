@@ -1,0 +1,161 @@
+.membersTableHighlightColor (@val) when ( @val = null ) { }
+
+.membersTableHighlightColor (@val) when not ( @val = null ) {
+	color: @val;
+}
+
+// members table
+.genericListTable,
+.membersTable {
+	width: 100%;
+	margin: 0 0 24px;
+	padding: 0;
+	background: @Table-Bg;
+	border-bottom: 2px solid @Table-Border-Color;
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	thead {
+		th {
+			.h2;
+			padding: 0 24px 16px 0;
+			background: @Table-Heading-Bg;
+			color: @Table-Heading-Color;
+			vertical-align: top;
+			text-align: left;
+		}
+	}
+
+	tbody {
+		td:first-child {
+			padding-left: 24px;
+		}
+
+		.memberValue h5 {
+			margin: 0;
+			padding: 0;
+			color: inherit;
+			font: inherit;
+		}
+
+		td.memberDirectoryBottomRow {
+			padding: 0 24px 16px;
+			border-top: none;
+		}
+
+		td.noSeparator {
+			border-top: none;
+		}
+
+		td {
+			padding: 16px 24px 16px 0;
+			border-top: 2px solid @Table-Border-Color;
+			vertical-align: top;
+		}
+	}
+
+	tr:hover {
+		background-color: @Table-Row-Highlight-Bg;
+	}
+
+	tr:hover td {
+		.membersTableHighlightColor(@Table-Row-Highlight-Color);
+		background-color: @Table-Row-Highlight-Bg;
+		cursor: pointer;
+	}
+
+	tr:hover td a {
+		.membersTableHighlightColor(@Table-Row-Highlight-Color);
+	}
+
+	tr.hiddenRow {
+		display: none;
+	}
+
+	&.trWarning {
+		td.warningText {
+			padding: 0 8px;
+			color: #666;
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device M
+@media screen and (max-width: @Device-M-MaxWidth) {
+	.genericListTable,
+	.membersTable {
+		td,
+		th {
+			word-break: break-all;
+		}
+	}
+}
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.genericListTable,
+	.membersTable {
+		display: block;
+
+		td:empty {
+			display: none;
+		}
+
+		tr {
+			display: block;
+		}
+
+		thead {
+			display: none;
+		}
+
+		tbody {
+			display: block;
+
+			td:first-child {
+				padding: 4px 0;
+
+				h5 {
+					font-weight: bold;
+				}
+			}
+
+			tr {
+				padding: 20px 0;
+			}
+
+			tr[bottomrow='true'] {
+				padding: 0;
+				border-top: none;
+			}
+
+			td.memberDirectoryBottomRow {
+				padding: 0;
+			}
+
+			tr {
+				border-top: 2px solid @Table-Border-Color;
+			}
+
+			td {
+				display: block;
+				width: auto;
+				padding: 4px 0;
+				border-top: none;
+			}
+		}
+	}
+}
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.genericListTable,
+	.membersTable {
+		margin-bottom: 16px;
+	}
+}

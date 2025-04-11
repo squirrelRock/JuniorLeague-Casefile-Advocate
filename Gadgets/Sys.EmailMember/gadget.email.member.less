@@ -1,0 +1,62 @@
+/* gadget: sand message */
+/******************************************************************************/
+.WaGadgetEmailMember {
+	.pageTitleOuterContainer {
+		.pageBackContainer {
+			margin: 0 0 20px;
+		}
+	}
+
+	.mandatoryFieldsTitle {
+		margin: 0 0 24px;
+		padding: 0;
+		border-bottom: @Form-Name-Border;
+		color: @Form-Name-Color;
+		font: @Form-Name-Font;
+		text-align: right;
+
+		strong {
+			font-weight: inherit;
+		}
+	}
+
+	#idSendMailMainContainer {
+		.memberDirectoryDetailsHeaderContainer {
+			h3 {
+				.h5;
+				font-weight: normal;
+			}
+		}
+	}
+
+	#idSendEmailMainSectionContainer {
+		textarea {
+			margin-bottom: 16px;
+		}
+	}
+
+	#idButtonsContainer {
+		.fieldBody {
+			width: 100%;
+		}
+
+		input[id*='cancelButton'] {
+			float: right;
+			margin-right: 0;
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.WaGadgetEmailMember {
+		.mandatoryFieldsTitle {
+			font-size: 14px;
+		}
+	}
+}

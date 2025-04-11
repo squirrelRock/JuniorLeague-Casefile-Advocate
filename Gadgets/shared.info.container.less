@@ -1,0 +1,82 @@
+.infoOuterContainer {
+	margin: 0 0 40px;
+	padding: 16px;
+	background-color: @InfoContainer-Bg;
+	color: @InfoContainer-Color;
+
+	.infoSection {
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+
+		// label
+		.infoTitle {
+			float: left;
+			width: ~"calc(31% - 16px)";
+			padding: 0 24px 0 0;
+			font-weight: bold;
+			text-align: right;
+			box-sizing: border-box;
+		}
+
+		// value
+		.infoText {
+			float: left;
+			width: ~"calc(69% - 16px)";
+		}
+
+		.textLine {
+			display: block;
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.infoOuterContainer {
+		margin: 0 0 40px;
+
+		.infoSection {
+			.infoTitle {
+				float: none;
+				width: auto;
+				margin-top: 12px;
+				margin-bottom: 8px;
+				padding-right: 0;
+				text-align: left;
+			}
+
+			.infoText {
+				float: none;
+				width: auto;
+			}
+
+			&.eventRegistrationInfoEvent .infoTitle {
+				margin-top: 0;
+			}
+
+			&.eventRegistrationInfoEndDate .infoTitle,
+			&.eventRegistrationInfoLocation .infoTitle {
+				display: none;
+			}
+		}
+	}
+}
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.infoOuterContainer {
+		margin-bottom: 16px;
+
+		.infoSection {
+			.infoext {
+				font-size: 14px;
+			}
+		}
+	}
+}

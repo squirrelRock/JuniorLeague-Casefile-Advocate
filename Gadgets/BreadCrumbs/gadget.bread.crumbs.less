@@ -1,0 +1,30 @@
+.WaGadgetBreadcrumbs {
+	margin: 0;
+	padding: 0;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: inline;
+			margin: 3px 0;
+			padding: 0;
+
+			& + li:before {
+				display: inline-block;
+				padding: 0 5px 0 3px;
+				color: @Typography-Link-Color;
+				font-family: 'FontAwesome';
+				content: '\f105';
+			}
+		}
+	}
+}
+
+.gadgetStyle002.WaGadgetBreadcrumbs {
+	li:before {
+		color: @Typography-Dark-Color;
+	}
+}

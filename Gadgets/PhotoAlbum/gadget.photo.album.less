@@ -1,0 +1,648 @@
+/******************************************************************************/
+/*	WaGadgetPhotoAlbum                                                        */
+/*		WaGadgetPhotoAlbumStateList                                           */
+/*		WaGadgetPhotoAlbumStatePhoto                                          */
+/******************************************************************************/
+
+.WaGadgetPhotoAlbum {
+	padding: @Gadget-Pd;
+	overflow: visible;
+	background: @Gadget-Bg;
+	color: @PhotoAlbum-Color;
+}
+
+/* photo list */
+/******************************************************************************/
+.WaGadgetPhotoAlbumStateList {
+	.sitePhotoAlbumPanelOuterContainer {
+		position: relative;
+	}
+
+	// view mode
+	.photoAlbumViewModeContainer {
+		margin: 0 0 24px;
+
+		input[type=radio] {
+			 margin-right: 4px;
+		 }
+
+		label {
+			margin: 0 24px 0 0;
+		}
+	}
+
+	.noPhotosPanel {
+		float: left;
+		margin: 0 0 -24px;
+	}
+
+	.photoAlbumUploadButtonContainer {
+		position: relative;
+		float: left;
+		margin: 0 0 24px;
+		padding-top: 48px;
+
+		// number of photos
+		span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			min-width: 120px;
+			margin: 0 0 24px;
+		}
+
+		input.typeButton {
+			.functionalButton;
+		}
+	}
+
+	.pageTitleOuterContainer {
+		float: right;
+		margin: 0 0 24px;
+	}
+
+	// pager nav
+	.pagerOuterContainer {
+		float: right;
+		clear: right;
+		margin: 8px 0 24px;
+	}
+
+	#idPhotoAlbumMainContainer {
+		clear: both;
+		margin: 0 0 24px;
+	}
+}
+
+
+/* photo detail */
+/******************************************************************************/
+.WaGadgetPhotoAlbumStatePhoto {
+
+	// control line 1
+	#idPhotoHeaderContainer {
+		margin: 0 0 24px;
+		overflow: hidden;
+
+		.pageBackContainer {
+			float: left;
+
+			a {
+				margin: 0 32px 0 0;
+				background: none;
+				white-space: nowrap;
+			}
+
+			a:before {
+				text-decoration: underline;
+			}
+
+			a:before {
+				display: inline-block;
+				margin: 0 8px 0 0;
+				font-family: 'WA-theme-icons';
+				font-size: 9px;
+				text-decoration: none;
+				content: '\e62d';
+			}
+		}
+
+		.buttonsInTitleContainer {
+			float: right;
+
+			input.typeButton {
+				.functionalButton;
+			}
+		}
+	}
+
+	// control line 2
+	#idMenuHeaderContainer {
+		.clearfix;
+		margin: 0 0 32px;
+
+		.menuHeaderLeftContainer {
+			float: left;
+
+			.linkContainer {
+				display: inline-block;
+			}
+
+			.linkContainer + .linkContainer {
+				margin: 0 0 0 24px;
+			}
+
+			.linkContainer:first-child *:before,
+			.linkContainer + .linkContainer *:after {
+				text-decoration: underline;
+			}
+
+			.linkContainer:first-child *:before {
+				display: inline-block;
+				margin: 0 8px 0 0;
+				font-family: 'WA-theme-icons';
+				font-size: 9px;
+				text-decoration: none;
+				content: '\e62d';
+			}
+
+			.linkContainer + .linkContainer *:after {
+				display: inline-block;
+				margin: 0 0 0 8px;
+				font-family: 'WA-theme-icons';
+				font-size: 9px;
+				text-decoration: none;
+				content: '\e62b';
+			}
+		}
+
+		.infoContainer {
+			float: right;
+		}
+	}
+
+	// image
+	#idPhotoMainSectionContainer {
+		margin: 0 0 24px;
+
+		#idImageContainer {
+			text-align: center;
+		}
+
+		img {
+			display: inline-block;
+			max-width: 100%;
+			vertical-align: top;
+		}
+
+		#idCaptionContainer {
+			width: 900px;
+			max-width: 100%;
+			margin: 24px auto 0;
+		}
+	}
+
+	.footerContainer {
+		margin: 0;
+		text-align: center;
+
+		// link "Add caption" or "Edit"
+		a.jsRequired {
+			.functionalButton;
+			display: inline-block !important;
+		}
+
+		.editCaptionTextBox {
+			box-sizing: border-box;
+			width: 900px;
+			max-width: 100%;
+			height: 100px;
+			margin: 0 0 24px;
+			vertical-align: top;
+		}
+
+		input.typeButton {
+			.functionalButton;
+		}
+
+		input.typeButton + input.typeButton {
+			margin: 0 0 0 16px;
+		}
+	}
+}
+
+.WaGadgetPhotoAlbum.PhotoAlbumStyle002 {
+	#idPhotoHeaderContainer {
+		position: relative;
+		width: 100%;
+		margin: 0 auto 4px;
+
+		.photoHeaderContainerWrap {
+			background: @PhotoAlbum-Style002-Bg;
+			overflow: hidden;
+
+			.pageBackContainer {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				margin-bottom: 0;
+
+				// link "All album photos"
+				a {
+					display: inline-block;
+					height: 100%;
+					margin: 0;
+					padding: 0 8px 0 16px;
+					line-height: 48px;
+				}
+
+				.countInfoPhotoLabel:before {
+					display: inline-block;
+					margin: 0 8px 0 0;
+					text-decoration: none;
+					content: '|';
+				}
+			}
+
+			.buttonsInTitleContainer {
+				display: none;
+			}
+
+			.infoContainerWrap {
+				float: right;
+				display: table;
+				width: auto;
+				height: 48px;
+				padding: 0 16px;
+				text-align: right;
+
+				.infoContainer {
+					display: table-cell;
+					vertical-align: middle;
+
+					.photoInfo,
+					.photoInfoGray {
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.photoAlbumDeleteButton {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			width: 48px;
+			height: 48px;
+			background: @PhotoAlbum-Style002-Bg;
+			color: @PhotoAlbum-Style002-DeleteButton-Color;
+			font-size: 16px;
+			line-height: 48px;
+			text-align: center;
+			text-decoration: none;
+
+			&:before {
+				font-family: 'WA-theme-icons';
+				content: '\e60e';
+			}
+
+			&:hover {
+				color: @PhotoAlbum-Style002-DeleteButton-Hover-Color;
+			}
+		}
+	}
+
+	#idPhotoMainContainer {
+		#idMenuHeaderContainer {
+			display: none;
+		}
+
+		#idPhotoMainSectionContainer {
+			margin: 0 auto 4px;
+
+			#idImageContainer {
+				position: relative;
+				width: 100%;
+				margin: 0 auto 4px;
+				padding: 0;
+				background: @PhotoAlbum-Detal-Img-Bg;
+				font-size: 0;
+
+				img {
+					max-height: 900px;
+				}
+
+				.linkContainer {
+					position: absolute;
+					top: 40%;
+					right: 0;
+					width: 48px;
+					height: 48px;
+					vertical-align: top;
+
+					& > * {
+						display: block;
+						box-sizing: border-box;
+						background: @PhotoAlbum-Style002-LinkButton-Bg;
+						width: 48px;
+						height: 48px;
+						text-decoration: none;
+						text-indent: -9999px;
+
+						&:before {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 48px;
+							height: 48px;
+							color: @PhotoAlbum-Style002-LinkButton-Color;
+							font: 36px/48px 'FontAwesome';
+							text-align: center;
+							text-indent: 0;
+							content: '\f105';
+						}
+					}
+
+					a {
+						&:hover:before {
+							color: @PhotoAlbum-Style002-LinkButton-Hover-Color;
+						}
+					}
+
+					span {
+						&:before {
+							color: @PhotoAlbum-Style002-LinkButton-Disable-Color;
+						}
+					}
+				}
+
+				.linkContainer:first-of-type {
+					left: 0;
+					right: auto;
+
+					& > * {
+						&:before {
+							content: '\f104';
+						}
+					}
+				}
+			}
+
+			#idCaptionContainer {
+				position: relative;
+				width: 100%;
+				margin: 0 auto;
+				padding: 0;
+				background: @PhotoAlbum-Style002-Caption-Bg;
+				box-sizing: border-box;
+
+				.photoLabel {
+					display: block;
+					width: 900px;
+					max-width: 100%;
+					box-sizing: border-box;
+					margin: 0 auto;
+					padding: 16px 0;
+				}
+
+				.photoAlbumEditCaptionButton {
+					position: absolute;
+					top: 0;
+					right: 0;
+					display: block;
+					width: 48px;
+					height: 48px;
+					color: @PhotoAlbum-Style002-LinkButton-Color;
+					font-size: 14px;
+					line-height: 48px;
+					text-align: center;
+					text-decoration: none;
+
+					&:before {
+						font-family: 'WA-theme-icons';
+						content: '\e60c';
+					}
+
+					&:hover {
+						color: @PhotoAlbum-Style002-LinkButton-Hover-Color;
+					}
+				}
+			}
+		}
+	}
+
+	.footerContainer {
+		.editCaptionTextBox {
+			width: 100%;
+			padding: 16px 16px;
+		}
+
+		.editCaptionButtonContainer {
+			margin-top: 24px;
+		}
+
+		a.noneEdit {
+			display: none !important;
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+// Device S
+@media screen and (max-width: @Device-M-MaxWidth) {
+	.WaGadgetPhotoAlbum.PhotoAlbumStyle002 {
+		#idPhotoMainContainer {
+			#idPhotoMainSectionContainer {
+				#idCaptionContainer {
+					.photoLabel {
+						padding: 16px 48px 16px 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.WaGadgetPhotoAlbumStateList {
+		.photoAlbumUploadButtonContainer {
+			clear: both;
+			margin: 0 0 24px;
+		}
+
+		.photoAlbumUploadButtonContainer + .pageTitleOuterContainer {
+			float: left;
+			clear: both;
+		}
+
+		.pagerOuterContainer {
+			clear: both;
+			margin: 7px 0 24px;
+		}
+	}
+
+	.WaGadgetPhotoAlbumStatePhoto {
+
+		// control line 2
+		#idMenuHeaderContainer {
+			margin-top: -32px;
+
+			.menuHeaderLeftContainer {
+				margin-bottom: 24px;
+			}
+
+			.infoContainer {
+				float: none;
+				clear: both;
+			}
+		}
+	}
+
+	.WaGadgetPhotoAlbum.PhotoAlbumStyle001 {
+		#idPhotoHeaderContainer {
+			.pageBackContainer {
+				margin-bottom: 32px;
+			}
+		}
+	}
+
+	.WaGadgetPhotoAlbum.PhotoAlbumStyle002 {
+		#idPhotoHeaderContainer {
+			width: 100%;
+
+			.photoHeaderContainerWrap {
+				.pageBackContainer {
+
+					// link "All album photos"
+					a {
+						width: 40px;
+						padding: 0;
+						text-indent: -9999px;
+
+						&:before {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 40px;
+							height: 40px;
+							margin-right: 0;
+							text-align: center;
+							text-indent: 0;
+						}
+					}
+				}
+
+				.infoContainerWrap {
+					max-width: 60%;
+				}
+			}
+		}
+
+		#idPhotoMainContainer {
+			#idPhotoMainSectionContainer {
+				#idImageContainer {
+					width: 100%;
+				}
+			}
+		}
+
+		.photoAlbumButtonBlock {
+			width: 100%;
+
+			.photoAlbumAddCaptionButton,
+			.photoAlbumDeleteButton,
+			.photoAlbumEditCaptionButton {
+				text-indent: -9999px;
+
+				&:before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 40px;
+					margin-right: 0;
+					text-align: center;
+					text-indent: 0;
+				}
+			}
+		}
+	}
+}
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.WaGadgetPhotoAlbumStateList {
+		.photoAlbumViewModeContainer {
+			margin-bottom: 16px;
+
+			label {
+				margin-right: 15px;
+			}
+			label:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.noPhotosPanel {
+			margin-bottom: -16px;
+		}
+
+		.photoAlbumUploadButtonContainer {
+			float: none;
+			margin-bottom: 16px;
+			padding-top: 40px;
+
+			span {
+				margin-bottom: 16px;
+			}
+
+			input.typeButton {
+				width: 100%;
+			}
+		}
+
+		.pageTitleOuterContainer {
+			margin-bottom: 16px;
+		}
+
+		.pagerOuterContainer {
+			margin-top: 0;
+			margin-bottom: 16px;
+		}
+
+		#idPhotoAlbumMainContainer {
+			margin-bottom: 16px;
+		}
+	}
+
+	.WaGadgetPhotoAlbumStatePhoto {
+
+		// control line 1
+		#idPhotoHeaderContainer {
+			.pageBackContainer {
+				float: none;
+			}
+
+			.buttonsInTitleContainer {
+					float: none;
+					margin: 24px 0 36px;
+			}
+		}
+
+		.footerContainer div[id*='EditCaptionButton']{
+			text-align: left;
+		}
+	}
+
+	.WaGadgetPhotoAlbum.PhotoAlbumStyle002 {
+		#idPhotoHeaderContainer {
+			.photoHeaderContainerWrap {
+				.pageBackContainer {
+					span {
+						display: none;
+					}
+				}
+			}
+		}
+
+		#idPhotoMainContainer {
+			#idPhotoMainSectionContainer {
+				#idImageContainer {
+					padding-bottom: 48px;
+
+					.linkContainer {
+						top: auto;
+						bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

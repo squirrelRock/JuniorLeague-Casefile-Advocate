@@ -1,0 +1,199 @@
+.WaGadgetForumUpdates.forumUpdatesStyle001,
+.WaGadgetForumUpdates.forumUpdatesStyle002,
+.WaGadgetForumUpdates.forumUpdatesStyle003,
+.WaGadgetForumUpdates.forumUpdatesStyle004,
+.WaGadgetForumUpdates.forumUpdatesStyle005,
+.WaGadgetForumUpdates.forumUpdatesStyle006 {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			position: relative;
+			margin: 0 0 16px;
+			padding: 0;
+			font-family: @Lato-FontFamily;
+			font-size: 16px;
+			font-style: normal;
+
+			.title {
+				margin: 0 0 6px;
+				padding: 0;
+				font-weight: bold;
+
+				a {
+					font-family: @Lato-FontFamily;
+					font-size: 16px;
+					color: @Gadget-Link-Color;
+					font-style: normal;
+					font-weight: bold;
+					text-decoration: underline;
+				}
+
+				a:hover {
+					color: @Gadget-Link-Color-Hover;
+					text-decoration: none;
+				}
+			}
+
+			.date,
+			.author {
+				display: inline;
+				margin: 0;
+				padding: 0;
+				color: @Typography-BodyAlt-Color;
+				font-size: 14px;
+				font-style: italic;
+				font-weight: normal;
+				line-height: 1.14;
+			}
+
+			.author:after {
+				content: '|';
+			}
+
+			.author a {
+				font-family: @Lato-FontFamily;
+				font-size: 14px;
+				color: @Gadget-Link-Color-Alt;
+				font-style: italic;
+				font-weight: normal;
+				text-decoration: underline;
+			}
+
+			.author a:hover {
+				color: @Gadget-Link-Color-Alt;
+				text-decoration: none;
+			}
+		}
+	}
+
+	li.last {
+		margin: 0;
+	}
+}
+
+.WaGadgetForumUpdates.forumUpdatesStyle002,
+.WaGadgetForumUpdates.forumUpdatesStyle005 {
+	ul {
+		li {
+			padding: 8px 0 8px 16px;
+			border-left: 4px solid @Gadget-Color;
+		}
+	}
+}
+
+.WaGadgetForumUpdates.forumUpdatesStyle003,
+.WaGadgetForumUpdates.forumUpdatesStyle006 {
+	ul {
+		li {
+			margin: 0 0 16px;
+			padding: 0 12px;
+			text-align: center;
+
+			.date,
+			.author {
+				display: block;
+				padding: 3px 0;
+			}
+
+			.author:after {
+				content: '';
+			}
+		}
+	}
+}
+
+.WaGadgetForumUpdates.forumUpdatesStyle004,
+.WaGadgetForumUpdates.forumUpdatesStyle005,
+.WaGadgetForumUpdates.forumUpdatesStyle006 {
+	.gadgetStyleBody {
+		padding: 16px 8px 24px;
+	}
+
+	ul {
+		li {
+			.title {
+				color: @Typography-Dark-Link-Color;
+
+				a {
+					color: @Typography-Dark-Link-Color;
+				}
+
+				a:hover {
+					color: @Typography-Dark-Link-Color-Hover;
+				}
+			}
+
+			.date,
+			.author {
+				color: @Typography-Dark-BodyAlt-Color;
+			}
+			
+			.author {
+				a {
+					color: @Typography-Dark-Link-Color;
+				}
+
+				a:hover {
+					color: @Typography-Dark-Link-Color-Hover;
+				}
+			}
+		}
+	}
+}
+
+.WaGadgetForumUpdates.forumUpdatesStyle005 {
+	ul {
+		li {
+			border-color: @Gadget-Dark-Color;
+		}
+	}
+}
+
+.WaGadgetForumUpdates.forumUpdatesStyle006 {
+	.slick-prev:hover:before,
+	.slick-next:hover:before {
+		color: rgba(255, 255, 255, 1);
+	}
+
+	.slick-prev:before,
+	.slick-next:before {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.slick-dots li button:hover:before,
+	.slick-dots li button:focus:before {
+		color: rgba(255, 255, 255, 1);
+	}
+
+	.slick-dots li button:before {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.slick-dots li.slick-active button:before {
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.WaGadgetForumUpdates.forumUpdatesStyle001,
+	.WaGadgetForumUpdates.forumUpdatesStyle002,
+	.WaGadgetForumUpdates.forumUpdatesStyle003,
+	.WaGadgetForumUpdates.forumUpdatesStyle004,
+	.WaGadgetForumUpdates.forumUpdatesStyle005,
+	.WaGadgetForumUpdates.forumUpdatesStyle006 {
+		ul {
+			li {
+				margin: 0 0 12px;
+			}
+		}
+	}
+}

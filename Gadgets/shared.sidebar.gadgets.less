@@ -1,0 +1,143 @@
+.WaPlaceHolderSidebar {
+
+	/******************************************************************************/
+	/* WaGadgetMenuVertical                                                       */
+	/******************************************************************************/
+
+	.WaGadgetMenuVertical.VerticalMenuStyle001,
+	.WaGadgetMenuVertical.VerticalMenuStyle002 {
+		// level 1
+		ul.firstLevel {
+			width: 276px;
+			border: none;
+			background: transparent;
+
+			li > .item > a > span {
+				width: auto;
+			}
+
+			li.dir > .item > a:after {
+				display: none;
+			}
+		}
+
+		// level 2
+		ul ul {
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 260px;
+			padding-left: 16px;
+			background: none;
+			border: none;
+
+			li > .item > a > span {
+				width: auto;
+			}
+
+			li.dir > .item > a:after {
+				display: none;
+			}
+
+			li .item > a {
+				color: @VerticalMenu-Light-FirstLevel-Links-Color;
+			}
+
+			li .item:hover > a {
+				background: none;
+				color: @VerticalMenu-Light-FirstLevel-Link-Color-Hover;
+			}
+
+			li.sel .item > a {
+				color: @VerticalMenu-Light-FirstLevel-Link-Selected-Color;
+			}
+
+			li.sel .item:hover > a {
+				color: @VerticalMenu-Light-FirstLevel-Link-Selected-Color;
+			}
+		}
+
+		ul ul li {
+			position: relative;
+		}
+
+		// visible sublevel
+		li > .item > ul {
+			display: block;
+			visibility: visible;
+			width: auto;
+			min-width: inherit;
+			height: auto;
+			overflow: visible;
+			opacity: 1;
+		}
+
+		// align center (setting)
+		ul.alignCenter ul {
+			padding-left: 0;
+		}
+
+		// align right (setting)
+		ul.alignRight > li {
+			&.dir > .item > a:before {
+				display: none;
+			}
+		}
+
+		ul.alignRight ul li {
+			&.dir > .item > a:before {
+				display: none;
+			}
+		}
+
+		ul.alignRight ul {
+			right: 0;
+			padding-left: 0;
+		}
+	}
+
+	.WaGadgetMenuVertical.VerticalMenuStyle002 {
+		ul ul li {
+			.item > a {
+				color: @VerticalMenu-Dark-FirstLevel-Links-Color;
+			}
+
+			.item:hover > a {
+				color: @VerticalMenu-Dark-FirstLevel-Link-Color-Hover;
+			}
+
+			&.sel .item > a {
+				color: @VerticalMenu-Dark-FirstLevel-Link-Selected-Color;
+			}
+
+			&.sel .item:hover > a {
+				color: @VerticalMenu-Dark-FirstLevel-Link-Selected-Color;
+			}
+		}
+	}
+
+
+	/******************************************************************************/
+	/* Login                                                                      */
+	/******************************************************************************/
+
+	.WaGadgetLoginButton {
+		.authenticated .loginPanel {
+			width: 225px;
+
+			.profileBox {
+				display: block;
+			}
+		}
+	}
+
+	.WaGadgetLoginForm {
+		.authenticated .loginPanel {
+			width: 225px;
+
+			.profileBox {
+				display: block;
+			}
+		}
+	}
+}

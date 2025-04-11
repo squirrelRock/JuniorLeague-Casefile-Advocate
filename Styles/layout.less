@@ -1,0 +1,382 @@
+@Device-L-MaxWidth: 1279px; /* 992 - 1260 */
+@Container-L-MaxWidth: 1250px;
+
+@Device-M-MaxWidth: 999px; /* 768 - 991 */
+@Container-M-MaxWidth: 960px;
+
+@Device-S-MaxWidth: 899px; /* 480 - 767 */
+@Container-S-MaxWidth: 860px;
+
+@Device-XS-MaxWidth: 549px; /* 320 - 479 */
+
+/* common */
+/******************************************************************************/
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: @Body-Bg;
+}
+
+.mLayout {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	.clearAfter;
+}
+
+* html .mLayout {
+	height: 100%;
+}
+
+.zonePlace {
+	padding: 0;
+}
+
+.zoneSidebar {
+	background: @Sidebar-Bg;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	overflow: auto;
+	z-index: 999;
+	.clearAfter;
+}
+
+.pageModeEdit .zoneSidebar {
+	position: absolute;
+	overflow: visible;
+	width: 300px !important;
+}
+
+.WaPlaceHolderSidebar {
+	min-height: 100% !important;
+	box-sizing: border-box;
+	display: block !important;
+	padding-top: 64px;
+}
+
+.zoneSidebar .WaPlaceHolderSidebar > div {
+	display: none;
+}
+
+.sidebarExpanded .zoneSidebar .WaPlaceHolderSidebar > div,
+.pageModeEdit .zoneSidebar .WaPlaceHolderSidebar > div {
+	display: block;
+}
+
+.zoneMain {
+	position: relative;
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	.clearAfter;
+}
+
+.pageModeEdit .zoneSidebarLeft + .zoneMain {
+	padding-left: 300px !important;
+}
+
+.pageModeEdit .zoneSidebarRight + .zoneMain {
+	padding-right: 300px !important;
+}
+
+.zoneHeader1 {
+	background: @ZoneHeader1-Outer;
+}
+
+.zoneHeader1 .container_12 > div {
+	background: @ZoneHeader1-Inner;
+}
+
+.zoneHeader2 {
+	background: @ZoneHeader2-Outer;
+}
+
+.zoneHeader2 .container_12 > div {
+	background: @ZoneHeader2-Inner;
+}
+
+.zoneHeader3 {
+	background: @ZoneHeader3-Outer;
+}
+
+.zoneHeader3 .container_12 > div {
+	background: @ZoneHeader3-Inner;
+}
+
+.zoneHeader4 {
+	background: @ZoneHeader4-Outer;
+}
+
+.zoneHeader4 .container_12 > div {
+	background: @ZoneHeader4-Inner;
+}
+
+.zoneContent {
+	background: none;
+}
+
+.zoneContent .container_12 > div {
+	background: none;
+}
+
+.zoneFooter1 {
+	background: @ZoneFooter1-Outer;
+}
+
+.zoneFooter1 .container_12 > div {
+	background: @ZoneFooter1-Inner;
+}
+
+.zoneFooter2 {
+	background: @ZoneFooter2-Outer;
+}
+
+.zoneFooter2 .container_12 > div {
+	background: @ZoneFooter2-Inner;
+}
+
+.zoneFooter3 {
+	background: @ZoneFooter3-Outer;
+}
+
+.zoneFooter3 .container_12 > div {
+	background: @ZoneFooter3-Inner;
+}
+
+[class^='WaLayoutContainer'] {
+	margin-bottom: @LayoutSeparatorBottom;
+	//max-width: 1200px;
+	//margin-left: auto;
+	//margin-right: auto;
+}
+
+.WaLayoutSeparator {
+	width: @LayoutSeparatorLeft;
+}
+
+[class^="WaGadget"] {
+	margin-bottom: @GadgetSeparatorBottom;
+}
+
+.WaGadgetFirst {
+	margin-top: 0;
+}
+
+.WaGadgetOnly {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.WaGadgetLast,
+.WaGadgetHeadline {
+	margin-bottom: 0;
+}
+
+#idFooterPoweredByContainer {
+	height: 50px;
+	letter-spacing: -10px;
+	text-align: right;
+}
+
+#idFooterPoweredByContainer:before {
+	display: inline-block;
+	width: 0;
+	height: 100%;
+	letter-spacing: normal;
+	vertical-align: middle;
+	content: '';
+}
+
+#idFooterPoweredByWA {
+	display: inline-block;
+	letter-spacing: normal;
+	vertical-align: middle;
+}
+
+//Device L
+.WaPlaceHolder {
+	width: auto;
+	margin: 0 auto;
+}
+
+.WaPlaceHolder > div {
+	max-width: @Container-L-MaxWidth;
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+.WaPlaceHolderContent > div,
+.WaPlaceHolderContent1 > div,
+.WaPlaceHolderContent2 > div,
+.WaPlaceHolderContent3 > div,
+.WaPlaceHolderContent4 > div {
+	padding: 40px 15px;
+}
+
+.WaPlaceHolderWide > div {
+	width: auto;
+	max-width: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.WaPlaceHolderSidebar > div {
+	padding: 0 12px 20px;
+}
+
+.zoneSidebar > div.sidebarButtonContainer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 40px;
+	padding: 12px 0 12px;
+
+	.sidebarButton {
+		float: right;
+		position: relative;
+		display: block;
+		width: 40px;
+		height: 40px;
+		margin: 0 5px;
+		cursor: pointer;
+		z-index: 100;
+	}
+
+	.sidebarButton:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font: 30px/40px 'FontAwesome';
+		color: @Sidebar-Button-Color;
+		text-align: center;
+		content: '\f105';
+	}
+
+	.sidebarButton:hover:before {
+		color: @Sidebar-Button-Color-Hover;
+	}
+}
+
+.zoneSidebarRight > div.sidebarButtonContainer {
+	.sidebarButton {
+		float: left;
+	}
+
+	.sidebarButton:before {
+		content: '\f104';
+	}
+}
+
+.sidebarExpanded {
+	.zoneSidebar > div.sidebarButtonContainer {
+		.sidebarButton {
+			margin: 0 12px;
+		}
+
+		.sidebarButton:before {
+			content: '\f104';
+		}
+	}
+
+	.zoneSidebarRight > div.sidebarButtonContainer {
+		.sidebarButton:before {
+			content: '\f105';
+		}
+	}
+}
+
+.zoneWAbranding {
+	margin: 10px 0 0;
+}
+
+.WABranding {
+	max-width: @Container-L-MaxWidth;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+//Device M
+@media (max-width: @Device-M-MaxWidth) {
+	body {
+		-webkit-text-size-adjust: none;
+	}
+}
+
+//Device S
+@media (max-width: @Device-S-MaxWidth) {
+	.zoneSidebarMobile {
+		top: 50px;
+		width: 50px;
+		height: 50px;
+
+		div.sidebarButtonContainer {
+			padding: 5px 0 5px;
+		}
+	}
+
+	.zoneMainMobileLeft {
+		padding-left: 0 !important;
+	}
+
+	.zoneMainMobileRight {
+		padding-right: 0 !important;
+	}
+
+	.sidebarExpanded {
+		.zoneSidebarMobile {
+			height: 100%;
+		}
+	}
+
+	.WaLayoutTable {
+		display: block;
+		width: 100%;
+	}
+
+	.WaLayoutTable > tbody {
+		display: block;
+		width: 100%;
+	}
+
+	.WaLayoutTable .WaLayoutRow {
+		display: block;
+		width: 100%;
+	}
+
+	.WaLayoutTable .WaLayoutSeparator {
+		display: none;
+	}
+
+	.WaLayoutTable .WaLayoutItem {
+		display: block;
+		width: 100% !important;
+	}
+
+	.WaLayoutTable .WaLayoutItem ~ .WaLayoutItem {
+		margin-top: @LayoutSeparatorBottom;
+	}
+}
+
+//Device XS
+@media (max-width: @Device-XS-MaxWidth) {
+	body {
+		min-width: 320px;
+	}
+}

@@ -1,0 +1,262 @@
+.WaGadgetCustomMenu.menuStyle001 {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: 0;
+			padding: 0;
+			vertical-align: top;
+
+			a {
+				font-family: @Lato-FontFamily;
+				color: @Typography-Link-Color;
+				font-size: 16px;
+				line-height: 1.5;
+				font-weight: bold;
+				font-style: normal;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			a:hover {
+				color: @Typography-Link-Color-Hover;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.orientationHorizontal li {
+		display: inline-block;
+		padding-right: 30px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.orientationVertical li {
+		padding-bottom: 16px;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	// align
+	ul.alignRight {
+		text-align: right;
+	}
+
+	ul.alignLeft {
+		text-align: left;
+	}
+
+	ul.alignCenter {
+		text-align: center;
+	}
+}
+
+.WaGadgetCustomMenu.menuStyle002 {
+	.gadgetStyleBody {
+		padding: 16px 8px 24px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: 0;
+			padding: 0;
+			vertical-align: top;
+
+			a {
+				font-family: @Lato-FontFamily;
+				color: @Typography-Dark-Link-Color;
+				font-size: 16px;
+				line-height: 1.5;
+				font-weight: bold;
+				font-style: normal;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			a:hover {
+				color: @Typography-Dark-Link-Color-Hover;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.orientationHorizontal li {
+		display: inline-block;
+		padding-right: 30px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.orientationVertical li {
+		padding-bottom: 16px;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	// align
+	ul.alignRight {
+		text-align: right;
+	}
+
+	ul.alignLeft {
+		text-align: left;
+	}
+
+	ul.alignCenter {
+		text-align: center;
+	}
+}
+
+.WaGadgetCustomMenu.menuStyle003 {
+	ul {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		vertical-align: top;
+		list-style: none;
+
+		li {
+			margin: 0;
+			padding: 0;
+			vertical-align: top;
+
+			a {
+				font-family: @Lato-FontFamily;
+				color: @Typography-Link-Color;
+				font-size: 16px;
+				line-height: 1.5;
+				font-weight: bold;
+				font-style: normal;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.orientationHorizontal {
+		border-top: 4px solid @CustomMenu-Style002-Border-Color;
+		border-bottom: 4px solid @CustomMenu-Style002-Border-Color;
+
+		li {
+			display: inline-block;
+			padding: 16px;
+		}
+	}
+
+	.orientationVertical {
+		border-left: 4px solid @CustomMenu-Style002-Border-Color;
+
+		li {
+			padding: 8px;
+		}
+	}
+
+	// align
+	&.customMenuAlignLeft .container {
+		text-align: left;
+	}
+
+	&.customMenuAlignCenter .container {
+		text-align: center;
+	}
+
+	&.customMenuAlignRight .container {
+		text-align: right;
+
+		.orientationVertical {
+			border-left: none;
+			border-right: 4px solid @CustomMenu-Style002-Border-Color;
+		}
+	}
+}
+
+.WaGadgetCustomMenu.menuStyle004 {
+	.gadgetStyleBody {
+		padding: 16px 8px 24px;
+	}
+
+	ul {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		vertical-align: top;
+		list-style: none;
+
+		li {
+			margin: 0;
+			padding: 0;
+			vertical-align: top;
+
+			a {
+				color: @Typography-Dark-Link-Color;
+				font-family: @Lato-FontFamily;
+				font-size: 16px;
+				line-height: 1.5;
+				font-weight: bold;
+				font-style: normal;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			a:hover {
+				color: @Typography-Dark-Link-Color-Hover;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.orientationHorizontal {
+		border-top: 4px solid @CustomMenu-Style003-Border-Color;
+		border-bottom: 4px solid @CustomMenu-Style003-Border-Color;
+
+		li {
+			display: inline-block;
+			padding: 16px;
+		}
+	}
+
+	.orientationVertical {
+		border-left: 4px solid @CustomMenu-Style003-Border-Color;
+
+		li {
+			padding: 8px;
+		}
+	}
+
+	// align
+	&.customMenuAlignLeft .container {
+		text-align: left;
+	}
+
+	&.customMenuAlignCenter .container {
+		text-align: center;
+	}
+
+	&.customMenuAlignRight .container {
+		text-align: right;
+
+		.orientationVertical {
+			border-left: none;
+			border-right: 4px solid @CustomMenu-Style003-Border-Color;
+		}
+	}
+}

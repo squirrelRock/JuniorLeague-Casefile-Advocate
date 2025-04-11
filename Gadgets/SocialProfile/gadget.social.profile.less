@@ -1,0 +1,247 @@
+.WaGadgetSocialProfile {
+	.gadgetStyleTitle {
+		padding: 0 0 26px;
+
+		h4 {
+			.h1();
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.alignRight {
+		text-align: right;
+	}
+
+	.alignLeft {
+		text-align: left;
+	}
+
+	.alignCenter {
+		text-align: center;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		letter-spacing: -0.3em;
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		font-family: @Lato-FontFamily;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: none;
+		letter-spacing: normal;
+		vertical-align: top;
+	}
+
+	a, a:link {
+		display: inline-block;
+		background: none;
+		text-decoration: none;
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	.orientationHorizontal {
+		margin: 0 0 0 -16px;
+
+		&:before {
+			display: block;
+			height: 0;
+			margin: 0 0 -16px;
+			overflow: hidden;
+			font-size: 0;
+			content: '';
+		}
+
+		li {
+			margin: 16px 0 0 16px;
+		}
+	}
+
+	.orientationVertical {
+		li {
+			display: block;
+		}
+
+		li + li {
+			margin: 16px 0 0;
+		}
+	}
+}
+
+.WaGadgetSocialProfile.socialProfileStyle001 {
+	li {
+		a {
+			position: relative;
+			display: inline-block;
+			width: 34px;
+			height: 34px;
+			color: #fff;
+			font-family: 'WA-theme-icons';
+			font-size: 16px;
+			text-decoration: none;
+			font-weight: normal;
+			font-style: normal;
+			line-height: 34px;
+			vertical-align: top;
+		}
+
+		a:hover {
+			opacity: 0.9;
+		}
+
+		a:before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: block;
+			text-align: center;
+		}
+	}
+
+	a.Facebook { background: #507bbe; }
+
+	a.Facebook:before { content: '\e641'; }
+
+	a.Twitter { background: #64ccef; }
+
+	a.Twitter:before { content: '\e635'; }
+
+	a.LinkedIn { background: #1087c9; }
+
+	a.LinkedIn:before { content: '\e639'; }
+
+	a.YouTube { background: #ec6b52; }
+
+	a.YouTube:before { content: '\e633'; }
+
+	a.Instagram { background: #527ea3; }
+
+	a.Instagram:before { content: '\e63b'; }
+
+	a.Pinterest { font-family: 'FontAwesome'; font-size: 18px; background: #f15f5c; }
+
+	a.Pinterest:before { content: '\f0d2'; }
+}
+
+// Themed style for light backgrounds
+.WaGadgetSocialProfile.socialProfileStyle002,
+.WaGadgetSocialProfile.socialProfileStyle003,
+.WaGadgetSocialProfile.socialProfileStyle004 {
+	.orientationHorizontal {
+		margin-left: -24px;
+
+		li {
+			margin-left: 24px;
+		}
+	}
+
+	li {
+		a {
+			position: relative;
+			display: inline-block;
+			width: 23px;
+			height: 23px;
+			color: @SocialProfile-Style002-Color;
+			font-family: 'FontAwesome';
+			font-size: 23px;
+			text-decoration: none;
+			font-weight: normal;
+			font-style: normal;
+			line-height: 23px;
+			vertical-align: top;
+		}
+
+		a:hover {
+			color: @SocialProfile-Style002-Color-Hover;
+		}
+
+		a:before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: block;
+			text-align: center;
+		}
+	}
+
+	a.Facebook:before { content: '\f09a'; }
+
+	a.Twitter:before { content: '\f099'; }
+
+	a.LinkedIn:before { content: '\f0e1'; }
+
+	a.YouTube:before { content: '\f167'; }
+
+	a.Instagram:before { content: '\f16d'; }
+
+	a.Pinterest:before { content: '\f231'; }
+}
+
+.WaGadgetSocialProfile.socialProfileStyle003 {
+	li {
+		a {
+			color: @SocialProfile-Style003-Color;
+		}
+
+		a:hover {
+			color: @SocialProfile-Style003-Color-Hover;
+		}
+	}
+}
+
+.WaGadgetSocialProfile.socialProfileStyle002,
+.WaGadgetSocialProfile.socialProfileStyle003 {
+	.gadgetStyleBody {
+		padding: 16px 8px 24px;
+	}
+}
+
+.WaGadgetSocialProfile.socialProfileStyle004 {
+	.orientationHorizontal {
+		margin-left: -16px;
+
+		li {
+			margin-left: 16px;
+		}
+	}
+
+	.orientationVertical {
+		li + li {
+			margin-top: 14px;
+		}
+	}
+
+	li {
+		a {
+			color: @SocialProfile-Style004-Color;
+		}
+
+		a:hover {
+			color: @SocialProfile-Style004-Color-Hover;
+		}
+	}
+
+	a.Facebook:before { content: '\f082'; }
+
+	a.Twitter:before { content: '\f081'; }
+
+	a.LinkedIn:before { content: '\f08c'; }
+
+	a.YouTube:before { content: '\f166'; }
+
+	a.Instagram:before { content: '\f16d'; }
+
+	a.Pinterest:before { content: '\f0d3'; }
+}

@@ -1,0 +1,42 @@
+/******************************************************************************/
+/*	WaGadgetMembershipApplication                                             */
+/*		WaGadgetMembershipApplicationStateSelectLevel                         */
+/*		WaGadgetMembershipApplicationStateNotAvailable                        */
+/*		WaGadgetMembershipApplicationStateFillData                            */
+/*		WaGadgetMembershipApplicationStateReview                              */
+/*		WaGadgetMembershipApplicationIdentify                                 */
+/*		WaGadgetMembershipApplicationStateDiscountCode                        */
+/******************************************************************************/
+
+.WaGadgetMembershipApplication {
+	padding: @Gadget-Pd;
+	overflow: visible;
+	background: @Gadget-Bg;
+}
+
+[class*='WaGadgetAddMemberToBundle'] {
+	padding: @Gadget-Pd;
+	overflow: visible;
+	background: @Gadget-Bg;
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.WaGadgetAddMemberToBundle {
+		.navigationOuterContainer .navigationContainer {
+			.left {
+				float: left;
+			}
+
+			.right {
+				float: right;
+				margin-top: 0;
+			}
+		}
+	}
+}

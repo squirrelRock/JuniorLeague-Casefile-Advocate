@@ -1,0 +1,463 @@
+/******************************************************************************/
+/*	WaGadgetMemberDirectory                                                   */
+/*		WaGadgetMemberDirectoryStateList                                      */
+/*		WaGadgetMemberDirectoryStateAdvancedSearch                            */
+/******************************************************************************/
+
+[class*='WaGadgetMemberDirectory'] {
+	padding: @Gadget-Pd;
+	overflow: visible;
+	background: @Gadget-Bg;
+}
+
+/* mode: WaGadgetMemberDirectoryStateList */
+/******************************************************************************/
+.WaGadgetMemberDirectoryStateList {
+	form {
+		.clearAfter;
+	}
+
+	// Selected search criteria - like "info container"
+	[id*='selectedCriteraListContainer'] > .fieldContainer {
+		margin: 0;
+	}
+
+	.selectedCriteriaListInnerContainer {
+		margin: 0 0 30px;
+		padding: 20px 20px 17px;
+		background: @MemberDirectory-SelectedCriteria-Bg;
+
+		.fieldContainer {
+			margin: 5px 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		.fieldSubContainer {
+			font-size: inherit;
+		}
+
+		.criteriaTitleColumn {
+			float: left;
+			width: 30%;
+			padding: 0 2% 0 0;
+			color: @MemberDirectory-SelectedCriteria-Color;
+			font-weight: bold;
+			text-align: right;
+		}
+
+		.criteriaValueColumn {
+			float: left;
+			width: 67%;
+			padding: 0;
+			color: @MemberDirectory-SelectedCriteria-Color;
+		}
+	}
+
+	.selectedCriteriaListActionsOuterContainer {
+		.clearfix;
+		margin: 0 0 20px;
+
+		.clearAdvSearchContainer,
+		.editAdvSearchContainer {
+			float: left;
+			margin-right: 1em;
+		}
+	}
+
+	// Search types selector
+	.browsingColumnsMainContainer {
+		margin: 0 0 20px;
+
+		table.browsingColumns {
+			width: 100%;
+			table-layout: fixed;
+
+			th {
+				width: 23%;
+				padding: 0 2% 1em 0;
+				vertical-align: top;
+				text-align: left;
+			}
+
+			td {
+				width: 23%;
+				padding: 0 2% 0 0;
+				vertical-align: top;
+			}
+		}
+
+		.filterOptions {
+			max-height: 160px;
+			overflow-x: hidden;
+			overflow-y: auto;
+
+			ul.filterList {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+					padding: 0 0 3px;
+				}
+
+				// option with no member
+				a.emptyName {
+					.opacity(50);
+				}
+			}
+		}
+
+		.selectedFilter {
+			display: none;
+
+			.selectedName {
+				margin-bottom: 1em;
+			}
+		}
+	}
+
+	// Advanced search link
+	.advSearchContainerLink {
+		margin: 0 0 16px;
+	}
+
+	// Search area
+	.memberDirectorySearchAreaOuterContainer {
+		margin: 0 0 32px;
+		padding: 16px 0 0;
+		border-top: 4px solid @MemberDirectory-Border-Color;
+
+		label {
+			vertical-align: middle;
+			margin-right: 12px;
+		}
+
+		input {
+			vertical-align: middle;
+		}
+
+		.searchResult {
+			margin-left: 16px;
+			vertical-align: middle;
+
+			// counted
+			#membersFound {
+				font-style: normal;
+				font-weight: bold;
+			}
+
+			// link Refresh cached search
+			#idReloadData {
+				margin-left: 8px;
+				cursor: pointer;
+
+				&:before {
+					display: inline-block;
+					font-family: 'FontAwesome';
+					font-size: 18px;
+					text-decoration: underline;
+					content: '\f021';
+				}
+
+				&:before {
+					text-decoration: none;
+				}
+
+				img {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// Search results table
+	.memberDirectoryOuterContainer {
+		margin: 0 0 20px;
+
+		table#membersTable {
+			table-layout: fixed;
+
+			td {
+				word-wrap: break-word;
+			}
+		}
+	}
+
+	// pagination
+	#idPagingData,
+	#idPagingData2 {
+		float: right;
+
+		select {
+			margin-left: 7px;
+		}
+	}
+}
+
+/* mode: WaGadgetMemberDirectoryStateAdvancedSearch */
+/******************************************************************************/
+.WaGadgetMemberDirectoryStateAdvancedSearch {
+
+	// clear selection
+	.clearValuesOuterContainer {
+		margin: 0 0 24px;
+		text-align: right;
+	}
+
+	// Choice of search criteria
+	.searchCriteriaOuterContainer {
+		margin: 0 0 32px;
+
+		.inner > div > .generalFieldsContainer {
+			margin: 0;
+		}
+
+		.criteriaListItem {
+			margin: 8px 0;
+
+			.fieldContainer {
+				float: left;
+				width: 47%;
+				margin: 0;
+			}
+
+			.valueContainer {
+				float: left;
+				width: 53%;
+			}
+		}
+
+		.fieldContainer table {
+			span[style*='hidden'][id*='criteriaList'] { display: none !important; }
+
+			.left {
+				width: 55%;
+			}
+
+			.right {
+				width: 45%;
+				padding-right: 16px;
+			}
+
+			select {
+				width: 100%;
+			}
+		}
+
+		.valueContainer {
+			.fieldContainer {
+				float: none;
+				width: 100%;
+
+				.groupBodyVertical {
+					padding-bottom: 16px;
+				}
+			}
+
+			input[type=text] {
+				width: 50%;
+			}
+
+			input.desDateTextBox {
+				width: 140px;
+			}
+
+			select {
+				width: 50%;
+			}
+		}
+	}
+
+	// buttons
+	.ActionPanelOuterContainer {
+		margin: 0 0 24px;
+
+		.exitAdvSearchContainer,
+		.searchButtonContainer,
+		.separatorTextContainer {
+			display: inline-block;
+			margin: 0 3px 0 0;
+			vertical-align: middle;
+		}
+
+		.exitAdvSearchContainer {
+			margin-right: 0;
+		}
+
+		.searchButtonContainer {
+			margin-right: 16px;
+		}
+
+		input.searchButton {
+			.functionalButton;
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.WaGadgetMemberDirectoryStateList {
+
+		// Search types selector
+		.browsingColumnsMainContainer table.browsingColumns {
+			table-layout: auto;
+
+			tr.filterHead th {
+				display: none;
+			}
+
+			tr.filterRow td	{
+				width: 100%;
+				display: block;
+				padding-bottom: 20px;
+				word-break: break-all;
+
+				a, nobr {
+					white-space: normal;
+					word-break: break-all;
+				}
+			}
+		}
+	}
+
+	.WaGadgetMemberDirectoryStateAdvancedSearch {
+		.searchCriteriaOuterContainer {
+			.fieldContainer table {
+				.left {
+					width: 50%;
+				}
+
+				.right {
+					width: 50%;
+				}
+			}
+
+			.valueContainer {
+				input[type=text] {
+					width: 70%;
+				}
+
+				select {
+					width: 70%;
+				}
+			}
+		}
+	}
+}
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+
+	::-webkit-scrollbar:vertical {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar:horizontal {
+		height: 12px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, .5);
+		border-radius: 10px;
+		border: 2px solid #ffffff;
+	}
+
+	::-webkit-scrollbar-track {
+		border-radius: 10px;
+		background-color: #ffffff;
+	}
+
+	.WaGadgetMemberDirectoryStateList {
+
+		.memberDirectorySearchAreaOuterContainer .searchResult {
+			display: block;
+			margin: 10px 0 0 0;
+		}
+
+		// Selected search criteria - like "info container"
+		.selectedCriteriaListInnerContainer {
+			padding-right: 10px;
+			padding-left: 10px;
+
+			.criteriaTitleColumn {
+				float: none;
+				width: auto;
+				margin-right: 2%;
+				padding-right: 0;
+				text-align: left;
+			}
+
+			.criteriaValueColumn {
+				float: none;
+				width: auto;
+				margin-left: 30px;
+			}
+		}
+	}
+
+	.WaGadgetMemberDirectoryStateAdvancedSearch {
+
+		// clear selection
+		.clearValuesOuterContainer {
+			text-align: left;
+		}
+
+		// Choice of search criteria
+		.searchCriteriaOuterContainer {
+			.criteriaListItem {
+				margin: 16px 0;
+
+				.fieldContainer {
+					float: none;
+					width: auto;
+				}
+
+				.valueContainer {
+					float: none;
+					width: auto;
+					padding-top: 4px;
+				}
+			}
+
+			.fieldContainer table {
+				.left {
+					width: auto;
+				}
+
+				.right {
+					width: auto;
+					padding: 0;
+				}
+
+				select {
+					width: 100%;
+				}
+			}
+
+			.valueContainer {
+				.fieldContainer {
+					.groupBodyVertical {
+						padding-bottom: 0;
+					}
+				}
+
+				input[type=text] {
+					width: 100%;
+				}
+
+				select {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

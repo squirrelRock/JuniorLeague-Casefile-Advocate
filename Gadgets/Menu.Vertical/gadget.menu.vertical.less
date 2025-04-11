@@ -1,0 +1,507 @@
+.WaGadgetMenuVertical.VerticalMenuStyle001 {
+	overflow: visible;
+
+	.menuInner {
+		position: relative;
+	}
+
+	.verticalMenuFirstLevel() {
+		position: relative;
+		display: block;
+		margin: 0;
+		padding: 0;
+
+		& > .item {
+			position: relative;
+		}
+
+		& > .item > a {
+			position: relative;
+			display: block;
+			padding: 4px 16px;
+			overflow: hidden;
+			background: inherit;
+			color: @VerticalMenu-Light-FirstLevel-Links-Color;
+			font: bold 16px/1.5 @Lato-FontFamily;
+			text-align: left;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		& > .item > a > span {
+			display: inline-block;
+			width: 245px;
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		& > .item:hover > a {
+			background: @VerticalMenu-Light-FirstLevel-Link-Bg-Hover;
+			color: @VerticalMenu-Light-FirstLevel-Link-Color-Hover;
+		}
+
+		// selected
+		&.sel > .item > a {
+			color: @VerticalMenu-Light-FirstLevel-Link-Selected-Color;
+		}
+
+		&.sel > .item:hover > a {
+			color: @VerticalMenu-Light-FirstLevel-Link-Color-Hover;
+		}
+
+		// mark if has sublevel
+		&.dir > .item > a:after {
+			position: relative;
+			top: 3px;
+			right: -10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f105';
+		}
+	}
+
+	.verticalMenuSubLevel() {
+		margin: 0;
+
+		& > .item {
+			position: relative;
+		}
+
+		& > .item > a,
+		& > .item > a:link {
+			position: relative;
+			display: block;
+			padding: 4px 16px;
+			overflow: hidden;
+			background: inherit;
+			color: @VerticalMenu-Light-SecondLevel-Links-Color;
+			font: normal 16px/1.5 @Lato-FontFamily;
+			text-align: left;
+			text-decoration: none;
+			text-transform: none;
+		}
+
+		& > .item > a > span {
+			display: inline-block;
+			width: 245px;
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		& > .item:hover > a {
+			background: @VerticalMenu-Light-SecondLevel-Link-Bg-Hover;
+			color: @VerticalMenu-Light-SecondLevel-Link-Color-Hover;
+		}
+
+		// selected
+		&.sel > .item > a {
+			color: @VerticalMenu-Light-SecondLevel-Link-Selected-Color;
+		}
+
+		&.sel > .item:hover > a {
+			color: @VerticalMenu-Light-SecondLevel-Link-Color-Hover;
+		}
+
+		// mark if has sublevel
+		&.dir > .item > a:after {
+			position: relative;
+			top: 3px;
+			right: -10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f105';
+		}
+	}
+
+	// level 1
+	ul.firstLevel {
+		box-sizing: border-box;
+		width: 300px;
+		margin: 0;
+		padding: 8px 0;
+		background: @VerticalMenu-Light-Bg-Color;
+		border: 1px solid @VerticalMenu-Light-Border-Color;
+		list-style: none;
+	}
+
+	ul.firstLevel > li {
+		.verticalMenuFirstLevel();
+	}
+
+	// level 2
+	ul ul {
+		position: absolute;
+		top: -12px;
+		left: 100%;
+		z-index: 40000;
+		display: block;
+		visibility: hidden;
+		box-sizing: border-box;
+		width: 300px;
+		height: 0;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background: @VerticalMenu-Light-Bg-Color;
+		border: 1px solid @VerticalMenu-Light-Border-Color;
+		opacity: 0;
+		list-style: none;
+		-webkit-transition: opacity @Menu-TransitionTime;
+		-moz-transition: opacity @Menu-TransitionTime;
+		-ms-transition: opacity @Menu-TransitionTime;
+		-o-transition: opacity @Menu-TransitionTime;
+		transition: opacity @Menu-TransitionTime;
+	}
+
+	ul ul:before {
+		position: absolute;
+		top: 0;
+		left: -2px;
+		display: block;
+		width: 3px;
+		height: 100%;
+		content: '';
+	}
+
+	ul ul li {
+		.verticalMenuSubLevel();
+	}
+
+	// hover
+	li > .item:hover > ul {
+		display: block;
+		visibility: visible;
+		width: auto;
+		min-width: 300px;
+		height: auto;
+		overflow: visible;
+		opacity: 1;
+	}
+}
+
+// align center (setting)
+.WaGadgetMenuVertical.VerticalMenuStyle001 {
+	ul.alignCenter > li {
+		& > .item > a {
+			text-align: center;
+		}
+	}
+
+	ul.alignCenter ul li {
+		& > .item > a {
+			text-align: center;
+		}
+	}
+}
+
+// align right (setting)
+.WaGadgetMenuVertical.VerticalMenuStyle001 {
+	ul.alignRight > li {
+		& > .item > a {
+			text-align: right;
+		}
+
+		&.dir > .item > a:after {
+			display: none;
+		}
+
+		&.dir > .item > a:before {
+			position: relative;
+			top: 3px;
+			right: 10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f104';
+		}
+	}
+
+	ul.alignRight ul li {
+		& > .item > a {
+			text-align: right;
+		}
+
+		&.dir > .item > a:after {
+			display: none;
+		}
+
+		&.dir > .item > a:before {
+			position: relative;
+			top: 3px;
+			right: 10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f104';
+		}
+	}
+
+	ul.alignRight ul {
+		right: 100%;
+		left: auto;
+		margin: 0;
+	}
+
+	ul.alignRight ul:before {
+		position: absolute;
+		top: 0;
+		right: -2px;
+		left: auto;
+		display: block;
+		width: 3px;
+		height: 100%;
+		content: '';
+	}
+}
+
+.WaGadgetMenuVertical.VerticalMenuStyle002 {
+	overflow: visible;
+
+	.menuInner {
+		position: relative;
+	}
+
+	.verticalMenuFirstLevel() {
+		position: relative;
+		display: block;
+		margin: 0;
+		padding: 0;
+
+		& > .item {
+			position: relative;
+		}
+
+		& > .item > a {
+			position: relative;
+			display: block;
+			padding: 4px 16px;
+			overflow: hidden;
+			background: inherit;
+			color: @VerticalMenu-Dark-FirstLevel-Links-Color;
+			font: bold 16px/1.5 @Lato-FontFamily;
+			text-align: left;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		& > .item > a > span {
+			display: inline-block;
+			width: 245px;
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		& > .item:hover > a {
+			background: @VerticalMenu-Dark-FirstLevel-Link-Bg-Hover;
+			color: @VerticalMenu-Dark-FirstLevel-Link-Color-Hover;
+		}
+
+		// selected
+		&.sel > .item > a {
+			color: @VerticalMenu-Dark-FirstLevel-Link-Selected-Color;
+		}
+
+		&.sel > .item:hover > a {
+			color: @VerticalMenu-Dark-SecondLevel-Link-Color-Hover;
+		}
+
+		// mark if has sublevel
+		&.dir > .item > a:after {
+			position: relative;
+			top: 3px;
+			right: -10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f105';
+		}
+	}
+
+	.verticalMenuSubLevel() {
+		margin: 0;
+
+		& > .item {
+			position: relative;
+		}
+
+		& > .item > a,
+		& > .item > a:link {
+			position: relative;
+			display: block;
+			padding: 4px 16px;
+			overflow: hidden;
+			background: inherit;
+			color: @VerticalMenu-Dark-SecondLevel-Links-Color;
+			font: normal 16px/1.5 @Lato-FontFamily;
+			text-align: left;
+			text-decoration: none;
+			text-transform: none;
+		}
+
+		& > .item > a > span {
+			display: inline-block;
+			width: 245px;
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		& > .item:hover > a {
+			background: @VerticalMenu-Dark-SecondLevel-Link-Bg-Hover;
+			color: @VerticalMenu-Dark-SecondLevel-Link-Color-Hover;
+		}
+
+		// selected
+		&.sel > .item > a {
+			color: @VerticalMenu-Dark-SecondLevel-Link-Selected-Color;
+		}
+
+		&.sel > .item:hover > a {
+			color: @VerticalMenu-Dark-SecondLevel-Link-Color-Hover;
+		}
+
+		// mark if has sublevel
+		&.dir > .item > a:after {
+			position: relative;
+			top: 3px;
+			right: -10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f105';
+		}
+	}
+
+	// level 1
+	ul.firstLevel {
+		box-sizing: border-box;
+		width: 300px;
+		margin: 0;
+		padding: 8px 0;
+		background: @VerticalMenu-Dark-Bg-Color;
+		border: 1px solid @VerticalMenu-Dark-Border-Color;
+		list-style: none;
+	}
+
+	ul.firstLevel > li {
+		.verticalMenuFirstLevel();
+	}
+
+	// level 2
+	ul ul {
+		position: absolute;
+		top: -12px;
+		left: 100%;
+		z-index: 40000;
+		display: block;
+		visibility: hidden;
+		box-sizing: border-box;
+		width: 300px;
+		height: 0;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background: @VerticalMenu-Dark-Bg-Color;
+		border: 1px solid @VerticalMenu-Dark-Border-Color;
+		opacity: 0;
+		list-style: none;
+		-webkit-transition: opacity @Menu-TransitionTime;
+		-moz-transition: opacity @Menu-TransitionTime;
+		-ms-transition: opacity @Menu-TransitionTime;
+		-o-transition: opacity @Menu-TransitionTime;
+		transition: opacity @Menu-TransitionTime;
+	}
+
+	ul ul:before {
+		position: absolute;
+		top: 0;
+		left: -2px;
+		display: block;
+		width: 3px;
+		height: 100%;
+		content: '';
+	}
+
+	ul ul li {
+		.verticalMenuSubLevel();
+	}
+
+	// hover
+	li > .item:hover > ul {
+		display: block;
+		visibility: visible;
+		width: auto;
+		min-width: 300px;
+		height: auto;
+		overflow: visible;
+		opacity: 1;
+	}
+}
+
+// align center (setting)
+.WaGadgetMenuVertical.VerticalMenuStyle002 {
+	ul.alignCenter > li {
+		& > .item > a {
+			text-align: center;
+		}
+	}
+
+	ul.alignCenter ul li {
+		& > .item > a {
+			text-align: center;
+		}
+	}
+}
+
+// align right (setting)
+.WaGadgetMenuVertical.VerticalMenuStyle002 {
+	ul.alignRight > li {
+		& > .item > a {
+			text-align: right;
+		}
+
+		&.dir > .item > a:after {
+			display: none;
+		}
+
+		&.dir > .item > a:before {
+			position: relative;
+			top: 3px;
+			right: 10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f104';
+		}
+	}
+
+	ul.alignRight ul li {
+		& > .item > a {
+			text-align: right;
+		}
+
+		&.dir > .item > a:after {
+			display: none;
+		}
+
+		&.dir > .item > a:before {
+			position: relative;
+			top: 3px;
+			right: 10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f104';
+		}
+	}
+
+	ul.alignRight ul {
+		right: 100%;
+		left: auto;
+		margin: 0;
+	}
+
+	ul.alignRight ul:before {
+		position: absolute;
+		top: 0;
+		right: -2px;
+		left: auto;
+		display: block;
+		width: 3px;
+		height: 100%;
+		content: '';
+	}
+}

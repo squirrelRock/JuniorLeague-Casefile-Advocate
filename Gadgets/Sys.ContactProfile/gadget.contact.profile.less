@@ -1,0 +1,1223 @@
+/******************************************************************************/
+/*	WaGadgetContactProfile                                                    */
+/*		WaGadgetContactProfileStateMain                                       */
+/*		WaGadgetContactProfileStateAccess                                     */
+/*		WaGadgetContactProfileStateSubscriptions                              */
+/*		WaGadgetContactProfileStateFinances                                   */
+/*		WaGadgetContactProfileStateDonations                                   */
+/*		WaGadgetContactProfileStatePhotoGallery                               */
+/******************************************************************************/
+
+// Common style
+.WaGadgetContactProfile {
+	//.sysFormatSmaller;
+	overflow: visible;
+
+	// top controls
+	.topButtonsOuterContainer {
+		margin: 0 0 24px;
+		overflow: hidden;
+
+		.inner > div:first-child {
+			float: left;
+		}
+
+		input.typeButton {
+			.functionalButton;
+			margin-right: 24px;
+		}
+
+		input[id*='cancelButton'] {
+			float: right;
+			margin-right: 0;
+		}
+
+		a.memberDirectoryDetailsLink {
+			margin-right: 24px;
+		}
+
+		span.totalBalance {
+			float: right;
+			padding: 8px 0 0;
+			font-weight: bold;
+		}
+	}
+
+	// tabs
+	.memberDetailsTabsOuterContainer {
+		margin: 0 0 40px;
+
+		ul.memberDetailsTabMenu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+				display: inline-block;
+				margin: 0 24px 0 0;
+				vertical-align: top;
+
+				span {
+					color: @Typography-Link-Color-Active;
+				}
+			}
+
+			.warning {
+				padding-left: 24px;
+				background: url('<$StaticModel.ThemeUrl$>/images/icons/icon-warning.png') 0 50% no-repeat;
+			}
+		}
+	}
+
+	#eventRegistrations {
+		.genericListHeaderContainer {
+			margin-bottom: 24px;
+
+			.filter,
+			.eventSearch {
+				padding-right: 24px;
+			}
+
+			.infoContainer div {
+				margin-top: 20px;
+			}
+		}
+
+		.genericListTable {
+			#tableItems tr:hover {
+				background: @Forum-Table-Row-Highlight-Bg;
+			}
+
+			th.rightAlign {
+				text-align: right;
+				padding-right: 0;
+			}
+
+			td:first-child {
+				width: 50%;
+			}
+
+			td.rightAlign {
+				text-align: right;
+			}
+		}
+
+		.buttonContainer {
+			input {
+				.functionalButton;
+				margin-left: 12px;
+				margin-top: 12px;
+			}
+		}
+	}
+
+	#idBottomButtonsContainer {
+		.left {
+			width: 100%;
+
+			input[id*='cancelButton'] {
+				float: right;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+/* WaGadgetContactProfileStateMain */
+/******************************************************************************/
+.WaGadgetContactProfileStateMain,
+.WaGadgetContactProfileStatePrivacy,
+.WaGadgetContactProfileStateSubscriptions {
+	#idMemberProfileContainer #idSectionMembershipLevelContainer #idMembershipLevelContainer {
+		.right .fieldBody span.typeInstruction {
+			padding-top: 0;
+		}
+	}
+
+	// tab profile
+	// rows for membership level
+	.actionButtonContainer {
+		margin: 0 0 0 30%;
+
+		input[type=submit] {
+			.functionalButton;
+			margin-top: 8px;
+		}
+	}
+
+	// membership card
+	#idMembershipCardContainerHolder  {
+		padding-top: 8px;
+
+		.membershipCardIframeContainer {
+			width: 280px;
+			height: 160px;
+			margin-bottom: 8px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 14px 0 rgba(0,0,0,.4);
+			overflow: hidden;
+
+			.membershipCardIframe {
+				width: 280px;
+				height: 160px;
+				border: none;
+				background: none;
+				overflow: hidden;
+				display: block;
+			}
+		}
+
+		.membershipCardLinkContainer {
+			padding: 8px 0;
+		}
+	}
+
+
+	// tab privacy
+	.profileDetailsOuterContainer {
+		.includeInMemberDirectoryContainer {
+			margin-bottom: 16px;
+
+			img {
+				display: none;
+			}
+
+			[id*=viewIncludeMeInMemberDirectory]:before {
+				margin-right: 7px;
+				color: #008000;
+				font-family: 'WA-theme-icons';
+				content: '\e631';
+			}
+
+			input[type=checkbox] {
+				margin-right: 7px;
+			}
+		}
+
+		.captionOuterContainer {
+			span.explanation {
+				.sysFormatSmaller;
+				.sysFormatGray;
+				text-transform: none;
+			}
+		}
+
+		#memberFieldTable {
+			width: 100%;
+			margin: 0 0 24px;
+			padding: 0;
+			border-collapse: collapse;
+
+			th {
+				width: 25%;
+				padding: 8px 0;
+				font-weight: inherit;
+				vertical-align: middle;
+				text-align: right;
+			}
+
+			td {
+				width: 25%;
+				padding: 8px 0;
+				vertical-align: middle;
+				text-align: center;
+			}
+
+			td,
+			th {
+				border-bottom: 1px solid @Table-Border-Color;
+			}
+
+			.memberFieldTitle img {
+				display: none;
+			}
+
+			.memberFieldTitle img[src*='photogallery-ico.gif'] + span:before {
+				margin-right: 7px;
+				font-family: 'FontAwesome';
+				content: '\f03e';
+			}
+
+			.memberFieldTitle img[src*='email-ico.gif'] + span:before {
+				margin-right: 7px;
+				font-family: 'WA-theme-icons';
+				content: '\e625';
+			}
+
+			.memberFieldTitle img[src*='memblevel-ico.gif'] + span:before {
+				margin-right: 7px;
+				font-family: 'FontAwesome';
+				content: '\f0c0';
+			}
+
+			.memberFieldTitle span + img {
+				margin-left: 3px;
+			}
+
+			.anybodyImage,
+			.nobodyImage,
+			.otherMembersImage {
+				display: inline;
+				vertical-align: middle;
+				font-size: 20px;
+			}
+
+			.anybodyImage:before {
+				font-family: 'WA-theme-icons';
+				content: '\e606';
+			}
+
+			.otherMembersImage:before {
+				font-family: 'FontAwesome';
+				content: '\f0c0';
+			}
+
+			.nobodyImage:before {
+				font-family: 'WA-theme-icons';
+				content: '\e611';
+			}
+		}
+	}
+
+	// tab subscription
+	.memberSubscriptionsOuterContainer {
+		padding-bottom: 24px;
+
+		.tdTopicForumSummaryLink {
+			padding: 0 16px 0 0;
+		}
+
+		.labeledImage {
+			display: inline;
+			white-space: nowrap;
+
+			img {
+				position: relative;
+				top: 1px;
+				margin: 0 0 0 8px;
+			}
+		}
+
+		// edit
+		.memberFormCheckBox input[type=checkbox] {
+			margin: 0 8px 0 0;
+		}
+
+		.forumSubscriptionBlock {
+			margin: -4px 0 0;
+		}
+
+		.forumSubscriptionBlockCheckbox {
+			display: inline-block;
+		}
+
+		.forumSubscriptionBlockDropDown {
+			display: inline-block;
+		}
+
+		.forumSubscriptionBlockLabel {
+			display: inline-block;
+			margin-left: 16px;
+			margin-bottom: 16px;
+		}
+
+		select {
+			width: auto;
+		}
+	}
+}
+
+/* WaGadgetContactProfileStatePhotoGallery */
+/******************************************************************************/
+.WaGadgetContactProfileStatePhotoGallery {
+
+	// album list
+	[id*=idButtonsContainer] {
+		margin-bottom: 32px;
+
+		// button
+		input.typeButton {
+			.functionalButton;
+			margin-right: 24px;
+		}
+	}
+
+	.emptyGalleryPanelInnerDiv {
+		.noAlbumsLocalizeContainer {
+			margin: 0 0 1em;
+		}
+
+		.addAlbumButton {
+			.functionalButton;
+		}
+	}
+
+	// photo list
+	#idMemberPhotoAlbumContainer {
+		#idPhotoAlbumHeaderContainer {
+			.clearfix;
+			margin-bottom: 32px;
+
+			.pageBackContainer {
+				float: left;
+				padding: 0;
+			}
+
+			.buttonsInTitleContainer {
+				float: right;
+
+				// control buttons
+				input.typeButton {
+					.functionalButton;
+					margin-left: 24px;
+				}
+			}
+		}
+
+		#idPhotoAlbumTitleMainContainer {
+			.clearfix;
+			margin: 0 0 30px;
+
+			.titleLeftContainer {
+				float: left;
+
+				// album name
+				h1 {
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			.titleRightContainer {
+				float: right;
+			}
+		}
+
+		#idPhotoAlbumMainContainer {
+			.descriptionContainer {
+				margin-bottom: 30px;
+			}
+
+			.emptyAlbumPanel,
+			.emptyAlbumPanelNoDescription {
+				.noPhotosLocalizeContainer {
+					margin: 0 0 1em;
+				}
+
+				input.typeButton {
+					.functionalButton;
+				}
+			}
+		}
+	}
+
+	// current photo
+	#idPhotoHeaderContainer {
+		.clearfix;
+		margin: 0 0 30px;
+
+		.pageBackContainer {
+			float: left;
+
+			a {
+				white-space: nowrap;
+			}
+
+			a:before {
+				display: inline-block;
+				margin: 0 7px 0 0;
+				font-family: 'WA-theme-icons';
+				font-size: 12px;
+				content: '\e62d';
+				text-decoration: underline;
+			}
+
+			a:before {
+				text-decoration: none;
+			}
+		}
+
+		.buttonsInTitleContainer {
+			float: right;
+
+			input.typeButton {
+				.functionalButton;
+			}
+
+			input.typeButton + input.typeButton {
+				margin: 0 0 0 16px;
+			}
+		}
+	}
+
+	#idPhotoMainContainer {
+		.pageTitleOuterContainer {
+			margin: 0 0 30px;
+
+			h1 {
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		#idMenuHeaderContainer {
+			.clearfix;
+			margin: 0 0 30px;
+
+			.linkContainer {
+				display: inline-block;
+			}
+
+			.linkContainer + .linkContainer {
+				margin: 0 0 0 24px;
+			}
+
+			.linkContainer:first-child *:before {
+				display: inline-block;
+				margin: 0 8px 0 0;
+				font-family: 'WA-theme-icons';
+				font-size: 12px;
+				content: '\e62e';
+				text-decoration: underline;
+			}
+
+			.linkContainer:first-child *:before {
+				text-decoration: none;
+			}
+
+			.linkContainer + .linkContainer *:after {
+				display: inline-block;
+				margin: 0 0 0 8px;
+				font-family: 'WA-theme-icons';
+				font-size: 12px;
+				content: '\e62c';
+				text-decoration: underline;
+			}
+
+			.linkContainer + .linkContainer *:after {
+				text-decoration: none;
+			}
+		}
+
+		#idPhotoMainSectionContainer {
+			margin: 0 0 24px;
+
+			#idImageContainer {
+				text-align: center;
+			}
+
+			img {
+				display: inline-block;
+				max-width: 100%;
+				vertical-align: top;
+			}
+
+			#idCaptionContainer {
+				width: 900px;
+				max-width: 100%;
+				margin: 24px auto 0;
+			}
+		}
+	}
+
+	.footerContainer {
+		margin: 0;
+		text-align: center;
+
+		// link "Add caption" or "Edit"
+		a.jsRequired {
+			.functionalButton;
+			display: inline-block !important;
+		}
+
+		.editCaptionTextBox {
+			box-sizing: border-box;
+			width: 900px;
+			max-width: 100%;
+			height: 100px;
+			margin: 0 0 24px;
+			vertical-align: top;
+		}
+
+		input.typeButton {
+			.functionalButton;
+		}
+
+		input.typeButton + input.typeButton {
+			margin: 0 0 0 16px;
+		}
+	}
+}
+
+/* WaGadgetContactProfileStateFinances */
+/* WaGadgetContactProfileStateDonations */
+/******************************************************************************/
+.WaGadgetContactProfileStateFinances,
+.WaGadgetContactProfileStateDonations {
+
+	// invoices and payments
+	.genericList {
+		margin: 30px 0 0;
+	}
+
+	// search controls
+	.genericListHeaderContainer {
+		margin: 0 0 24px;
+
+		table {
+			margin: 0;
+			border: 0;
+			border-collapse: collapse;
+
+			td {
+				vertical-align: middle;
+			}
+
+			td.searchBox {
+				width: 30%;
+
+				span {
+					padding-right: 16px;
+				}
+			}
+
+			td.infoContainer {
+				width: 17%;
+
+				#idRecordsFound {
+					margin-left: 8px;
+				}
+
+				em {
+					font-style: normal;
+					font-weight: bold;
+				}
+			}
+
+			td.reloadContainer {
+				width: 10%;
+			}
+
+			td.messages {
+				width: 10%;
+			}
+
+			td.pagingContainerTitle {
+				width: 8%;
+				text-align: right;
+
+				span {
+					padding-right: 8px;
+				}
+			}
+
+			td.pagingContainer {
+				width: 10%;
+				text-align: right;
+
+				#idPagingContainerTop {
+					display: inline;
+				}
+			}
+
+			td > * {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	// invoices table
+	.genericListTable {
+		td.lastTd,
+		th.lastTh {
+			text-align: right;
+		}
+
+		th.lastTh {
+			padding-right: 0;
+		}
+
+		input[type='checkbox'] {
+			margin-top: 5px;
+			margin-left: 8px;
+		}
+
+		input[type='submit'] {
+			.functionalButton;
+			margin-left: 12px;
+			margin-bottom: 8px;
+		}
+
+		input.button,
+		input.smallButton {
+			width: 0;
+			// padding: 14px 18px 15px;
+			overflow: visible;
+			margin-bottom: 0;
+		}
+
+		input.button[class],
+		input.smallButton[class] {
+			width: auto;
+		}
+
+		input.button:first-child,
+		input.smallButton:first-child {
+			margin-left: 0;
+		}
+
+		th {
+			&.firstTh {
+				width: 25%;
+			}
+
+			&.invoiceNumber {
+				width: 45%;
+			}
+
+			&.status {
+				width: 30%;
+				white-space: nowrap;
+			}
+		}
+
+		td {
+			div:first-child {
+				// margin-bottom: 8px;
+			}
+
+			div.checkbox {
+				margin-right: 0;
+				overflow: hidden;
+
+				input,
+				span {
+					float: right;
+				}
+			}
+
+			div {
+				clear: both;
+				margin-right: 25px;
+			}
+
+			div.buttonContainer {
+				margin-right: 0;
+			}
+
+			div.alert {
+				color: red;
+				font-weight: bold;
+			}
+
+			div.alertThin {
+				color: red;
+				font-weight: normal;
+			}
+
+			&.pending {
+				span {
+					// display: inline-block;
+					margin-left: -20px;
+					padding-left: 20px;
+					background: url('<$StaticModel.ThemeUrl$>/images/pending.gif') no-repeat left 2px;
+				}
+			}
+
+			&.firstTd {
+				span {
+					white-space: nowrap;
+				}
+			}
+
+			span.nowrap {
+				white-space: nowrap;
+			}
+		}
+
+		tr {
+			&.hiddenRow {
+				display: none;
+			}
+		}
+
+		tr.bottomRow {
+			background: @Table-Bg;
+
+			td {
+				background: @Table-Bg;
+			}
+		}
+
+		tr.noLine:hover,
+		tr.noLine:hover + tr {
+			background: @Table-Row-Highlight-Bg;
+			color: @Table-Row-Highlight-Color;
+
+			td {
+				background: @Table-Row-Highlight-Bg;
+			}
+
+			a {
+				color: @Table-Row-Highlight-Color;
+			}
+		}
+
+		td {
+			.grayedOut {
+				color: #a4a4a4;
+			}
+		}
+
+		tr {
+			&.grayedOut,
+			&.grayedOut a {
+				color: #a4a4a4;
+			}
+
+			&.grayedOutBk {
+				td {
+					background-color: #ead0d2;
+				}
+			}
+		}
+
+		.memberDirectoryBottomRow {
+			padding-bottom: 15px;
+			overflow: hidden;
+			// white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+/* WaGadgetFinDocument */
+/******************************************************************************/
+.WaGadgetFinDocument {
+	.sysFormatSmaller;
+
+	// invoices details
+	.paymentDetailsForm {
+		h1 {
+			margin: 0 0 24px;
+			padding: 0;
+		}
+
+		.warning,
+		.warning span {
+			color: red !important;
+			font-weight: bold;
+		}
+
+		.grayedOut {
+			color: #777;
+			font-weight: normal;
+		}
+
+		.totals {
+			float: right;
+			padding-right: 16px;
+		}
+
+		.emptyComment {
+			width: 200px;
+			text-align: left;
+		}
+
+		.membersTable {
+			.memberDirectoryColumn1 {
+				width: 85%;
+			}
+
+			.right {
+				text-align: right;
+			}
+		}
+	}
+}
+
+/* mode: WaGadgetContactProfileStateFinances ( anonymous payment ) */
+/******************************************************************************/
+.WaGadgetAnonymousPaymentProfile {
+	.sysFormatSmaller;
+
+	h1 {
+		margin: 0 0 0.75em;
+	}
+
+	.subTitle {
+		margin: 1em 0;
+	}
+
+	.topButtonsOuterContainer {
+		margin: 1em 0;
+		text-align: right;
+	}
+
+	#idRecordsFound {
+		margin-left: 16px;
+	}
+}
+
+
+/* mode: WaGadgetContactProfileStateDonations ( recurring donations and donations list ) */
+/*****************************************************************************************************/
+
+.WaGadgetContactProfileStateDonations
+{
+  .donationTabItemsContainer
+  {
+    margin-bottom: 15px;
+  }
+
+  .donationInProgress:before
+  {
+    font-family: 'WA-theme-icons';
+    margin-right: 5px;
+    content: '\E609';
+    color: red;
+  }
+
+  #donationItems td
+  {
+    cursor: pointer;
+  }
+}
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device M
+@media screen and (max-width: @Device-M-MaxWidth) {
+	.WaGadgetContactProfileStateFinances,
+    .WaGadgetContactProfileStateDonations {
+		.genericListHeaderContainer {
+			table,
+			table tbody,
+			table tbody tr {
+				display: block;
+			}
+
+			table {
+				td {
+					display: inline-block;
+
+					&.searchBox {
+						width: auto;
+
+						input.typeText {
+							width: 100px;
+						}
+					}
+
+					&.infoContainer {
+						width: auto;
+						padding-left: 16px;
+					}
+
+					&.messages,
+					&.pagingContainerTitle,
+					&.reloadContainer {
+						width: auto;
+						text-align: left;
+					}
+
+					&.pagingContainer {
+						width: auto;
+						text-align: left;
+
+						#idPagingContainerTop {
+							select {
+								width: 135px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.genericListTable {
+			table-layout: fixed;
+
+			input.button:first-child,
+			input.smallButton:first-child {
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	.WaGadgetContactProfileStatePhotoGallery {
+		#idPhotoMainContainer {
+			#idPhotoMainSectionContainer {
+				#idImageContainer {
+					img {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.WaGadgetContactProfile {
+
+		// tabs
+		.memberDetailsTabsOuterContainer {
+			ul.memberDetailsTabMenu {
+				li {
+					display: block;
+					margin: 8px 0;
+				}
+			}
+		}
+
+		#eventRegistrations {
+			.genericListHeaderContainer {
+				margin-bottom: 24px;
+
+				.filter,
+				.eventSearch,
+				.infoContainer div {
+					display: block;
+					margin-top: 8px;
+				}
+			}
+
+			.genericListTable {
+				th.rightAlign,
+				td.rightAlign {
+					text-align: left;
+				}
+			}
+
+			.buttonContainer {
+				input:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.WaGadgetContactProfileStateFinances,
+    .WaGadgetContactProfileStateDonations {
+		.genericListHeaderContainer {
+			table,
+			table tbody,
+			table tbody tr {
+				display: block;
+			}
+
+			table {
+				td {
+					display: block;
+					margin-top: 8px;
+
+					&.searchBox {
+						width: auto;
+						margin-right: 16px;
+
+						input.typeText {
+							width: 100px;
+						}
+					}
+
+					&.infoContainer {
+						width: auto;
+						padding-left: 0;
+					}
+
+					&.messages,
+					&.pagingContainerTitle,
+					&.reloadContainer {
+						width: auto;
+						text-align: left;
+					}
+
+					&.pagingContainer {
+						width: auto;
+						text-align: left;
+
+						#idPagingContainerTop {
+							select {
+								width: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.genericListTable {
+			th {
+				&.firstTh,
+				&.invoiceNumber,
+				&.lastTh,
+				&.status {
+					display: block;
+					width: auto;
+					text-align: left;
+				}
+			}
+
+			td {
+				&.pending {
+					span {
+						margin-left: 0;
+					}
+				}
+
+				div.checkbox input,
+				div.checkbox span {
+					float: none;
+				}
+
+				div.checkbox input {
+					margin-left: 0;
+					margin-right: 8px;
+				}
+			}
+
+			td.rightAlign {
+				text-align: left;
+			}
+
+			input.button:first-child,
+			input.smallButton:first-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.WaGadgetContactProfileStatePhotoGallery {
+		#idMemberPhotoAlbumContainer {
+			#idPhotoAlbumHeaderContainer {
+				.pageBackContainer {
+					margin: 0 0 24px;
+				}
+
+				.buttonsInTitleContainer {
+					input.typeButton {
+						margin-right: 16px;
+						margin-bottom: 16px;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.WaGadgetContactProfileStatePhotoGallery {
+		#idPhotoHeaderContainer {
+			.pageBackContainer {
+				padding: 0 0 24px;
+			}
+		}
+
+		#idPhotoMainContainer {
+			#idMenuHeaderContainer {
+				margin-bottom: 24px;
+			}
+
+			#idPhotoMainSectionContainer {
+				#idImageContainer {
+					padding-bottom: 15px;
+
+					img {
+						max-width: 100%;
+					}
+				}
+
+				#idCaptionContainer {
+					width: 100%;
+					margin-bottom: 24px;
+				}
+			}
+		}
+
+		.footerContainer {
+			textarea.editCaptionTextBox {
+				width: 100%;
+				margin-bottom: 24px;
+			}
+		}
+	}
+}
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.WaGadgetContactProfileStateMain {
+
+		// tab profile
+		.actionButtonContainer {
+			margin: 0;
+		}
+
+		#socialLoginContainer {
+			float: left;
+		}
+
+		#socialLoginContainer:last-child {
+			float: right;
+		}
+
+		.profileDetailsOuterContainer {
+			#memberFieldTable {
+				.memberFieldHeadingTitle {
+					display: none;
+				}
+			}
+		}
+
+		#subscriptionsList {
+			.fieldContainer {
+				margin: 24px 0;
+			}
+		}
+	}
+
+	.WaGadgetContactProfile {
+		.topButtonsOuterContainer {
+			a.memberDirectoryDetailsLink {
+				display: block;
+				margin-top: 16px;
+			}
+		}
+
+		ul.albumsContainerUL {
+			text-align: center;
+		}
+	}
+
+	.WaGadgetContactProfileStatePhotoGallery {
+		#idMemberPhotoAlbumContainer {
+			#idPhotoAlbumMainContainer {
+				.photosContainer {
+					ul.photosContainerUL {
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		#idPhotoMainContainer {
+			#idPhotoMainSectionContainer {
+				#idCaptionContainer {
+					font-size: 14px;
+					line-height: 1.43;
+				}
+			}
+		}
+
+		.footerContainer {
+			textarea.editCaptionTextBox {
+				font-size: 14px;
+				line-height: 1.43;
+			}
+		}
+	}
+}

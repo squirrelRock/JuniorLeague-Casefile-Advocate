@@ -1,0 +1,79 @@
+.WaGadgetNavigationLinks {
+	ul.orientationHorizontal {
+		min-height: 16px;
+		margin: 0;
+		padding: 0;
+		border: none;
+		list-style: none;
+
+		// level 1
+		li {
+			.ie7-inline-block();
+			display: inline-block;
+			padding: 0 0 10px;
+			vertical-align: top;
+
+			& + li:before {
+				display: inline-block;
+				margin: 0 0.2em 0 0.3em;
+				content: '|';
+			}
+		}
+
+		// level 2
+		ul {
+			margin: 0 0 0 1em;
+			padding: 0 0 0;
+			list-style: none;
+
+			li {
+				display: block;
+				padding: 0 0 0;
+
+				& + li:before {
+					display: none;
+					margin: 0;
+				}
+			}
+		}
+		
+		// level 3
+		ul ul {
+			margin: 0 0 0 0;
+		}
+	}
+
+	ul.orientationVertical {
+		min-height: 16px;
+		margin: 0 0 0 18px;
+		padding: 0;
+		list-style: disc;
+
+		li {
+			padding: 0 0 0;
+		}
+
+		ul {
+			margin: 0 0 0 15px;
+			padding: 0 0 0;
+			list-style: disc;
+		}
+	}
+
+}
+
+.WaGadgetNavigationLinks.gadgetStyleNone {
+	ul.orientationHorizontal {
+		li {
+			& + li:before {
+				color: @Typography-Link-Color;
+			}
+		}
+	}
+
+	ul.orientationVertical {
+		li {
+			color: @Typography-Link-Color;
+		}
+	}
+}

@@ -1,0 +1,84 @@
+/* page navigation (1 2 3 ...) */
+/*****************************************************************************/
+.pagerOuterContainer {
+	margin: 0 0 24px 0;
+	padding: 0;
+	font-family: @Lato-FontFamily;
+	font-size: 16px;
+	line-height: 24px;
+
+	.bound,
+	.near,
+	.linkCurrent,
+	a, a:link {
+		display: inline-block;
+		height: 24px;
+		margin: 0 3px;
+		padding: 0;
+		background: none !important;
+		color: @Pager-Link-Color;
+		vertical-align: top;
+		text-align: left;
+		text-decoration: none;
+	}
+
+	a, a:link {
+		text-decoration: underline;
+	}
+
+	a:hover {
+		color: @Pager-Link-Hover-Color;
+		text-decoration: none;
+	}
+
+	.linkCurrent {
+		color: @Pager-Color;
+	}
+
+	.bound,
+	.near {
+		position: relative;
+		width: 16px;
+		margin: 0 !important;
+		overflow: hidden;
+		text-indent: -1000px;
+	}
+
+	.bound:before,
+	.near:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		font-family: 'FontAwesome';
+		font-size: 16px;
+		text-align: center;
+		text-indent: 0;
+		text-decoration: underline;
+	}
+
+	.bound:before,
+	.near:before {
+		text-decoration: none;
+	}
+
+	.bound:first-child:before { content: "\f100"; }
+
+	.bound:first-child + .near:before { content: "\f104"; }
+
+	.linkCurrent ~ .near:before { content: "\f105"; }
+
+	.linkCurrent ~ .bound:before { content: "\f101"; }
+
+	span.bound,
+	span.near {
+		color: @Pager-Grayed-Color;
+	}
+}
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.pagerOuterContainer {
+		margin-bottom: 16px;
+	}
+}

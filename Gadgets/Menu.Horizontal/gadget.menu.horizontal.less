@@ -1,0 +1,677 @@
+.WaGadgetMenuHorizontal.HorizontalMenuStyle001 {
+	overflow: visible;
+
+	.menuBackground {
+		display: none;
+	}
+
+	.horizontalMenuFirstLevel() {
+		position: relative;
+		display: table-cell;
+		margin: 0;
+		padding: 0;
+		vertical-align: top;
+
+		& > .item {
+			position: relative;
+		}
+
+		& > .item > a {
+			position: relative;
+			display: block;
+			height: 23px;
+			padding: 8px 16px;
+			background: inherit;
+			color: @HorizontalMenu-Light-FirstLevel-Links-Color;
+			font: bold 16px/23px @Lato-FontFamily;
+			white-space: nowrap;
+			vertical-align: top;
+			text-align: left;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		& > .item:first-child > a {
+			padding-left: 0;
+		}
+
+		& > .item > a > span {
+			position: relative;
+			display: block;
+			height: 23px;
+			padding: 0;
+		}
+
+		& > .item:hover > a {
+			background: @HorizontalMenu-Light-FirstLevel-Link-Bg-Hover;
+			color: @HorizontalMenu-Light-FirstLevel-Link-Color-Hover;
+		}
+
+		// phantom element
+		&.phantom {
+			width: 60px;
+		}
+
+		&.phantom > .item > a {
+			text-align: center;
+			padding-right: 0;
+		}
+
+		&.phantom > .item > a span {
+			position: relative;
+			min-width: 20px;
+			overflow: hidden;
+			text-indent: -1000px;
+		}
+
+		&.phantom > .item > a span:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 23px;
+			font: 23px/23px 'FontAwesome';
+			letter-spacing: -2px;
+			text-align: right;
+			text-indent: 0;
+			content: '\f0c9';
+		}
+
+		// selected element
+		&.sel > .item > a {
+			color: @HorizontalMenu-Light-FirstLevel-Link-Selected-Color;
+		}
+
+		&.sel > .item:hover > a {
+			color: @HorizontalMenu-Light-FirstLevel-Link-Color-Hover;
+		}
+
+		// mark if has sublevel
+		&.dir > .item > a span:after {
+			position: relative;
+			// top: -2px;
+			z-index: 3;
+			display: inline-block;
+			width: auto;
+			height: 23px;
+			margin: 0 0 0 7px;
+			font: 23px/23px 'FontAwesome';
+			vertical-align: top;
+			-webkit-transition: -webkit-transform @Menu-TransitionTime ease-out 0s;
+			-moz-transition: -moz-transform @Menu-TransitionTime ease-out 0s;
+			-ms-transition: -ms-transform @Menu-TransitionTime ease-out 0s;
+			-o-transition: -o-transform @Menu-TransitionTime ease-out 0s;
+			transition: transform @Menu-TransitionTime ease-out 0s;
+			content: '\f105';
+		}
+
+		&.dir > .item > a:hover span:after {
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+
+		&.dir > .item:hover > a span:after {
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+	}
+
+	.horizontalMenuSubLevel() {
+		margin: 0;
+
+		& > .item {
+			position: relative;
+		}
+
+		& > .item > a {
+			position: relative;
+			display: block;
+			width: auto;
+			height: auto;
+			margin: 0;
+			padding: 4px 16px;
+			color: @HorizontalMenu-Light-SecondLevel-Links-Color;
+			font: normal 16px/1.5 @Lato-FontFamily;
+			text-align: left;
+			text-decoration: none;
+			text-transform: none;
+		}
+
+		& > .item > a > span {
+			display: inline-block;
+			width: 245px;
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		& > .item:hover > a {
+			background: @HorizontalMenu-Light-SecondLevel-Link-Bg-Hover;
+			color: @HorizontalMenu-Light-SecondLevel-Link-Color-Hover;
+		}
+
+		// selected
+		&.sel > .item > a {
+			color: @HorizontalMenu-Light-SecondLevel-Link-Selected-Color;
+		}
+
+		&.sel > .item:hover > a {
+			color: @HorizontalMenu-Light-SecondLevel-Link-Color-Hover;
+		}
+
+		// mark if has sublevel
+		&.dir > .item > a:after {
+			position: relative;
+			top: 4px;
+			right: -10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f105';
+		}
+	}
+
+	.menuInner {
+		position: relative;
+		margin: 0;
+		background: @HorizontalMenu-Light-FirstLevel-Bg-Color;
+
+		// level 1
+		ul.firstLevel {
+			display: table;
+			margin: 0;
+			padding: 0;
+			background: @HorizontalMenu-Light-FirstLevel-Bg-Color;
+			text-align: left;
+			list-style: none;
+			zoom: 1;
+		}
+
+		ul.firstLevel.adapted {
+			width: 100%;
+		}
+
+		ul.firstLevel > li {
+			.horizontalMenuFirstLevel();
+		}
+
+		// level 2
+		ul ul {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 40000;
+			display: block;
+			visibility: hidden;
+			box-sizing: border-box;
+			width: 0;
+			min-width: 0;
+			height: 0;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background: @HorizontalMenu-Light-SecondLevel-Bg-Color;
+			border: 1px solid @HorizontalMenu-Light-Border-Color;
+			opacity: 0;
+			list-style: none;
+			-webkit-transition: opacity @Menu-TransitionTime;
+			-moz-transition: opacity @Menu-TransitionTime;
+			-ms-transition: opacity @Menu-TransitionTime;
+			-o-transition: opacity @Menu-TransitionTime;
+			transition: opacity @Menu-TransitionTime;
+		}
+
+		ul ul:before {
+			position: absolute;
+			// top: -2px;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 3px;
+			content: '';
+		}
+
+		ul ul li {
+			.horizontalMenuSubLevel();
+		}
+
+		// level 3
+		ul ul ul {
+			position: absolute;
+			top: -12px;
+			left: 100%;
+			margin: 0;
+		}
+
+		ul ul ul:before {
+			position: absolute;
+			top: 0;
+			left: -2px;
+			display: block;
+			width: 3px;
+			height: 100%;
+			content: '';
+		}
+
+		// hover
+		li > .item:hover > ul {
+			display: block;
+			visibility: visible;
+			width: auto;
+			min-width: 300px;
+			height: auto;
+			overflow: visible;
+			opacity: 1;
+		}
+
+		.firstLevel > li.last-child ul,
+		.firstLevel > li:last-child ul {
+			right: 0;
+			left: auto;
+		}
+
+		.firstLevel > li.last-child ul li .item a,
+		.firstLevel > li:last-child ul li .item a {
+			text-align: right;
+		}
+
+		.firstLevel > li:last-child ul li.dir > .item > a:after,
+		.firstLevel > li:last-child ul li.dir > .item > a:after {
+			display: none;
+		}
+
+		.firstLevel > li.last-child ul li.dir > .item > a:before,
+		.firstLevel > li:last-child ul li.dir > .item > a:before {
+			position: relative;
+			top: 4px;
+			right: 10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f104';
+		}
+
+		.firstLevel > li.last-child ul ul,
+		.firstLevel > li:last-child ul ul {
+			top: -12px;
+			right: 100%;
+			left: auto;
+			margin: 0;
+		}
+
+		.firstLevel > li.last-child ul ul:before,
+		.firstLevel > li:last-child ul ul:before {
+			position: absolute;
+			top: 0;
+			right: -2px;
+			left: auto;
+			display: block;
+			width: 3px;
+			height: 100%;
+			content: '';
+		}
+	}
+
+	.stickyMenu {
+		position: relative;
+
+		&.active {
+			left: 0;
+			z-index: 1000;
+			width: 100%;
+			background: @HorizontalMenu-Light-SecondLevel-Bg-Color;
+			border-bottom: 1px solid @HorizontalMenu-Light-Border-Color;
+			box-sizing: border-box;
+
+			ul.firstLevel > li > .item > a {
+				padding: 16px 16px;
+			}
+		}
+	}
+}
+
+.WaGadgetMenuHorizontal.HorizontalMenuStyle002 {
+	overflow: visible;
+
+	.menuBackground {
+		display: none;
+	}
+
+	.horizontalMenuFirstLevel() {
+		position: relative;
+		display: table-cell;
+		margin: 0;
+		padding: 0;
+		vertical-align: top;
+
+		& > .item {
+			position: relative;
+		}
+
+		& > .item > a {
+			position: relative;
+			display: block;
+			height: 23px;
+			padding: 8px 16px;
+			background: inherit;
+			color: @HorizontalMenu-Dark-FirstLevel-Links-Color;
+			font: bold 16px/23px @Lato-FontFamily;
+			white-space: nowrap;
+			vertical-align: top;
+			text-align: left;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		& > .item > a > span {
+			position: relative;
+			display: block;
+			height: 23px;
+			padding: 0;
+		}
+
+		& > .item:hover > a {
+			background: @HorizontalMenu-Dark-FirstLevel-Link-Bg-Hover;
+			color: @HorizontalMenu-Dark-FirstLevel-Link-Color-Hover;
+		}
+
+		// phantom element
+		&.phantom {
+			width: 60px;
+		}
+
+		&.phantom > .item > a {
+			text-align: center;
+		}
+
+		&.phantom > .item > a span {
+			position: relative;
+			min-width: 20px;
+			overflow: hidden;
+			text-indent: -1000px;
+		}
+
+		&.phantom > .item > a span:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 23px;
+			font: 23px/23px 'FontAwesome';
+			letter-spacing: -2px;
+			text-align: right;
+			text-indent: 0;
+			content: '\f0c9';
+		}
+
+		// selected element
+		&.sel > .item > a {
+			color: @HorizontalMenu-Dark-FirstLevel-Link-Selected-Color;
+		}
+
+		&.sel > .item:hover > a {
+			color: @HorizontalMenu-Dark-FirstLevel-Link-Color-Hover;
+		}
+
+		// mark if has sublevel
+		&.dir > .item > a span:after {
+			position: relative;
+			// top: -2px;
+			z-index: 3;
+			display: inline-block;
+			width: auto;
+			height: 23px;
+			margin: 0 0 0 7px;
+			font: 23px/23px 'FontAwesome';
+			vertical-align: top;
+			-webkit-transition: -webkit-transform @Menu-TransitionTime ease-out 0s;
+			-moz-transition: -moz-transform @Menu-TransitionTime ease-out 0s;
+			-ms-transition: -ms-transform @Menu-TransitionTime ease-out 0s;
+			-o-transition: -o-transform @Menu-TransitionTime ease-out 0s;
+			transition: transform @Menu-TransitionTime ease-out 0s;
+			content: '\f105';
+		}
+
+		&.dir > .item > a:hover span:after {
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+
+		&.dir > .item:hover > a span:after {
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+	}
+
+	.horizontalMenuSubLevel() {
+		margin: 0;
+
+		& > .item {
+			position: relative;
+		}
+
+		& > .item > a {
+			position: relative;
+			display: block;
+			width: auto;
+			height: auto;
+			margin: 0;
+			padding: 4px 16px;
+			color: @HorizontalMenu-Dark-SecondLevel-Links-Color;
+			font: normal 16px/1.5 @Lato-FontFamily;
+			text-align: left;
+			text-decoration: none;
+			text-transform: none;
+		}
+
+		& > .item > a > span {
+			display: inline-block;
+			width: 245px;
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		& > .item:hover > a {
+			background: @HorizontalMenu-Dark-SecondLevel-Link-Bg-Hover;
+			color: @HorizontalMenu-Dark-SecondLevel-Link-Color-Hover;
+		}
+
+		// selected
+		&.sel > .item > a {
+			color: @HorizontalMenu-Dark-SecondLevel-Link-Selected-Color;
+		}
+
+		&.sel > .item:hover > a {
+			color: @HorizontalMenu-Dark-SecondLevel-Link-Color-Hover;
+		}
+
+		// mark if has sublevel
+		&.dir > .item > a:after {
+			position: relative;
+			top: 4px;
+			right: -10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f105';
+		}
+	}
+
+	.menuInner {
+		position: relative;
+		margin: 0;
+		background: @HorizontalMenu-Dark-FirstLevel-Bg-Color;
+
+		// level 1
+		ul.firstLevel {
+			display: table;
+			margin: 0;
+			padding: 0;
+			background: @HorizontalMenu-Dark-FirstLevel-Bg-Color;
+			text-align: left;
+			list-style: none;
+			zoom: 1;
+		}
+
+		ul.firstLevel.adapted {
+			width: 100%;
+		}
+
+		ul.firstLevel > li {
+			.horizontalMenuFirstLevel();
+		}
+
+		// level 2
+		ul ul {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 40000;
+			display: block;
+			visibility: hidden;
+			box-sizing: border-box;
+			width: 0;
+			min-width: 0;
+			height: 0;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background: @HorizontalMenu-Dark-SecondLevel-Bg-Color;
+			border: 1px solid @HorizontalMenu-Dark-Border-Color;
+			opacity: 0;
+			list-style: none;
+			-webkit-transition: opacity @Menu-TransitionTime;
+			-moz-transition: opacity @Menu-TransitionTime;
+			-ms-transition: opacity @Menu-TransitionTime;
+			-o-transition: opacity @Menu-TransitionTime;
+			transition: opacity @Menu-TransitionTime;
+		}
+
+		ul ul:before {
+			position: absolute;
+			// top: -2px;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 3px;
+			content: '';
+		}
+
+		ul ul li {
+			.horizontalMenuSubLevel();
+		}
+
+		// level 3
+		ul ul ul {
+			position: absolute;
+			top: -12px;
+			left: 100%;
+			margin: 0;
+		}
+
+		ul ul ul:before {
+			position: absolute;
+			top: 0;
+			left: -2px;
+			display: block;
+			width: 3px;
+			height: 100%;
+			content: '';
+		}
+
+		// hover
+		li > .item:hover > ul {
+			display: block;
+			visibility: visible;
+			width: auto;
+			min-width: 300px;
+			height: auto;
+			overflow: visible;
+			opacity: 1;
+		}
+
+		.firstLevel > li.last-child ul,
+		.firstLevel > li:last-child ul {
+			right: 0;
+			left: auto;
+		}
+
+		.firstLevel > li.last-child ul li .item a,
+		.firstLevel > li:last-child ul li .item a {
+			text-align: right;
+		}
+
+		.firstLevel > li:last-child ul li.dir > .item > a:after,
+		.firstLevel > li:last-child ul li.dir > .item > a:after {
+			display: none;
+		}
+
+		.firstLevel > li.last-child ul li.dir > .item > a:before,
+		.firstLevel > li:last-child ul li.dir > .item > a:before {
+			position: relative;
+			top: 4px;
+			right: 10px;
+			z-index: 3;
+			font: 23px/23px 'FontAwesome';
+			content: '\f104';
+		}
+
+		.firstLevel > li.last-child ul ul,
+		.firstLevel > li:last-child ul ul {
+			top: -12px;
+			right: 100%;
+			left: auto;
+			margin: 0;
+		}
+
+		.firstLevel > li.last-child ul ul:before,
+		.firstLevel > li:last-child ul ul:before {
+			position: absolute;
+			top: 0;
+			right: -2px;
+			left: auto;
+			display: block;
+			width: 3px;
+			height: 100%;
+			content: '';
+		}
+	}
+
+	.stickyMenu {
+		position: relative;
+
+		&.active {
+			left: 0;
+			z-index: 1000;
+			width: 100%;
+			background: @HorizontalMenu-Dark-SecondLevel-Bg-Color;
+			border-bottom: 1px solid @HorizontalMenu-Dark-Border-Color;
+			box-sizing: border-box;
+
+			ul.firstLevel > li > .item > a {
+				padding: 16px 16px;
+			}
+		}
+	}
+}
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	body .layoutMain {
+		.WaGadgetMenuHorizontal {
+			display: none;
+		}
+	}
+}

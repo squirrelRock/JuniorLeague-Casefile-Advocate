@@ -1,0 +1,371 @@
+.main-nav-gadget {
+    background-color: #BF1E2E !important;
+    color: white !important;    
+}
+
+.custom-menu-deepRed {
+    background-color: #BF1E2E !important;
+    color: white !important;  
+}
+
+#id_2rts5Rh {
+    background-color: #BF1E2E !important;
+    color: white !important;    
+}
+
+#id_Bs5p1uw {
+    background-color: white !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: xx-large !important;    
+}
+
+#id_6PFK6Xv {
+    background-color: #BF1E2E !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: xx-large !important;    
+}
+
+
+
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ebebeb;
+           
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+       
+        .headline {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #BF1E2E; /* Deep Red */
+        }
+
+        /* the row layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch; 
+            margin-bottom: 40px;
+        }
+
+        .image-col {
+            width: 40%;
+            padding: 0;
+        }
+
+        /* 2 background colors-alternating text columnss*/
+        .text-col {
+            width: 60%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            color: white; 
+        }
+
+        .text-col.deep-red {
+            background-color: #BF1E2E; /* Deep Red */
+        }
+
+        .text-col.cranberry {
+            background-color: #A52A2A; /* cranberry */
+        }
+
+       /* ------- */
+      .image-col img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+         background-color: #A52A2A; /* cranberry */
+            display: block;
+        }
+
+        .text-col h2 {
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+            color: white; 
+        }
+
+        .text-col p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+     
+
+.row {
+    display: flex !important; 
+    flex-wrap: nowrap !important;
+    align-items: stretch !important; 
+    justify-content: space-between !important;
+margin: 0 !important;
+    padding: 0 !important;
+}
+
+.image-col, .text-col {
+    display: flex !important;
+    flex-direction: column !important;
+}
+   
+.row {
+    margin-bottom: 0 !important;
+}
+
+
+
+
+   /* mobile - test */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+            .image-col, .text-col {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+/*Public page stuff */
+  /* Homepage */
+.navigate {
+    font-weight: bolder;
+}
+
+hr.solid{
+    border-top: 8px solid #D32A40;
+}
+
+#involve {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.graybar{
+    background-color:#EBEBEB;
+}
+
+.redbar{
+    background-color: #BF1E2E;
+}
+
+#homecal {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* - banner home page  - */
+
+.banner {
+  position: relative;
+  background-image: url('https://juniorleagueofnapasonoma24.wildapricot.org/resources/Pictures/Home_Page_Images/2048px-ATTR-MarkGunn_hotAir_Flickr__Gunn_Shot.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px; 
+  max-height: 500px; 
+  overflow: hidden; 
+}
+
+.banner1 {
+  position: relative;
+  background-image: url('https://juniorleagueofnapasonoma24.wildapricot.org/resources/Pictures/2025_JLNS/Banner_Images/balloon-30logo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px; 
+  max-height: 500px; 
+  overflow: hidden; 
+}
+
+.banner2 {
+  position: relative;
+  background-image: url('https://juniorleagueofnapasonoma24.wildapricot.org/resources/Pictures/2025_JLNS/Banner_Images/__balloons-mage-ok99-8d98295510825ca5ade764068979233%20copy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px; 
+  max-height: 500px; 
+  overflow: hidden; 
+}
+
+.banner3 {
+  position: relative;
+  background-image: url('https://juniorleagueofnapasonoma24.wildapricot.org/resources/Pictures/2025_JLNS/Banner_Images/__balloons-mage-lots-hills-3af1563d7eba3d45e23151b849709512%20copy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px; 
+  max-height: 500px; 
+  overflow: hidden; 
+}
+
+.banner4 {
+  position: relative;
+  background-image: url('https://juniorleagueofnapasonoma24.wildapricot.org/resources/Pictures/2025_JLNS/Banner_Images/2balloons-vineyards.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px; 
+  max-height: 500px; 
+  overflow: hidden; 
+}
+
+.banner5 {
+  position: relative;
+  background-image: url('https://juniorleagueofnapasonoma24.wildapricot.org/resources/Pictures/2025_JLNS/Banner_Images/_balloon-mage2-Greater-4b0dac0d274a781a94c22632c59175c7%20copy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px; 
+  max-height: 500px; 
+  overflow: hidden; 
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 44px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.banner-text {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(1.15rem, 5vw, 2rem); 
+  font-weight: bold;
+  color: rgb(245, 238, 238);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em; 
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.separator {
+  font-size: 0.8em; 
+  padding: 0 0.3em;
+}
+
+#id_1EQhvA6 .menuInner {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*------NAVBAR------ */
+
+
+.navbar {
+  background-image: url("https://juniorleagueofnapasonoma24.wildapricot.org/resources/Pictures/2025_JLNS/whiteGrapes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+  position: relative;
+  z-index: 9999;
+}
+
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  position: relative;
+  margin-right: 15px;
+}
+
+
+.nav-item a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #D32A40;
+  text-decoration: none;
+  border: 2px solid #D32A40;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-item a:hover {
+  background-color: #D32A40;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* drpdwn menu container */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 10000; 
+
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+/* show dropdown on hover */
+.nav-item:hover > .dropdown {
+  display: block;
+}
+
+*/
+.dropdown li {
+  margin: 0;
+}
+
+
+.dropdown li a {
+  padding: 8px 20px;
+  background-color: #fff;
+  color: #D32A40;
+  text-decoration: none;
+  border-bottom: 1px solid #D32A40;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.dropdown li a:hover {
+  background-color: #D32A40;
+  color: #fff;
+}
+
+/*-----END -NAVBAR------ */

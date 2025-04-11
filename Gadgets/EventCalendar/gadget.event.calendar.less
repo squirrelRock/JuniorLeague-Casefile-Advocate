@@ -1,0 +1,1955 @@
+/******************************************************************************/
+/*	WaGadgetEvents                                                            */
+/*		WaGadgetEventsStateList                                               */
+/*		WaGadgetEventsStateDetails                                            */
+/*		WaGadgetEventsStateRegistrationsList                                  */
+/*		WaGadgetEventsStateUndefined                                          */
+/*		WaGadgetEventsStateSelfRegistrationsList                              */
+/*		WaGadgetEventsStateRegistration                                       */
+/*		WaGadgetEventsStateCalendar                                           */
+/******************************************************************************/
+
+.WaGadgetEvents {
+	overflow: visible;
+
+	#idSectionGuestListContainer input[id*="guestList_AddGuest"] {
+		.functionalButton();
+		margin: 10px 5px 0 0;
+	}
+}
+
+/* mode: WaGadgetEventsStateList (Events list) */
+/******************************************************************************/
+.WaGadgetEventsStateList {
+
+	// "Upcoming events" text
+	h3.sectionTitle {
+		.h1;
+		float: left;
+		margin: 0 16px 0 0;
+	}
+
+	h1.pageTitle {
+		float: left;
+		margin: 0;
+		background-color: transparent !important;
+		font-size: 1em;
+
+		a.rssFeedLabel {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			font-size: inherit;
+			vertical-align: top;
+			text-decoration: none;
+		}
+
+		a.rssFeedLabel:before {
+			color: #f26522;
+			font: 23px/36px 'FontAwesome';
+			content: '\f09e';
+			display: inline-block;
+			padding-top: 2px;
+		}
+
+		a.rssFeedLabel img {
+			display: none;
+		}
+	}
+
+	.pageTitleOuterContainer {
+		float: right;
+		margin: 0 0 0 20px;
+		line-height: 36px;
+
+		.pageViewSwitcherContainer {
+			// Switch to Calendar View
+			a {
+				white-space: nowrap;
+			}
+
+			a:before {
+				position: relative;
+				display: inline-block;
+				margin: 0 12px 0 0;
+				font: 16px/1 'WA-theme-icons';
+				text-decoration: underline;
+				content: '\e602';
+			}
+
+			a:before { text-decoration: none; }
+
+			img {
+				display: none;
+			}
+		}
+	}
+
+	// empty events
+	.pageTitleOuterContainer + p {
+		clear: both;
+		margin: 0;
+		padding: 32px 0 0;
+	}
+
+	.boxesList {
+		clear: both;
+		margin: 0;
+		padding: 32px 0 0;
+		list-style: none;
+
+		.boxesListItem {
+			margin: 0;
+			padding: 0;
+		}
+
+		.boxesListItem + .boxesListItem {
+			margin-top: 32px;
+		}
+	}
+
+	.pastEventsOuterContainer {
+		margin: 40px 0 0;
+		padding: 24px 0 0;
+		border-top: 1px solid @EventList-PastEvents-Divider-Color;
+
+		// text "Past events"
+		h3.sectionTitle {
+			.header;
+			float: none;
+			margin: 0 0 16px;
+		}
+
+		table.pastEventsList {
+			margin: 0;
+			padding: 0;
+			border: none;
+			border-collapse: collapse;
+
+			td.left {
+				min-width: 110px;
+				padding: 0 8px 0 0;
+				vertical-align: top;
+				text-align: left;
+				color: @EventList-PastEvents-Color;
+			}
+
+			td.left + td {
+				padding: 0;
+				vertical-align: top;
+				text-align: left;
+			}
+
+			div.hiddenEventIcon {
+				display: inline-block;
+				color: #7c7c7c;
+				font: ~'normal 14px/normal WA-theme-icons';
+			}
+
+			div.hiddenEventIcon:before {
+				position: relative;
+				top: 1px;
+				content: '\e607';
+			}
+		}
+	}
+
+	// block event item
+	.boxOuterContainer {
+		.boxHeaderOuterContainer {
+			margin: 0 0 12px;
+
+			// h2 - name of event
+			h4.boxHeaderTitle {
+				.h3;
+				margin: 0;
+
+				div.hiddenEventIcon {
+					display: inline-block;
+					color: #7c7c7c;
+					font-family: 'WA-theme-icons';
+					font-style: normal;
+					font-weight: normal;
+					font-variant: normal;
+					vertical-align: middle;
+					word-spacing: -0.4em;
+
+					&:before {
+						position: relative;
+						content: '\e607';
+					}
+
+					& + a {
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+
+		.boxBodyOuterContainer {
+			position: relative;
+
+			// &:before {
+			// 	position: absolute;
+			// 	top: 0;
+			// 	bottom: 0;
+			// 	left: 0;
+			// 	z-index: -1;
+			// 	width: 25%;
+			// 	background: @EventList-Information-Bg;
+			// 	content: '';
+			// }
+
+			.boxBodyInfoOuterContainer {
+				float: left;
+				width: 300px;
+
+				.boxBodyInfoContainer {
+					padding: @EventList-Information-Pd;
+					background: @EventList-Information-Bg;
+				}
+
+				// info about event
+				.boxInfoContainer {
+					margin: 0 0 1.5em;
+				}
+
+				.boxActionContainer {
+					text-align: center;
+
+					// a register button
+					input.typeButton {
+						.functionalButton;
+					}
+
+					.infoAlreadyRegistered,
+					.infoRegistrationIsClosed,
+					.infoRegistrationIsNotAvailable {
+						margin: 1.5em 0 0;
+					}
+				}
+			}
+
+			.boxBodyContentOuterContainer {
+				float: right;
+				width: ~'calc(98% - 300px)';
+
+				.boxBodyContentContainer.fixedHeight {
+					position: relative;
+					max-height: 415px;
+					overflow: hidden;
+				}
+			}
+		}
+
+		.boxFooterOuterContainer {
+			margin: 1em 0 0;
+		}
+	}
+}
+
+.WaGadgetEvents {
+	padding: @Gadget-Pd;
+	background: @Gadget-Bg;
+
+	.pageTitle {
+		padding: 0;
+	}
+
+	// info about event
+	.boxInfoContainer {
+		ul.boxInfo {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+				.clearfix;
+				margin: 0;
+				padding: 0 0 6px;
+
+				// header option
+				& > label {
+					float: left;
+					width: 80px;
+					text-align: right;
+					font-weight: bold;
+				}
+
+				& > div {
+					margin: 0 0 0 92px;
+					overflow: hidden; // value option
+
+					strong {
+						font-weight: inherit;
+					}
+				}
+			}
+
+			.eventInfoEndDate,
+			.eventInfoStartDate {
+				padding-bottom: 0;
+			}
+
+			.eventInfoEndTime label,
+			.eventInfoStartTime label {
+				display: none;
+			}
+		}
+	}
+}
+
+/* mode: WaGadgetEventsStateDetails (Events Details) */
+/******************************************************************************/
+.WaGadgetEventsStateDetails {
+	.pageTitleOuterContainer {
+		.clearfix;
+
+		.pageBackContainer {
+			float: left;
+		}
+
+		.pageViewSwitcherOuterContainer {
+			float: right;
+
+			// link "Add to my calendar"
+			a:first-child {
+				display: none;
+			}
+
+			a + a:before {
+				position: relative;
+				display: inline-block;
+				margin: 0 12px 0 0;
+				font: 16px/1 'WA-theme-icons';
+				text-decoration: underline;
+				content: '\e602';
+			}
+
+			a + a:before { text-decoration: none; }
+		}
+
+		.eventsTitleContainer {
+			clear: both;
+			margin: 0 0 12px;
+			padding: 40px 0 0;
+
+			// title - name of event
+			h1 {
+				.h3;
+				margin: 0;
+			}
+		}
+	}
+
+	.boxOuterContainer {
+		.boxBodyInfoOuterContainer {
+			float: left;
+			width: 300px;
+
+			.boxBodyInfoContainer {
+				padding: @EventList-Information-Pd;
+				background: @EventList-Information-Bg;
+
+				// info about event
+				.boxInfoContainer {
+					margin: 0 0 1.5em;
+				}
+
+				.registrationInfoContainer {
+
+					// text "Registration"
+					h4.infoTitle {
+						.h2;
+						margin-top: 0;
+					}
+
+					.infoText {
+						display: none;
+					}
+
+					ul.registrationInfo {
+						margin: 0 0 1em;
+						padding: 0 0 0 30px;
+						list-style: none;
+
+						li {
+							position: relative;
+							margin: 0 0 16px;
+
+							&:before {
+								position: absolute;
+								top: -1px;
+								left: -30px;
+								font-size: 1.08em;
+								content: '•';
+							}
+
+							.regTypeLiLabelImg {
+								margin: 0;
+
+								&:before {
+									position: relative;
+									display: inline-block;
+									margin: 0 5px 0 0;
+									color: #676767;
+									font: 16px/1 'FontAwesome';
+									content: '\f023';
+								}
+							}
+						}
+
+						li:last-child {
+							margin-bottom: 0;
+						}
+
+						li.disabled {
+							.sysFormatGray;
+
+							.regTypeLiLabelImg {
+								&:before {
+									.sysFormatGray;
+								}
+							}
+						}
+					}
+				}
+
+				.regTypeHr {
+					height: 1px;
+					margin: 0;
+					padding: 0;
+
+					hr {
+						display: none;
+					}
+				}
+
+				// Registration message
+				.boxMessageContainer {
+					margin: 1em 0;
+				}
+
+				.boxActionContainer {
+					margin: 1.5em 0 1em;
+					text-align: center;
+
+					input.typeButton {
+						.functionalButton;
+					}
+
+					.infoAlreadyRegistered,
+					.infoRegistrationIsClosed,
+					.infoRegistrationIsNotAvailable {
+						margin: 1em 0 0;
+					}
+				}
+
+				.clearEndContainer {
+					display: block;
+					height: 0;
+					margin: 16px 0 -16px;
+				}
+			}
+		}
+
+		.boxBodyContentOuterContainer {
+			float: right;
+			width: ~'calc(98% - 300px)';
+
+			.boxBodyContentContainer {
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+/* mode: WaGadgetEventsStateRegistrationsList |
+	WaGadgetEventsStateSelfRegistrationsList (attendees list and register) */
+/******************************************************************************/
+.WaGadgetEventsStateRegistrationsList,
+.WaGadgetEventsStateSelfRegistrationsList {
+	padding-bottom: 0;
+
+	.pageBackContainer {
+		margin: 0 0 40px;
+	}
+
+	.titleOuterContainer {
+		margin: 0 0 24px;
+
+		.titleLeftContainer {
+			float: left;
+		}
+
+		.titleRightContainer {
+			float: right;
+		}
+
+		// "Event registration"
+		h2.stepTitle {
+			.h4;
+			margin: 0;
+			line-height: 40px !important;
+		}
+
+		input.typeButton {
+			.functionalButton;
+		}
+	}
+
+	.sectionOuterContainer {
+		margin-top: 0;
+	}
+
+	.generalFormOuterContainer {
+		.pagerOuterContainer {
+			.clearAfter;
+		}
+
+		.eventRegistrationsViewPagerContainer {
+			float: right;
+		}
+
+		.boxOuterContainer {
+			.boxBodyOuterContainer {
+				.titleOuterContainer {
+					.titleLeftContainer {
+						float: left;
+					}
+
+					.titleRightContainer {
+						float: right;
+
+						// button "New registration"
+						input.typeButton {
+							.functionalButton;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#membersTable {
+		// background: @Event-Registration-Table-Bg;
+		// border-bottom: none;
+
+		// thead th {
+		// 	.h4;
+		// 	color: @Typography-Body-Color;
+		// 	padding: 16px 24px 4px 0;
+		// }
+
+		// thead th:first-child {
+		// 	padding-left: 16px;
+		// }
+
+		// thead th:last-child {
+		// 	padding-right: 16px;
+		// }
+
+		tbody tr {
+			// td {
+			// 	border-top: none;
+			// 	padding: 4px 24px 4px 0;
+			// 	font-size: 14px;
+			// }
+
+			// td:first-child {
+			// 	padding-left: 16px;
+			// }
+
+			// td:last-child {
+			// 	padding-right: 16px;
+			// }
+
+			td.memberDirectoryColumn1 {
+				width: 30%;
+			}
+
+			td.memberDirectoryColumn3 input[type='submit'] {
+				.functionalButton();
+				margin-top: 5px;
+				margin-bottom: 8px;
+				margin-left: 12px;
+			}
+		}
+
+		// tbody:last-child tr:last-child {
+		// 	td {
+		// 		padding-bottom: 16px;
+		// 	}
+		// }
+
+		// tbody tr:hover {
+		// 	background: @Event-Registration-Table-Hover-Bg;
+
+		// 	td {
+		// 		background: @Event-Registration-Table-Hover-Bg;
+		// 	}
+		// }
+	}
+}
+
+/* mode: WaGadgetEventsStateRegistration (Event registration) */
+/******************************************************************************/
+.WaGadgetEventsStateRegistration {
+	overflow: visible;
+	padding-bottom: 0;
+
+	#idSectionGuestListContainer {
+		margin: 0 0 24px;
+
+		.membersTable {
+			// margin-bottom: 24px;
+			// background: @Event-Registration-Table-Bg;
+			// border-bottom: none;
+
+			// thead th {
+			// 	.h4;
+			// 	color: @Typography-Body-Color;
+			// 	padding: 16px 24px 4px 0;
+			// 	background: @Event-Registration-Table-Bg;
+			// }
+
+			// thead th:first-child {
+			// 	padding-left: 16px;
+			// }
+
+			// thead th:last-child {
+			// 	padding-right: 16px;
+			// }
+
+			// tbody tr {
+			// 	td {
+			// 		border-top: none;
+			// 		padding: 4px 24px 4px 0;
+			// 		font-size: 14px;
+			// 	}
+
+			// 	td:first-child {
+			// 		padding-left: 16px;
+			// 	}
+
+			// 	td:last-child {
+			// 		padding-right: 16px;
+			// 	}
+			// }
+
+			// tbody:last-child tr:last-child {
+			// 	td {
+			// 		padding-bottom: 16px;
+			// 	}
+			// }
+
+			// tbody tr:hover {
+			// 	background: @Event-Registration-Table-Hover-Bg;
+
+			// 	td {
+			// 		background: @Event-Registration-Table-Hover-Bg;
+			// 	}
+			// }
+		}
+
+		.navigationContainer {
+			margin: 24px 0 0;
+
+			input[type=submit] {
+				.functionalButton;
+				margin-right: 20px;
+				vertical-align: baseline;
+			}
+		}
+	}
+
+	#idSectionNumberOfGuestsContainer {
+		.singleStringContainer td.right span:first-child {
+			padding-right: 8px;
+		}
+
+		.singleStringContainer td.right span:last-child {
+			padding-left: 8px;
+		}
+
+		.singleStringContainer td.right > .fieldBody input + span {
+			display: inline-block;
+			padding-top: 3px;
+			padding-left: 12px;
+			white-space: nowrap;
+		}
+	}
+
+	.membersTable {
+		.memberDirectoryColumn4 {
+			// font-size: 14px;
+			text-align: right;
+
+			.memberValue {
+				display: inline-block;
+				margin-left: -10px;
+				text-align: left;
+			}
+
+			h5 {
+				display: inline;
+				margin-left: 24px;
+			}
+
+			a {
+				white-space: nowrap;
+			}
+
+			a[id*='editLink']:before {
+				position: relative;
+				top: 1px;
+				display: inline-block;
+				margin-right: 8px;
+				font: 1em 'WA-theme-icons';
+				text-decoration: underline;
+				content: '\e60c';
+			}
+
+			a[id*='editLink']:before { text-decoration: none; }
+
+			a[id*='removeLink']:before {
+				position: relative;
+				top: 1px;
+				display: inline-block;
+				margin-right: 8px;
+				font: 1em 'WA-theme-icons';
+				text-decoration: underline;
+				content: '\e60e';
+			}
+
+			a[id*='removeLink']:before { text-decoration: none; }
+
+			a[id*='removeLink'] {
+				word-spacing: 0;
+				color: @Event-Registration-Table-Link-Color;
+			}
+
+			a[id*='removeLink'] img {
+				display: none;
+			}
+		}
+	}
+
+	.eventRegistrationTypeRadioWrapper {
+		.textLine {
+			width: 550px;
+		}
+
+		.typeInstruction {
+			padding-top: 0;
+			padding-bottom: 16px;
+		}
+	}
+}
+
+// title container
+.WaGadgetEvents {
+	.pageTitleContainer,
+	.titleContainer {
+		.clearfix;
+		margin: 0 0 24px;
+
+		// h2, name of event
+		h1 {
+			.h2;
+			float: left;
+			margin: 0;
+		}
+
+		#idTitleRight {
+			float: right;
+			position: relative;
+			top: 6px;
+
+			.pageViewSwitcherContainer {
+				// link "Add to my calendar"
+				a:before {
+					position: relative;
+					display: inline-block;
+					margin: 0 12px 0 0;
+					font: 16px/1 'WA-theme-icons';
+					text-decoration: underline;
+					content: '\e602';
+				}
+				// link "Add to my calendar" IE fix
+				a:before { text-decoration: none; }
+			}
+		}
+	}
+}
+
+// -> event pager nav
+.WaGadgetEvents .pagerOuterContainer {
+	padding: 0 0 0 24px;
+}
+
+.WaGadgetEvents .pagerOuterContainer.pagerIsEmpty {
+	margin-bottom:0;
+}
+
+.navigationOuterContainer .navigationContainer .left a.additionalLink {
+	vertical-align: middle;
+}
+
+.WaGadgetEvents .navigationOuterContainer .navigationContainer .right {
+	width: auto !important;
+}
+
+	// icon for h4 title
+.eventPageContainer {
+	div.hiddenEventIcon {
+		float: left;
+		width: 27px;
+		height: 20px;
+		margin-right: 6px;
+		background: url('<$StaticModel.ThemeUrl$>/images/eyeLong.gif') top right no-repeat;
+		vertical-align: middle;
+		filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+		-moz-opacity: 0.75;
+	}
+}
+
+.fieldSubContainer {
+	.fieldBody {
+		.fieldItem {
+
+			/*
+			.generalFieldsContainer .fieldBody .fieldItem.disabled,
+			.generalFieldsContainer .fieldBody .fieldItem.disabled LABEL,
+			.generalFieldsContainer .fieldBody .fieldItem LABEL.disabled
+			{
+				color: #999999;
+				cursor: default;
+			}
+			*/
+
+			&.disabled .label span:first-child label {
+				padding-right: 20px;
+				background: url('<$StaticModel.ThemeUrl$>/images/icons/icon-warning.png') no-repeat right 1px;
+				color: #929191;
+			}
+
+			// event registration type radio group customization
+			&.eventRegistrationTypeRadioWrapper.disabled .label span:first-child label {
+				padding-right: 0;
+				background: none;
+			}
+
+			&.eventRegistrationTypeRadioWrapper.disabled .label {
+				color: #929191;
+
+				a {
+					color: #929191;
+				}
+			}
+
+			&.eventRegistrationTypeRadioWrapper .label .textLine:first-child {
+				a {
+					margin-left: 8px;
+				}
+			}
+
+			&.eventRegistrationTypeRadioWrapper a.warningDetailsLink {
+				text-decoration: underline;
+				cursor: help;
+			}
+
+			&.eventRegistrationTypeRadioWrapper .warningLabel {
+				margin-left: 24px;
+				padding-left: 24px;
+				background: url('<$StaticModel.ThemeUrl$>/images/icons/icon-warning-new.png') no-repeat 5px center;
+			}
+
+			&.eventRegistrationTypeRadioWrapper img.regCodeRequired {
+				display: none;
+			}
+
+			&.eventRegistrationTypeRadioWrapper label.regCodeRequired:before {
+				position: relative;
+				display: inline-block;
+				margin: 0 4px 0 0;
+				font: 16px/1 'FontAwesome';
+				text-decoration: none;
+				content: '\f023';
+			}
+		}
+	}
+}
+
+.fieldSubContainer {
+	.fieldBody.lastColumn {
+		float: right;
+	}
+}
+
+#idEventRegistrationConfirmationContainer {
+	#guestListContainer {
+		margin: 24px 0;
+	}
+}
+
+/* mode: WaGadgetEventsStateUndefined (Event registration) */
+/******************************************************************************/
+.WaGadgetEventsStateUndefined {
+	overflow: visible;
+	padding-bottom: 0;
+
+	#idSectionGuestListContainer {
+		margin: 0 0 24px;
+
+		.membersTable {
+			// margin-bottom: 24px;
+			// background: @Event-Registration-Table-Bg;
+
+			// tbody tr:hover {
+			// 	background: @Event-Registration-Table-Hover-Bg;
+			// }
+		}
+
+		.navigationContainer {
+			margin: 24px 0 0;
+
+			input[type=submit] {
+				.functionalButton;
+				margin-right: 20px;
+				vertical-align: baseline;
+			}
+		}
+	}
+
+	#idSectionNumberOfGuestsContainer {
+		.singleStringContainer td.right > .fieldBody input + span {
+			display: inline-block;
+			padding-top: 3px;
+			padding-left: 12px;
+			white-space: nowrap;
+		}
+	}
+
+	.membersTable {
+		.memberDirectoryColumn4 {
+			// font-size: 14px;
+			text-align: right;
+
+			.memberValue {
+				display: inline-block;
+				margin-left: -10px;
+				text-align: left;
+			}
+
+			h5 {
+				display: inline;
+				margin-left: 10px;
+			}
+
+			a {
+				white-space: nowrap;
+			}
+
+			a[id*='editLink']:before {
+				position: relative;
+				top: 1px;
+				display: inline-block;
+				margin-right: 5px;
+				font: 1em 'WA-theme-icons';
+				text-decoration: underline;
+				content: '\e60c';
+			}
+
+			a[id*='editLink']:before {
+				text-decoration: none;
+			}
+
+			a[id*='removeLink']:before {
+				position: relative;
+				top: 1px;
+				display: inline-block;
+				margin-right: 5px;
+				font: 1em 'WA-theme-icons';
+				text-decoration: underline;
+				content: '\e611';
+			}
+
+			a[id*='removeLink']:before {
+				text-decoration: none;
+			}
+
+			a[id*='removeLink'] {
+				word-spacing: 0;
+			}
+
+			a[id*='removeLink'] img {
+				display: none;
+			}
+		}
+	}
+}
+
+/* Event - Calendar view
+/******************************************************************************/
+.WaGadgetEventsStateCalendar {
+
+	// date of calendar
+	.sectionTitle {
+		.h1;
+		float: left;
+		margin: 0 16px 0 0;
+	}
+
+	// container for rss icon
+	.pageTitle {
+		float: left;
+		margin: 0;
+		background-color: transparent !important;
+		font-size: 1em;
+
+		a.rssFeedLabel {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			font-size: inherit;
+			vertical-align: top;
+			text-decoration: none;
+		}
+
+		a.rssFeedLabel:before {
+			color: #f26522;
+			font: 23px/36px 'FontAwesome';
+			content: '\f09e';
+			display: inline-block;
+			padding-top: 2px;
+		}
+
+		a.rssFeedLabel img {
+			display: none;
+		}
+	}
+
+	.pageTitleOuterContainer {
+		float: right;
+		margin: 0 0 0 16px;
+		line-height: 36px;
+
+		.pageViewSwitcherContainer {
+			a {
+				white-space: nowrap;
+			}
+
+			a:before {
+				position: relative;
+				display: inline-block;
+				margin: 14px 12px 0 0;
+				font: 16px/1 'FontAwesome';
+				text-decoration: underline;
+				content: '\f0ca';
+			}
+
+			a:before { text-decoration: none; }
+
+			img {
+				display: none;
+			}
+		}
+	}
+
+	// links week/month/year
+	#idViewSwitchersTable {
+		.clearfix;
+		clear: both;
+		padding: 24px 0 32px;
+		overflow: hidden;
+
+		#group1 {
+			float: left;
+			width: auto;
+		}
+
+		#group2 {
+			float: right;
+			width: auto;
+		}
+
+		div[id*=Button] {
+			position: relative;
+			display: inline-block;
+		}
+
+		div[id*=Button]:before {
+			display: inline-block;
+			content: '|';
+			margin: 0 4px;
+		}
+
+		div[id*=Button]:first-child:before {
+			display: none;
+			content: '';
+		}
+
+		div[id*=Button] span {
+			color: @EventSwitchers-Color;
+		}
+
+		div.decButton a:before,
+		div.incButton a:after {
+			display: inline-block;
+			content: '<';
+			margin: 0 4px;
+			text-decoration: underline;
+		}
+
+		div.decButton a:before,
+		div.incButton a:after {
+			text-decoration: none;
+		}
+
+
+		div.incButton a:after {
+			content: '>';
+		}
+	}
+
+	// month view
+	.monthViewType {
+		.EventListCalendar {
+			width: 100%;
+			background: @EventCalendar-Bg;
+			table-layout: fixed;
+			border-bottom: 1px solid @EventCalendar-Border-Color;
+
+			td.EventListCalendarHeader {
+				margin: 0;
+				padding: 16px;
+				overflow: hidden;
+				background-color: transparent;
+				border: none !important;
+				color: inherit;
+				text-overflow: ellipsis;
+				font-weight: bold;
+			}
+
+			td {
+				height: auto;
+				padding: 0;
+				border-color: @EventCalendar-Border-Color;
+				border-right: 1px solid @EventCalendar-Border-Color;
+				border-left: 1px solid @EventCalendar-Border-Color;
+
+				// current date
+				a.calendarDate,
+				a.calendarDate:hover {
+					color: inherit;
+					text-decoration: none;
+					font-weight: bold;
+				}
+
+				&.EventListCalendarItemSelected {
+					a.calendarDate,
+					a.calendarDate:hover {
+						color: @EventCalendar-Current-Date-Color;
+					}
+				}
+
+				table {
+					width: 100%;
+					overflow: hidden;
+					table-layout: fixed;
+				}
+
+				> div {
+					display: block;
+					display: -webkit-box;
+					max-height: 70px;
+					padding: 8px 12px;
+					border-left: 2px solid @EventCalendar-Event-Border;
+					background: @EventCalendar-Event-Bg;
+					color: @EventCalendar-Event-Color;
+					font-size: 16px;
+					line-height: 1.5;
+					// white-space: nowrap;
+					text-overflow: ellipsis;
+					-webkit-line-clamp: 3;
+					-webkit-box-orient: vertical;
+
+					a {
+						color: @EventCalendar-Event-Color;
+					}
+
+					a.eventHover {
+						text-decoration: @Typography-Link-Decoration-Hover;
+					}
+
+					div {
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+
+				> table td {
+					background: none !important;
+					border: none !important;
+				}
+			}
+
+			td.EventListCalendarDate {
+				padding: 16px 16px 21px;
+			}
+
+			td.EventListCalendarEventDiv {
+				padding: 0 16px 8px;
+			}
+
+			// td[width="100%"]
+			td[class*=EventListCalendarItem] > table > tbody > tr > td {
+				padding: 0;
+			}
+
+			.recurringEvent:before {
+				margin: 0 8px 0 0;
+				font-family: 'FontAwesome';
+				content: '\f073';
+			}
+
+			.recurringEvent .eventTime {
+				display: inline;
+			}
+
+			.eventDivItem:hover, .eventContainerHover {
+				background: @EventCalendar-Event-Hover-Bg;
+				cursor: pointer;
+
+				a {
+					color: @EventCalendar-Event-Hover-Color;
+				}
+			}
+		}
+	}
+
+	// week view
+	.weekViewType {
+		.EventListCalendar {
+			width: 100%;
+			background: @EventCalendar-Bg;
+			border: 1px solid @EventCalendar-Border-Color;
+			table-layout: fixed;
+
+			td.EventListCalendarHeader {
+				padding: 16px 24px 12px;
+				border-bottom: none !important;
+				border-left: 1px solid @EventCalendar-Border-Color;
+
+				a.calendarDate {
+					font-weight: bold;
+					text-decoration: none;
+				}
+			}
+
+			td[class*=EventListCalendarItem] {
+				padding: 0 24px 16px;
+				border-bottom: 1px solid @EventCalendar-Border-Color;
+				border-left: 1px solid @EventCalendar-Border-Color;
+			}
+
+			table {
+				width: 100%;
+				overflow: hidden;
+				table-layout: fixed;
+			}
+
+			td {
+				height: auto;
+				padding: 0;
+
+				td {
+					background: @EventCalendar-Bg !important;
+					border: none !important;
+				}
+			}
+
+			div {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+
+				a {
+					color: @EventCalendar-Event-Color;
+				}
+
+				a:before {
+					display: inline-block;
+					content: '•';
+					margin: 0 8px;
+					text-decoration: underline;
+				}
+
+				a:before {
+					text-decoration: none;
+				}
+
+				a.eventHover {
+					text-decoration: @Typography-Link-Decoration-Hover;
+					color: @EventCalendar-Event-Color;
+				}
+			}
+		}
+	}
+
+	// year vew
+	.yearViewType {
+		.EventListCalendar {
+			width: 100%;
+			background: @EventCalendar-Bg;
+			border: 1px solid @EventCalendar-Border-Color;
+			table-layout: fixed;
+
+			a.yearViewHeader {
+				margin: 0;
+				color: @Typography-Link-Color;
+				line-height: 1.5em;
+				text-decoration: underline;
+				font-weight: bold;
+
+				&:hover {
+					color: @Typography-Link-Color-Hover;
+					text-decoration: @Typography-Link-Decoration-Hover;
+				}
+			}
+
+			.yearViewHeader:after {
+				display: block;
+				height: 0;
+				margin-bottom: 8px;
+				content: '';
+			}
+
+			.yearViewHeader + br {
+				display: none;
+			}
+
+			td[class*=EventListCalendarItem] {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			td {
+				height: auto;
+				padding: 16px;
+				border-bottom: 1px solid @EventCalendar-Border-Color;
+				border-left: 1px solid @EventCalendar-Border-Color;
+				font-size: 16px;
+
+				& > span {
+					display: inline-block;
+					max-width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					font-weight: bold;
+
+					a {
+						font-weight: normal;
+						color: @EventCalendar-Event-Color;
+						padding-left: 8px;
+					}
+
+					// a:before {
+					// 	text-decoration: underline;
+					// }
+
+					// a:before {
+					// 	display: inline-block;
+					// 	margin: 0 8px 0 16px;
+					// 	content: '•';
+					// 	text-decoration: none;
+					// }
+				}
+			}
+		}
+	}
+}
+
+#preferencesHolder {
+	table.tags {
+		tr td {
+			label {
+				float: none;
+				display: block;
+				margin-left: 18px;
+			}
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device M
+@media screen and (max-width: @Device-M-MaxWidth) {
+	.WaGadgetEventsStateList {
+		.boxOuterContainer {
+			.boxBodyOuterContainer {
+				&:before {
+					width: 230px;
+				}
+
+				.boxBodyInfoOuterContainer {
+					width: 230px;
+				}
+
+				.boxBodyContentOuterContainer {
+					width: ~'calc(98% - 230px)';
+				}
+			}
+		}
+	}
+
+	.WaGadgetEventsStateDetails {
+		.boxOuterContainer {
+			.boxBodyInfoOuterContainer {
+				width: 230px;
+			}
+
+			.boxBodyContentOuterContainer {
+				width: ~'calc(98% - 230px)';
+			}
+		}
+	}
+
+	.WaGadgetEventsStateRegistration {
+		.eventRegistrationTypeRadioWrapper {
+			.textLine {
+				width: 450px;
+			}
+		}
+	}
+}
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.WaGadgetEventsStateList {
+		.pageTitleOuterContainer {
+			float: none;
+			clear: both;
+			margin: 0;
+			padding-top: 16px;
+		}
+
+		.boxOuterContainer {
+			.boxHeaderOuterContainer {
+				margin: 0 0 12px;
+			}
+
+			.boxBodyOuterContainer {
+				&:before {
+					display: none;
+				}
+
+				.boxBodyInfoOuterContainer {
+					float: none;
+					display: block;
+					width: auto;
+					margin: 0 0 12px;
+
+					.boxBodyInfoContainer {
+						height: auto !important;
+						margin-top: 0;
+					}
+				}
+
+				.boxBodyContentOuterContainer {
+					float: none;
+					display: block;
+					width: auto;
+				}
+			}
+		}
+
+		.pastEventsOuterContainer {
+			table.pastEventsList {
+				td.left {
+					min-width: 100px;
+				}
+			}
+		}
+	}
+
+	.WaGadgetEventsStateDetails {
+		.pageTitleOuterContainer {
+			.eventsTitleContainer {
+				margin: 0 0 12px;
+				padding-top: 24px;
+			}
+		}
+
+		.boxOuterContainer {
+			.boxBodyInfoOuterContainer {
+				float: none;
+				display: block;
+				width: auto;
+				margin: 0 0 24px;
+
+				.boxBodyInfoContainer {
+					height: auto !important;
+					margin-top: 0;
+				}
+			}
+
+			.boxBodyContentOuterContainer {
+				float: none;
+				display: block;
+				width: auto;
+			}
+		}
+	}
+
+	// title container
+	.WaGadgetEvents {
+		.pageTitleContainer,
+		.titleContainer {
+			#idTitleRight {
+				float: none;
+				clear: both;
+				top: 0;
+
+				.pageViewSwitcherContainer {
+					padding-top: 16px;
+				}
+			}
+		}
+	}
+
+	.WaGadgetEventsStateCalendar {
+		.sectionTitle {
+			display: inline-block;
+			width: 85%;
+		}
+
+		.pageTitle {
+			display: inline-block;
+			float: right;
+		}
+
+		.pageTitleOuterContainer {
+			float: none;
+			clear: both;
+			margin: 0;
+			padding-top: 5px;
+		}
+
+		// links week/month/year
+		#idViewSwitchersTable {
+			padding: 16px 0 8px;
+
+			#group1 {
+				display: block;
+				width: 127px;
+			}
+
+			#group2 {
+				display: block;
+				//width: 164px;
+				width: ~"calc(100% - 127px)";
+				text-align: right;
+			}
+
+			div[id*=Button] {
+				position: relative;
+				display: inline-block;
+				width: 40px;
+			}
+
+			div[id*=Button]:before {
+				display: none;
+				content: '';
+			}
+
+			div[id*=Button] > * {
+				position: relative;
+				overflow: hidden;
+				text-indent: 1000px;
+			}
+
+			div[id*=Button] a,
+			div[id*=Button] span {
+				display: block;
+				width: 40px;
+				height: 40px;
+				padding: 0;
+				background: @EventSwitchers-Button-Bg;
+				color: @EventSwitchers-Button-Color;
+				line-height: 40px;
+			}
+
+			div[id*=Button] span,
+			div[id*=Button] span:hover {
+				background: @EventSwitchers-Button-Active-Bg;
+				cursor: default;
+			}
+
+			div[id*=Button] > *:before {
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				line-height: 40px;
+				text-align: center;
+				text-indent: 0;
+			}
+
+			#weekButton > *:before {
+				content: 'W';
+			}
+
+			#monthButton > *:before {
+				content: 'M';
+			}
+
+			#yearButton > *:before {
+				content: 'Y';
+			}
+
+			#decButton > *:before {
+				font-family: 'FontAwesome';
+				font-size: 23px;
+				content: '\f104';
+			}
+
+			#todayButton {
+				width: ~"calc(100% - 88px)";
+
+				a {
+					width: 100%;
+				}
+			}
+
+			#todayButton > *:before {
+				content: 'Today';
+			}
+
+			#incButton > *:before {
+				font-family: 'FontAwesome';
+				font-size: 23px;
+				content: '\f105';
+			}
+		}
+
+		.monthViewType {
+			.EventListCalendar {
+				td.EventListCalendarHeader {
+					padding: 8px 4%;
+					overflow: hidden;
+					letter-spacing: 1000px;
+					white-space: nowrap;
+					text-overflow: clip;
+				}
+
+				td.EventListCalendarHeader:first-letter {
+					margin-right: -1000px;
+				}
+
+				td {
+					> div {
+						padding: 4px 6px;
+						font-size: 14px;
+					}
+				}
+
+				td.EventListCalendarDate {
+					padding: 8px 4px 2px;
+				}
+
+				td.EventListCalendarEventDiv {
+					padding: 0 8px 4px;
+				}
+			}
+		}
+
+		.weekViewType {
+			.EventListCalendar {
+				td.EventListCalendarHeader {
+					padding: 8px;
+				}
+
+				td[class*=EventListCalendarItem] {
+					padding: 0 8px 8px;
+				}
+
+				div {
+					margin-bottom: 8px;
+
+					a:before {
+						margin: 0 8px 0 4px;
+					}
+				}
+			}
+		}
+
+		.yearViewType {
+			.EventListCalendar {
+				td {
+					padding: 8px;
+
+					& > span {
+						a {
+							margin-left: 8px;
+						}
+
+						a:before {
+							display: none;
+							content: '';
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.WaGadgetEventsStateRegistrationsList,
+	.WaGadgetEventsStateSelfRegistrationsList {
+		#membersTable {
+			tbody tr {
+			// 	border-top: none;
+			// 	padding: 8px 16px;
+
+			// 	td {
+			// 		padding: 0;
+			// 	}
+
+			// 	td:first-child {
+			// 		padding-left: 0;
+			// 	}
+
+			// 	td:last-child {
+			// 		padding-right: 0;
+			// 	}
+
+				td.memberDirectoryColumn1 {
+					width: 100%;
+				}
+
+				td.memberDirectoryColumn2 {
+					font-weight: bold;
+				}
+			}
+
+			// tbody tr:first-child {
+			// 	padding-top: 16px;
+			// }
+
+			// tbody:last-child tr:last-child {
+			// 	padding-bottom: 16px;
+
+			// 	td {
+			// 		padding-bottom: 0;
+			// 	}
+			// }
+		}
+	}
+
+	.WaGadgetEventsStateRegistration {
+		#idSectionGuestListContainer {
+			margin: 0 0 24px;
+
+			.membersTable {
+				// tbody tr {
+				// 	border-top: none;
+				// 	padding: 8px 16px;
+
+				// 	td {
+				// 		padding: 0;
+				// 	}
+
+				// 	td:first-child {
+				// 		padding-left: 0;
+				// 	}
+
+				// 	td:last-child {
+				// 		padding-right: 0;
+				// 	}
+				// }
+
+				// tbody tr:first-child {
+				// 	padding-top: 16px;
+				// }
+
+				// tbody:last-child tr:last-child {
+				// 	padding-bottom: 16px;
+
+				// 	td {
+				// 		padding-bottom: 0;
+				// 	}
+				// }
+
+				.memberDirectoryColumn1 {
+					font-weight: bold;
+				}
+
+				.memberDirectoryColumn4 {
+					text-align: left;
+					margin-top: 8px;
+
+					.memberValue {
+						margin-left: 0;
+
+						h5:first-child {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.navigationTopContainer {
+			.right {
+				width: 100%;
+				text-align: right;
+				margin-top: 24px;
+			}
+		}
+
+		.eventRegistrationTypeRadioWrapper {
+			.textLine {
+				width: 300px;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.WaGadgetEventsStateList {
+		h1.pageTitle {
+			a.rssFeedLabel:before {
+				line-height: 29px;
+				padding-top: 0;
+			}
+		}
+
+		.pageTitleOuterContainer {
+			line-height: inherit;
+		}
+	}
+
+	.WaGadgetEventsStateRegistrationsList,
+	.WaGadgetEventsStateSelfRegistrationsList {
+		.pageBackContainer {
+			margin-bottom: 24px;
+		}
+
+		.titleOuterContainer {
+			margin-bottom: 16px;
+
+			.titleRightContainer {
+				width: 100%;
+				margin-top: 16px;
+			}
+		}
+
+		#membersTable tbody tr {
+			td.memberDirectoryColumn3 input[type='submit'] {
+				margin-left: 8px;
+			}
+		}
+	}
+
+	.WaGadgetEvents {
+		.pageTitleContainer,
+		.titleContainer {
+			margin-bottom: 16px;
+		}
+	}
+
+	.WaGadgetEventsStateCalendar {
+		.yearViewType {
+			.EventListCalendar {
+				td {
+					& > span {
+						font-size: 14px;
+
+						a {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.WaGadgetEventsStateRegistration {
+		.eventRegistrationTypeRadioWrapper {
+			.textLine {
+				width: 100%;
+				max-width: 100%;
+			}
+
+			.typeInstruction {
+				padding: 0 0 8px;
+			}
+		}
+
+		.navigationOuterContainer .left, .navigationOuterContainer .right {
+			.clearfix;
+			display: block;
+		}
+	}
+
+	.fieldSubContainer {
+		.fieldBody {
+			.fieldItem {
+				&.eventRegistrationTypeRadioWrapper {
+					padding-left: 25px;
+
+					.typeRadioContainer {
+						margin-left: -25px;
+					}
+				}
+
+				&.eventRegistrationTypeRadioWrapper label.regCodeRequired {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	.fieldSubContainer {
+		.fieldBody.lastColumn {
+			float: none;
+		}
+	}
+
+	.WaGadgetEventsStateRegistrationDetails {
+		.navigationOuterContainer .right {
+			margin-top: 10px;
+		}
+	}
+
+	.navigationOuterContainer .navigationContainer .left a.additionalLink {
+		display: inline-block;
+		margin-top: 8px;
+		margin-right: 0;
+	}
+
+	.navigationTopContainer {
+		.right {
+			input {
+				margin-top: 24px;
+			}
+
+			input:first-child {
+				margin-top: 0;
+				margin-right: 180px;
+			}
+
+			input:last-child {
+				float: left;
+			}
+		}
+	}
+}

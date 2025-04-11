@@ -1,0 +1,456 @@
+// list of albums
+ul.albumsContainerUL {
+	height: auto !important;
+	margin: 0 0 -24px -24px;
+	padding: 0;
+	letter-spacing: -0.3em;
+	text-align: left;
+	list-style: none;
+
+	li.photoGalleryItemContainerLi {
+		display: inline-block;
+		width: 180px;
+		min-height: 180px;
+		margin: 0 0 24px 24px;
+		letter-spacing: normal;
+		vertical-align: top;
+	}
+
+	div[class^='photoGalleryItemThumbnailImage'] {
+		position: relative;
+		text-align: center;
+
+		a {
+			display: table-cell;
+			width: 180px;
+			height: 180px;
+			background: none;
+			outline: none;
+			vertical-align: middle;
+		}
+
+		img {
+			border: none;
+			vertical-align: middle;
+			width: 180px;
+			height: 180px;
+			object-fit: cover;
+		}
+	}
+
+	// empty item
+	[class^='photoGalleryEmptyItemThumbnailImage'] {
+		position: relative;
+		background: @PhotoAlbum-Member-Bg;
+		cursor: pointer;
+
+		.albumEmptyLabelContainer {
+			display: table-cell;
+			width: 180px;
+			height: 180px;
+			color: @PhotoAlbum-Member-Text;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		.albumEmptyLabel {
+			.sysFormatSmaller;
+		}
+	}
+
+	// hover
+	.photoGalleryItemThumbnailImageHover {
+		/*background: @PhotoAlbum-Img-Highlight-Bg;*/
+	}
+
+	// album name
+	.photoGalleryItemDescription {
+		padding: 8px 0 0;
+		font-size: 16px !important;
+
+		& > div {
+			word-wrap: break-word;
+		}
+	}
+}
+
+// list of photos
+.WaGadgetContactProfileStatePhotoGallery,
+.WaGadgetMemberPublicProfileStatePhotoAlbums,
+.WaGadgetPhotoAlbum.PhotoAlbumStyle001 {
+	ul.photosContainerUL {
+		height: auto !important;
+		margin: 0 0 -24px -24px;
+		padding: 0;
+		letter-spacing: -0.3em;
+		text-align: left;
+		list-style: none;
+
+		li.photoAlbumItemContainerLi {
+			display: inline-block;
+			width: 180px;
+			height: 180px;
+			margin: 0 0 24px 24px;
+			letter-spacing: normal;
+			vertical-align: top;
+		}
+
+		.photoContainer > div {
+			height: 180px !important;
+			overflow: hidden;
+		}
+
+		// item
+		[class^='photoInnerContainer'] {
+			position: relative;
+			text-align: center;
+
+			[id*='FullDescriptionDiv'] {
+				display: block !important;
+				visibility: hidden;
+			}
+
+			[class^='photoAlbumItemThumbnailPhoto'] {
+				a {
+					display: table-cell;
+					width: 180px;
+					height: 180px;
+					background: none;
+					outline: none;
+					vertical-align: middle;
+				}
+
+				img.photoAlbumItemThumbnailPhoto {
+					border: none;
+					vertical-align: middle;
+					width: 180px;
+					height: 180px;
+					object-fit: cover;
+				}
+
+				.smallDescriptionInnerContainer {
+					display: none;
+				}
+			}
+
+			// description
+			.fullDescriptionContainer {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				padding: 8px 36px 8px 16px;
+				overflow: hidden;
+				background: @PhotoAlbum-Style001-Img-FullDescription-Bg;
+				color: @PhotoAlbum-Style001-Img-FullDescription-Color;
+				font-size: 16px;
+				line-height: 1.5em;
+				text-align: left;
+				word-wrap: break-word;
+				cursor: pointer;
+			}
+
+			// async load
+			.processingTextContainer {
+				position: absolute;
+				bottom: 50%;
+				left: 50%;
+				margin: 0 0 -36px -55px;
+				padding: 10px;
+				background: none;
+
+				img {
+					display: none;
+				}
+
+				span {
+					display: none;
+				}
+			}
+
+			// controls for photo
+			.innerButtonsContainer {
+				a[id*='DeleteLinkButton'] {
+					position: absolute;
+					top: 8px;
+					right: 8px;
+					width: 25px;
+					height: 25px;
+					background: none;
+					text-indent: -9999px;
+					text-decoration: none;
+
+					&:before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 25px;
+						height: 25px;
+						color: @PhotoAlbum-Style001-FunctionButton-Color;
+						font: normal 16px/24px 'WA-theme-icons';
+						text-align: center;
+						text-indent: 1px;
+						content: '\e60e';
+						background: @PhotoAlbum-Style001-FunctionButton-Bg;
+						border-radius: 50%;
+					}
+
+					&:hover:before {
+						color: @PhotoAlbum-Style001-FunctionButton-Hover-Color;
+					}
+				}
+
+				a[id*='SetCoverLinkButton'] {
+					position: absolute;
+					top: 100%;
+					right: 0;
+					font-size: 16px;
+					line-height: 1.5em;
+				}
+			}
+		}
+	}
+}
+
+.WaGadgetPhotoAlbum.PhotoAlbumStyle002 {
+	ul.photosContainerUL {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li.photoAlbumItemContainerLiSizer,
+		li.photoAlbumItemContainerLi {
+			width: 19.7%;
+			margin-bottom: 5px;
+		}
+
+		li.photoAlbumItemContainerLiGutter {
+			width: 0.38%;
+		}
+
+		.photoContainer > div {
+			overflow: hidden;
+		}
+
+		// item
+		[class^='photoInnerContainer'] {
+			position: relative;
+
+			[id*='FullDescriptionDiv'] {
+				display: block !important;
+				visibility: hidden;
+			}
+
+			[class^='photoAlbumItemThumbnailPhoto'] {
+				a {
+					display: block;
+				}
+
+				img.photoAlbumItemThumbnailPhoto {
+					display: block;
+					width: 100%;
+					border: none;
+				}
+
+				.smallDescriptionInnerContainer {
+					display: none;
+				}
+			}
+
+			// description
+			.fullDescriptionContainer {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				padding: 8px 36px 8px 16px;
+				overflow: hidden;
+				background: @PhotoAlbum-Style002-Img-FullDescription-Bg;
+				color: @PhotoAlbum-Style002-Img-FullDescription-Color;
+				font-size: 16px;
+				line-height: 1.5em;
+				text-align: left;
+				word-wrap: break-word;
+				cursor: pointer;
+			}
+
+			// async load
+			.processingTextContainer {
+				position: absolute;
+				bottom: 50%;
+				left: 50%;
+				margin: 0 0 -36px -55px;
+				padding: 10px;
+				background: none;
+
+				img {
+					display: none;
+				}
+
+				span {
+					display: none;
+				}
+			}
+
+			// controls for photo
+			.innerButtonsContainer {
+				a[id*='DeleteLinkButton'] {
+					position: absolute;
+					top: 8px;
+					right: 8px;
+					width: 25px;
+					height: 25px;
+					background: none;
+					text-indent: -9999px;
+					text-decoration: none;
+
+					&:before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 25px;
+						height: 25px;
+						color: @PhotoAlbum-Style002-FunctionButton-Color;
+						font: normal 16px/24px 'WA-theme-icons';
+						text-align: center;
+						text-indent: 0;
+						content: '\e60e';
+						background: @PhotoAlbum-Style002-FunctionButton-Bg;
+						border-radius: 50%;
+					}
+
+					&:hover:before {
+						color: @PhotoAlbum-Style002-FunctionButton-Hover-Color;
+					}
+				}
+
+				a[id*='SetCoverLinkButton'] {
+					position: absolute;
+					top: 100%;
+					right: 0;
+					font-size: 16px;
+					line-height: 1.5em;
+				}
+			}
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device M
+@media screen and (max-width: @Device-M-MaxWidth) {
+	.WaGadgetPhotoAlbum.PhotoAlbumStyle002 {
+		ul.photosContainerUL {
+			li.photoAlbumItemContainerLiSizer,
+			li.photoAlbumItemContainerLi {
+				width: 24.6%;
+			}
+
+			li.photoAlbumItemContainerLiGutter {
+				width: 0.5%;
+			}
+		}
+	}
+}
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.WaGadgetContactProfileStatePhotoGallery,
+	.WaGadgetPhotoAlbum.PhotoAlbumStyle001 {
+		ul.photosContainerUL {
+			margin: 0 0 -16px -16px;
+
+			li.photoAlbumItemContainerLi {
+				width: 136px;
+				height: 136px;
+				margin: 0 0 16px 16px;
+			}
+
+			.photoContainer > div {
+				height: 136px !important;
+			}
+
+			[class^='photoInnerContainer'] {
+				[class^='photoAlbumItemThumbnailPhoto'] {
+					a {
+						width: 136px;
+						height: 136px;
+					}
+
+					img.photoAlbumItemThumbnailPhoto {
+						width: 136px;
+						height: 136px;
+					}
+				}
+
+				.fullDescriptionContainer {
+					font-size: 14px;
+				}
+			}
+
+			.innerButtonsContainer {
+				a[id*='DeleteLinkButton'] {
+					&:before {
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+
+	.WaGadgetPhotoAlbum.PhotoAlbumStyle002 {
+		ul.photosContainerUL {
+			li.photoAlbumItemContainerLiSizer,
+			li.photoAlbumItemContainerLi {
+				width: 32.8%;
+			}
+
+			li.photoAlbumItemContainerLiGutter {
+				width: 0.8%;
+			}
+
+			[class^='photoInnerContainer'] {
+				.fullDescriptionContainer {
+					font-size: 14px;
+				}
+			}
+
+			.innerButtonsContainer {
+				a[id*='DeleteLinkButton'] {
+					&:before {
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.WaGadgetContactProfileStatePhotoGallery,
+	.WaGadgetPhotoAlbum.PhotoAlbumStyle001 {
+		ul.photosContainerUL {
+			text-align: center;
+		}
+	}
+
+	.WaGadgetPhotoAlbum.PhotoAlbumStyle002 {
+		ul.photosContainerUL {
+			li.photoAlbumItemContainerLiSizer,
+			li.photoAlbumItemContainerLi {
+				width: 49.3%;
+			}
+
+			li.photoAlbumItemContainerLiGutter {
+				width: 1.4%;
+			}
+		}
+	}
+}

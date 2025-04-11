@@ -1,0 +1,472 @@
+/******************************************************************************/
+/*	WaGadgetSiteSearch                                                        */
+/******************************************************************************/
+
+.WaGadgetSiteSearch {
+	overflow: visible;
+
+	.searchBoxOuter.alignLeft {
+		text-align: left;
+	}
+
+	.searchBoxOuter.alignCenter {
+		text-align: center;
+	}
+
+	.searchBoxOuter.alignRight {
+		text-align: right;
+	}
+
+	.searchBox {
+		position: relative;
+		display: inline-block;
+		max-width: 100%;
+		font-size: 16px;
+		vertical-align: top;
+	}
+
+	.searchBoxFieldContainer {
+		position: relative;
+		display: inline-block;
+		max-width: 100%;
+		text-align: left;
+	}
+
+	.searchBoxField {
+		box-sizing: border-box;
+		width: 230px;
+		max-width: ~'calc(100% - 41px)';
+		height: 40px;
+		vertical-align: top;
+
+		&:-ms-input-placeholder {
+			color: #a9a9a9;
+		}
+	}
+
+	.searchBoxButton {
+		position: relative;
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		margin-left: -3px;
+		background: @SearchStyle001-Button-Bg;
+		text-indent: -9999px;
+		cursor: pointer;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 40px;
+			height: 40px;
+			color: @SearchStyle001-Button-Color;
+			font: 23px/40px 'FontAwesome';
+			text-align: center;
+			text-indent: 0;
+			content: '\f002';
+			text-decoration: underline;
+		}
+
+		&:before {
+			text-decoration: none;
+		}
+
+		&:hover {
+			background: @SearchStyle001-Button-Bg-Hover;
+		}
+
+		&:hover:before {
+			color: @SearchStyle001-Button-Color-Hover;
+		}
+	}
+
+	.autoSuggestionBox {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 7777;
+		display: none;
+		min-width: 228px;
+		margin-top: 8px;
+		padding: 0;
+		background: @Form-Input-Bg;
+		border: 1px solid @Form-Input-Border;
+		text-align: left;
+
+		.item {
+			padding: 12px;
+
+			a {
+				&:before {
+					display: inline-block;
+					width: 1.2em;
+					padding-right: 0.4em;
+					text-decoration: none;
+				}
+			}
+
+			.fa-align-left:before {
+				position: relative;
+				top: 0.1em;
+			}
+		}
+
+		.item + .item.last {
+			position: relative;
+			margin-top: 10px;
+
+			&:before {
+				position: absolute;
+				top: -5px;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 1px;
+				overflow: hidden;
+				background: #eee;
+				content: '';
+			}
+		}
+
+		.item.selectedSuggestions {
+			background: #dbe3eb;
+			background: rgba(219,227,235,0.5);
+		}
+	}
+
+	.searchBoxOuter.alignRight .autoSuggestionBox {
+		right: 0;
+		left: auto;
+	}
+}
+
+.WaGadgetSiteSearch.searchStyle003,
+.WaGadgetSiteSearch.searchStyle004,
+.WaGadgetSiteSearch.searchStyle005 {
+	.searchBoxField {
+		padding: 8px 12px 9px;
+	}
+}
+
+.WaGadgetSiteSearch.searchStyle001,
+.WaGadgetSiteSearch.searchStyle002 {
+	.searchBoxButton {
+		width: 36px;
+		height: 36px;
+
+		&:before {
+			width: 36px;
+			height: 36px;
+			line-height: 36px;
+		}
+	}
+}
+
+.WaGadgetSiteSearch.searchStyle002 {
+	.searchBoxButton {
+		background: @SearchStyle002-Button-Bg;
+
+		&:before {
+			color: @SearchStyle002-Button-Color;
+		}
+
+		&:hover {
+			background: @SearchStyle002-Button-Bg-Hover;
+		}
+
+		&:hover:before {
+			color: @SearchStyle002-Button-Color-Hover;
+		}
+	}
+}
+
+.WaGadgetSiteSearch.searchStyle003 {
+	.searchBoxButton {
+		background: @SearchStyle003-Button-Bg;
+
+		&:before {
+			color: @SearchStyle003-Button-Color;
+		}
+
+		&:hover {
+			background: @SearchStyle003-Button-Bg-Hover;
+		}
+
+		&:hover:before {
+			color: @SearchStyle003-Button-Color-Hover;
+		}
+	}
+}
+
+.WaGadgetSiteSearch.searchStyle004 {
+	.searchBoxButton {
+		background: @SearchStyle004-Button-Bg;
+
+		&:before {
+			color: @SearchStyle004-Button-Color;
+		}
+
+		&:hover {
+			background: @SearchStyle004-Button-Bg-Hover;
+		}
+
+		&:hover:before {
+			color: @SearchStyle004-Button-Color-Hover;
+		}
+	}
+}
+
+.WaGadgetSiteSearch.searchStyle005 {
+	.searchBoxButton {
+		background: @SearchStyle005-Button-Bg;
+
+		&:before {
+			color: @SearchStyle005-Button-Color;
+		}
+
+		&:hover {
+			background: @SearchStyle005-Button-Bg-Hover;
+		}
+
+		&:hover:before {
+			color: @SearchStyle005-Button-Color-Hover;
+		}
+	}
+}
+
+.WaGadgetSiteSearchResults {
+	&:after {
+		clear: both;
+		display: block;
+		height: 0;
+		overflow: hidden;
+		content: '';
+	}
+
+	.siteSearchResults {
+		padding: 0;
+
+		.searchControls {
+			margin: 0 0 0.7em;
+			font-size: 16px;
+			font-weight: bold;
+
+			.label {
+				display: inline-block;
+				margin-right: 0.4em;
+				margin-bottom: 6px;
+				padding: 4px 0;
+
+				&:after {
+					content: ":";
+					display: inline-block;
+				}
+			}
+
+			.searchBoxField {
+				box-sizing: border-box;
+				width: 230px;
+				max-width: 100%;
+				margin: 0 0.4em 6px 0;
+				padding: 6px 12px 7px;
+				background: @Form-Input-Bg;
+				border: 1px solid @Form-Input-Border;
+				color: @Form-Input-Color;
+				font-family: inherit;
+				font-size: inherit;
+				font-weight: normal;
+			}
+
+			.foundLabel {
+				display: inline-block;
+				margin-bottom: 6px;
+				padding: 4px 0;
+			}
+
+			.foundRecords {
+				display: inline-block;
+				margin-bottom: 6px;
+				padding: 4px 0;
+			}
+		}
+
+		.categories {
+			margin: 0 0 1.43em;
+			padding: 0;
+			line-height: 1.5;
+			font-size: 16px;
+
+			.togglePanelLink {
+				cursor: pointer;
+
+				&:before {
+					display: inline-block;
+					width: 0.8em;
+					margin-right: 5px;
+					text-align: center;
+				    text-decoration: underline;
+				}
+			    &:before {
+				    text-decoration: none;
+			    }
+
+				b {
+					font-weight: normal;
+				}
+			}
+
+			.contentTypesPanel {
+				display: none;
+				padding-top: 4px;
+
+				.row {
+					input[type=checkbox] {
+						position: relative;
+						top: 0.15em;
+						display: inline-block;
+						margin: 0 0.3em 0 0;
+					}
+				}
+
+				.row + .row {
+					margin-top: 0.25em;
+				}
+			}
+		}
+	}
+
+	.resultDiv {
+		padding-left: 0;
+
+		.row {
+			.title {
+				a {
+					&:before {
+						display: inline-block;
+						width: 1.3em;
+						padding-right: 0.3em;
+						text-decoration: underline;
+					}
+				    &:before {
+					    text-decoration: none;
+				    }
+				}
+			  
+
+
+			}
+
+			.text {
+				margin: 0.2em 0 0 1.6em;
+			}
+
+			.additionalInfo {
+				margin: 0.2em 0 0 1.6em;
+				color: #b7b7b7;
+			}
+		}
+
+		.row + .row {
+			margin-top: 1.43em;
+		}
+	}
+
+	.bottomLine {
+		margin: 1.43em 0 0;
+
+		&:after {
+			clear: both;
+			display: block;
+			height: 0;
+			overflow: hidden;
+			content: '';
+		}
+	}
+
+	.recordsFoundMessage {
+		float: left;
+	}
+
+	.searchPager {
+		float: right;
+
+		a, span {
+			margin: 0 5px;
+			font-size: 20px;
+			line-height: 24px;
+		}
+
+		a {
+			color: @Pager-Link-Color;
+			text-decoration: none;
+
+			&:hover {
+				color: @Pager-Link-Hover-Color;
+			}
+		}
+
+		span {
+			color: @Pager-Color;
+		}
+
+
+		span:first-child,
+		span:nth-child(2),
+		span:last-child,
+		span:nth-last-child(2) {
+			color: @Pager-Grayed-Color;
+		}
+
+		span:first-child,
+		span:nth-child(2),
+		span:last-child,
+		span:nth-last-child(2),
+		a:first-child,
+		a:nth-child(2),
+		a:last-child,
+		a:nth-last-child(2)
+		{
+			display: inline-block;
+			position: relative;
+			margin: 0;
+			width: 20px;
+			text-indent: -100500px;
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				font-family: 'WA-theme-icons';
+				font-size: 16px;
+				text-align: center;
+				text-indent: 0;
+
+			}
+		}
+
+		span:first-child:before, a:first-child:before { content: "\e62d"; }
+		span:nth-child(2):before, a:nth-child(2):before { content: "\e62e"; }
+		span:last-child:before, a:last-child:before { content: "\e62b"; }
+		span:nth-last-child(2):before, a:nth-last-child(2):before { content: "\e62c"; }
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.WaGadgetSiteSearchResults {
+		.siteSearchResults {
+			.searchControls {
+				.searchBoxField {
+					width: 140px;
+				}
+			}
+		}
+	}
+}

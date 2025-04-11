@@ -1,0 +1,516 @@
+.mobilePanelContainer {
+	position: relative;
+}
+
+.mobilePanelContainer:hover {
+	z-index: 40000;
+}
+
+.WaPlaceHolderMobilePanel > div {
+	padding: 0;
+}
+
+.pageModeEdit .WaGadgetMobilePanel {
+	display: block;
+}
+
+.WaGadgetMobilePanel {
+	display: none;
+	overflow: visible;
+
+	.mobilePanel {
+		position: relative;
+		height: 50px;
+		background: @MobilePanel-Bg;
+		color: #fff;
+
+		.mobilePanelButton {
+			position: absolute;
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			overflow: hidden;
+			color: @MobilePanel-Button-Color;
+			white-space: nowrap;
+			text-decoration: none;
+			text-indent: 1000px;
+			cursor: pointer;
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 50px;
+				height: 50px;
+				font: 23px/50px 'FontAwesome';
+				text-align: center;
+				text-indent: 0;
+			}
+
+			&:hover {
+				background: @MobilePanel-Button-Hover-Bg;
+				color: @MobilePanel-Button-Hover-Color;
+			}
+
+			&:active,
+			&.active {
+				background: @MobilePanel-Button-Hover-Bg;
+				color: @MobilePanel-Button-Color;
+			}
+		}
+
+		.buttonMenu {
+			top: 0;
+			left: 0;
+
+			&:before {
+				content: '\f0c9';
+			}
+		}
+
+		.buttonAdmin {
+			top: 0;
+			right: 50px;
+
+			&:before {
+				content: '\f013';
+			}
+		}
+
+		.buttonLogin {
+			top: 0;
+			right: 0;
+
+			&:before {
+				content: '\f090';
+			}
+
+			&.logged:before {
+				content: '\f007';
+			}
+		}
+
+		// menu
+		.horizontalMenuFirstLevel() {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			vertical-align: top;
+
+			& > .item {
+				position: relative;
+			}
+
+			& > .item > a {
+				position: relative;
+				display: block;
+				padding: 4px 16px;
+				color: @MobilePanel-Menu-Level1-Link-Color;
+				font-size: 16px;
+				vertical-align: top;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			// selected
+			&.sel > .item > a {
+				color: @MobilePanel-Menu-Link-Selected-Color;
+			}
+		}
+
+		.horizontalMenuSubLevel() {
+			margin: 0;
+
+			& > .item {
+				position: relative;
+			}
+
+			& > .item > a {
+				position: relative;
+				display: block;
+				margin: 0;
+				padding: 4px 16px 4px 24px;
+				color: @MobilePanel-Menu-Level2-Link-Color;
+				font-size: 14px;
+				text-decoration: none;
+			}
+
+			// selected
+			&.sel > .item > a {
+				color: @MobilePanel-Menu-Link-Selected-Color;
+			}
+		}
+
+		.menuInner {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			left: 0;
+			z-index: 40000;
+			display: none;
+			font: 16px/1.5 @Lato-FontFamily;
+			text-transform: uppercase;
+
+			// level 1
+			ul.firstLevel {
+				margin: 0;
+				padding: 12px 0;
+				background: @MobilePanel-Menu-Level1-Bg;
+				border-top: 1px solid @MobilePanel-Menu-Border-Top-Color;
+				font-weight: bold;
+				text-align: left;
+				list-style: none;
+			}
+
+			ul.firstLevel > li {
+				.horizontalMenuFirstLevel();
+			}
+
+			// level 2
+			ul ul {
+				padding: 0;
+				background: @MobilePanel-Menu-Level2-Bg;
+				font-weight: normal;
+				text-transform: none;
+				list-style: none;
+			}
+
+			ul ul li {
+				.horizontalMenuSubLevel();
+			}
+
+			// level 3
+			ul ul ul {
+				background: @MobilePanel-Menu-Level3-Bg;
+			}
+
+			ul ul ul .item a {
+				padding: 4px 16px 4px 32px;
+				color: @MobilePanel-Menu-Level3-Link-Color;
+				font-weight: normal;
+				text-transform: none;
+			}
+
+			// selected
+			ul ul ul li.sel > .item > a:after {
+				left: 60px;
+				background: #777;
+			}
+
+			// level 4+
+			ul ul ul ul {
+				display: none;
+			}
+		}
+
+		// login
+		.loginInner {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			z-index: 40000;
+			display: none;
+			box-sizing: border-box;
+			width: 100%;
+			padding: 16px;
+			background: @MobilePanel-Login-Bg;
+			border-top: 1px solid @MobilePanel-Login-Border-Top-Color;
+			color: @MobilePanel-Login-Color;
+			font-size: 14px;
+			text-align: right;
+
+			.generalLoginBox a,
+			.loginContainerAuthenticated a {
+				color: @MobilePanel-Login-Link-Color;
+				text-decoration: underline;
+			}
+
+			.generalLoginBox a:hover,
+			.loginContainerAuthenticated a:hover {
+				text-decoration: none;
+			}
+
+			.loginContainerForm {
+				float: right;
+
+				.mandatorySymbol {
+					visibility: hidden;
+					margin: 0 0 0 3px;
+					padding: 0;
+				}
+
+				[class$='Label'] {
+					margin: 0 0 5px;
+					padding: 0;
+
+					label {
+						cursor: text;
+					}
+				}
+
+				[class$='TextBox'] {
+					input[class$='TextBoxControl'] {
+						box-sizing: border-box;
+						width: 288px;
+						height: 32px;
+						margin: 0;
+						padding: 5px 12px;
+						background: @MobilePanel-Login-Input-Bg;
+						border: 1px solid @MobilePanel-Login-Input-Border;
+						color: @MobilePanel-Login-Input-Color;
+						font-size: 16px;
+						line-height: 1.38;
+
+						&::-webkit-input-placeholder {
+							color: @MobilePanel-Login-Input-PlaceHolder;
+						}
+
+						&:-moz-placeholder {
+							opacity: 1;
+							color: @MobilePanel-Login-Input-PlaceHolder;
+						}
+
+						&::-moz-placeholder {
+							opacity: 1;
+							color: @MobilePanel-Login-Input-PlaceHolder;
+						}
+
+						&:-ms-input-placeholder {
+							color: @MobilePanel-Login-Input-PlaceHolder;
+						}
+					}
+				}
+
+				.loginAction {
+					clear: both;
+
+					input.loginButton {
+						display: inline-block;
+						width: 100%;
+						max-width: 288px;
+						height: 40px;
+						margin: 0;
+						padding: 4px 20px;
+						background: @MobilePanel-Login-Submit-Bg;
+						border: none;
+						color: @MobilePanel-Login-Submit-Color;
+						font: normal 18px @Lato-FontFamily;
+						text-transform: uppercase;
+						cursor: pointer;
+
+						&:hover {
+							background: @MobilePanel-Login-Submit-Hover-Bg;
+							color: @MobilePanel-Login-Submit-Hover-Color;
+						}
+
+						&:active {
+							background: @MobilePanel-Login-Submit-Hover-Bg;
+							color: @MobilePanel-Login-Submit-Hover-Color;
+						}
+					}
+				}
+
+				.loginActionRememberMe {
+					position: relative;
+					float: left;
+					white-space: nowrap;
+
+					input.rememberMeCheckboxControl {
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 2;
+						display: inline-block;
+						visibility: hidden;
+						width: 18px;
+						height: 18px;
+						margin: 0;
+						padding: 0;
+						vertical-align: middle;
+					}
+
+					label {
+						display: inline-block;
+						font-style: italic;
+						vertical-align: top;
+						cursor: pointer;
+
+						&:before {
+							display: inline-block;
+							width: 15px;
+							height: 15px;
+							margin: 2px 6px 0 0;
+							background: @MobilePanel-Login-Input-Bg;
+							border: 1px solid @MobilePanel-Login-Input-Border;
+							font-family: 'WA-theme-icons';
+							font-size: 14px;
+							line-height: 15px;
+							font-style: normal;
+							vertical-align: top;
+							text-align: center;
+							cursor: pointer;
+							content: '';
+						}
+					}
+
+					.rememberMeCheckboxControl:checked + label:before {
+						content: '\e631';
+					}
+				}
+
+				.loginPasswordForgot {
+					float: right;
+					font-style: italic;
+				}
+
+				form {
+					.loginUserName {
+						margin: 0 0 16px;
+					}
+
+					.loginPassword {
+						margin: 0 0 16px;
+					}
+
+					.loginActionRememberMe {
+						margin: 0 0 16px;
+					}
+
+					.loginPasswordForgot {
+						margin: 0 0 16px;
+					}
+				}
+
+				&.oAuthIstrue {
+					.oAuthForm {
+						.oAuthButtonsContainer {
+							.wa-authenticateLoginLink {
+								display: block;
+								height: 40px;
+								margin: 0 0 20px;
+								border: none;
+								border-radius: 2px;
+
+								.authenticateLoginIcon {
+									width: 40px;
+									height: 40px;
+
+									&:after {
+										left: 38px;
+									}
+								}
+
+								.authenticateLoginText {
+									padding-left: 10px;
+									color: #fff;
+									font-size: 16px;
+									text-shadow: none;
+								}
+
+								&.facebook .authenticateLoginIcon {
+									position: relative;
+									background: none;
+
+									&:before {
+										position: absolute;
+										top: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										color: #fff;
+										font: normal 20px/40px WA-theme-icons;
+										text-align: center;
+										text-decoration: none;
+										text-shadow: none;
+										content: '\e641';
+									}
+								}
+
+								&.googlePlus .authenticateLoginIcon {
+									position: relative;
+									background: none;
+
+									&:before {
+										position: absolute;
+										top: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										color: #fff;
+										font: normal 20px/40px WA-theme-icons;
+										text-align: center;
+										text-decoration: none;
+										text-shadow: none;
+										content: '\e63d';
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.loginContainerAuthenticated {
+				float: right;
+				width: 288px;
+				font-size: 14px;
+				text-align: left;
+				font-style: italic;
+
+				&:after {
+					clear: both;
+					display: block;
+					visibility: hidden;
+					height: 0;
+					overflow: hidden;
+					font-size: 0;
+					content: '';
+				}
+
+				.labelBox {
+				}
+
+				.loggedName {
+					margin: 0 0 24px;
+					color: @MobilePanel-Login-Input-Color;
+					font-size: 16px;
+					font-style: normal;
+				}
+
+				.viewProfile {
+					display: inline-block;
+					margin: 0 35px 0 0;
+					vertical-align: top;
+				}
+
+				.changePassword {
+					display: inline-block;
+					margin: 0 35px 0 0;
+					vertical-align: top;
+				}
+
+				.loggedAction {
+					display: inline-block;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.switchToAdminContainer,
+	.switchToAdminShadowContainer {
+		display: none;
+	}
+
+	.WaGadgetMobilePanel {
+		display: block;
+	}
+}

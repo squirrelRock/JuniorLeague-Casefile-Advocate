@@ -1,0 +1,197 @@
+/* gadget stylization */
+/******************************************************************************/
+[class*=gadgetStyle] {
+	.gadgetStyleBody {
+		&:after {
+			clear: both;
+			display: block;
+			visibility: hidden;
+			height: 0;
+			overflow: hidden;
+			font-size: 0;
+			content: '';
+		}
+	}
+
+	.gadgetContentEditableArea {
+		overflow: hidden;
+	}
+}
+
+.gadgetStyleNone {
+	.gadgetStyleTitle {
+		padding: 0 0 24px;
+	}
+
+	.gadgetStyleTitle h4 {
+		.h1;
+		margin: 0;
+		padding: 0;
+	}
+
+	.gadgetStyleBody {
+		padding: 0;
+	}
+}
+
+.gadgetStyle002 {
+	.gadgetStyleTitle {
+		padding: 16px 8px 0;
+	}
+
+	.gadgetStyleTitle h4 {
+		.h1;
+		margin: 0;
+		padding: 0;
+	}
+
+	.gadgetStyleBody {
+		padding: 16px 8px 24px;
+	}
+
+	a:not(.stylizedButton),
+	a:link:not(.stylizedButton),
+	a:active:not(.stylizedButton),
+	a:visited:not(.stylizedButton) {
+		color: @Typography-Dark-Link-Color;
+
+		&:hover {
+			color: @Typography-Dark-Link-Color-Hover;
+		}
+	}
+
+	/* style reset for C&S */
+	.gadgetStyleResetMixin(@Typography-Dark-Color, @Typography-Dark-Link-Color, @Typography-Dark-Link-Color-Hover, @Typography-Dark-Color, @Typography-Dark-BodyAlt-Color, @Typography-Dark-Color);
+	/* / style reset for C&S */
+}
+
+.gadgetStyle002.WaGadgetHeadline {
+	.gadgetStyleBody {
+		padding: 16px 8px 0;
+	}
+}
+
+.gadgetStyleResetMixin(@heading1Color, @LinkColor, @LinkColorHover, @basicColor, @captionColor, @gadgetStyleTitleH4) {
+	color: @basicColor;
+	font-family: @Lato-FontFamily;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+
+	.gadgetStyleTitle h4 {
+		color: @gadgetStyleTitleH4;
+	}
+
+	a:not(.stylizedButton),
+	a:link:not(.stylizedButton),
+	a:active:not(.stylizedButton),
+	a:visited:not(.stylizedButton) {
+		background-color: transparent;
+		color: @LinkColor;
+		font-family: inherit;
+		font-size: inherit;
+		font-style: inherit;
+		font-weight: inherit;
+		text-decoration: underline;
+
+		&:hover {
+			color: @LinkColorHover;
+			text-decoration: none;
+		}
+
+		html:not([class*="WaPlaceHolder"]) & {
+			@media screen and (max-width: @Device-XS-MaxWidth) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	h1.promo {
+		.promo;
+		color: @heading1Color;
+	}
+
+	h1:not(.promo):not(.header):not(.h1Alt) {
+		.h1;
+		color: @heading1Color;
+	}
+
+	h1.header {
+		.header;
+		color: @heading1Color;
+	}
+
+	h1.h1Alt {
+		.h1Alt;
+		color: @heading1Color;
+	}
+
+	h2 {
+		.h2;
+		color: @basicColor;
+	}
+
+	h3 {
+		.h3;
+		color: @basicColor;
+	}
+
+	h4:not(.gadgetTitleH4):not(.h4Alt) {
+		.h4;
+		color: @basicColor;
+	}
+
+	h4.h4Alt {
+		.h4Alt;
+		color: @basicColor;
+	}
+
+	h5 {
+		.h5;
+		color: @basicColor;
+	}
+
+	h6 {
+		.h6;
+		color: @basicColor;
+	}
+
+	.contStyleSmaller {
+		.contStyleSmallerMixin(@basicColor);
+	}
+
+	.contStyleCaption {
+		.contStyleCaptionMixin(@captionColor);
+	}
+
+	.quotedText {
+		.quotedTextMixin(@basicColor);
+	}
+
+	@media screen and (max-width: @Device-XS-MaxWidth) {
+		font-size: 16px;
+	}
+}
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+//Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.gadgetStyleNone {
+		.gadgetStyleTitle {
+			padding: 0 0 16px;
+		}
+	}
+
+	.gadgetStyle002 {
+		.gadgetStyleTitle {
+			padding: 12px 4px 0;
+		}
+
+		.gadgetStyleBody {
+			padding: 12px 4px 20px;
+		}
+	}
+}

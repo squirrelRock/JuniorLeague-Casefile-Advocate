@@ -1,0 +1,162 @@
+/* gadget: authorization required */
+/******************************************************************************/
+
+.WaGadgetAuthorizationRequired {
+	font-size: 14px;
+
+	& > p {
+		margin: 0 0 1em;
+
+		&:first-child {
+			margin: 0;
+		}
+
+		// error message
+		span.mandatorySymbol {
+			padding-right: 0;
+			font-weight: normal;
+		}
+	}
+
+	// Styles for open Authorization form (Facebook, GooglePlus)
+	.openAuthFormContainer {
+		display: table-cell;
+		max-width: 174px;
+		padding-right: 16px;
+		vertical-align: top;
+
+		.oAuthButtonsContainer .wa-authenticateLoginLink {
+			max-width: 174px;
+			margin: 0 12px 12px 0;
+			vertical-align: top;
+			font-size: 11px;
+		}
+	}
+
+	.authFormContainer {
+		display: table-cell;
+		padding-left: 16px;
+		border-left: 2px solid #979797;
+		vertical-align: top;
+	}
+
+	.loginPageTable {
+		#idLoginBox {
+			margin: 0 0 12px;
+
+			.mandatory {
+				display: inline-block;
+				margin-bottom: 6px;
+				color: #676767;
+				font-style: italic;
+			}
+		}
+
+		#idPasswordBox {
+			margin: 0 0 12px;
+
+			.mandatory {
+				display: inline-block;
+				margin-bottom: 6px;
+				color: #676767;
+				font-style: italic;
+			}
+		}
+
+		#idRememberMe {
+			margin: 0 0 24px;
+
+			input {
+				margin-right: 8px;
+			}
+		}
+
+		#idCaptcha {
+			margin: 0 0 12px;
+		}
+
+		#idSubmitBox {
+		}
+
+		input[type='password'],
+		input[type='text'] {
+			width: 307px;
+			height: 30px;
+			margin: 2px 0 0;
+		}
+
+		#idRememberMe {
+			white-space: nowrap;
+		}
+
+		#idLoginButtonBox {
+			display: inline-block;
+			margin-right: 24px;
+			vertical-align: middle;
+		}
+
+		#idForgotLinkBox {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		input.loginButton {
+			.functionalButton;
+		}
+	}
+}
+
+.WaGadgetAuthorizationRequired {
+	.oAuthForm .oAuthButtonsContainer a.wa-authenticateLoginLink {
+		font-size: 11px;
+		color: #fff;
+		text-decoration: none;
+		font-weight: normal;
+		font-style: normal;
+		font-family: Verdana;
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
+
+/*
+.widgetMode .WaGadgetAuthorizationRequired .authFormContainer { padding-left: 0; }
+*/
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.WaGadgetAuthorizationRequired {
+		.openAuthFormContainer {
+			display: block;
+			margin-bottom: 20px;
+			padding-right: 0;
+			border-right: 0;
+		}
+
+		.authFormContainer {
+			display: block;
+			padding-top: 30px;
+			padding-left: 0;
+			border-top: 2px solid #979797;
+			border-left: none;
+
+			#idLoginButtonBox {
+				display: block;
+				margin: 0 0 15px 0;
+				vertical-align: middle;
+			}
+
+		}
+
+
+	}
+}

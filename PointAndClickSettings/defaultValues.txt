@@ -1,0 +1,518 @@
+General_formatting-Backgrounds-Site-Background_color = ;
+General_formatting-Backgrounds-Site-Background_image = ;
+General_formatting-Backgrounds-Site-Background_position = ;
+General_formatting-Backgrounds-Site-Background_repeat = ;
+
+General_formatting-Backgrounds-Header_1-Background_color = ;
+General_formatting-Backgrounds-Header_1-Background_image = ;
+General_formatting-Backgrounds-Header_1-Background_position = ;
+General_formatting-Backgrounds-Header_1-Background_repeat = ;
+
+General_formatting-Backgrounds-Header_2-Background_color = ;
+General_formatting-Backgrounds-Header_2-Background_image = ;
+General_formatting-Backgrounds-Header_2-Background_position = ;
+General_formatting-Backgrounds-Header_2-Background_repeat = ;
+
+General_formatting-Backgrounds-Header_3-Background_color = ;
+General_formatting-Backgrounds-Header_3-Background_image = ;
+General_formatting-Backgrounds-Header_3-Background_position = ;
+General_formatting-Backgrounds-Header_3-Background_repeat = ;
+
+General_formatting-Backgrounds-Content-Background_color = ;
+General_formatting-Backgrounds-Content-Background_image = ;
+General_formatting-Backgrounds-Content-Background_position = ;
+General_formatting-Backgrounds-Content-Background_repeat = ;
+
+General_formatting-Backgrounds-Footer_1-Background_color = ;
+General_formatting-Backgrounds-Footer_1-Background_image = ;
+General_formatting-Backgrounds-Footer_1-Background_position = ;
+General_formatting-Backgrounds-Footer_1-Background_repeat = ;
+
+General_formatting-Backgrounds-Footer_2-Background_color = ;
+General_formatting-Backgrounds-Footer_2-Background_image = ;
+General_formatting-Backgrounds-Footer_2-Background_position = ;
+General_formatting-Backgrounds-Footer_2-Background_repeat = ;
+
+General_formatting-Backgrounds-Footer_3-Background_color = ;
+General_formatting-Backgrounds-Footer_3-Background_image = ;
+General_formatting-Backgrounds-Footer_3-Background_position = ;
+General_formatting-Backgrounds-Footer_3-Background_repeat = ;
+
+General_formatting-Backgrounds-Branding-Background_color = ;
+General_formatting-Backgrounds-Branding-Background_image = ;
+General_formatting-Backgrounds-Branding-Background_position = ;
+General_formatting-Backgrounds-Branding-Background_repeat = ;
+
+
+
+General_formatting-Basic_typography-Text-Font_family = ;
+General_formatting-Basic_typography-Text-Font_size = ;
+General_formatting-Basic_typography-Text-Font_weight = ;
+General_formatting-Basic_typography-Text-Font_style = ;
+General_formatting-Basic_typography-Text-Font_color = ;
+
+General_formatting-Basic_typography-Link-Font_family = ;
+General_formatting-Basic_typography-Link-Font_size = ;
+General_formatting-Basic_typography-Link-Font_weight = ;
+General_formatting-Basic_typography-Link-Font_style = ;
+General_formatting-Basic_typography-Link-Text_decoration = ;
+General_formatting-Basic_typography-Link-Font_color = ;
+
+General_formatting-Basic_typography-Link_on_hover-Text_decoration = ;
+General_formatting-Basic_typography-Link_on_hover-Font_color = ;
+
+General_formatting-Basic_typography-Promo-Background_color = ;
+General_formatting-Basic_typography-Promo-Font_family = ;
+General_formatting-Basic_typography-Promo-Font_size = ;
+General_formatting-Basic_typography-Promo-Font_weight = ;
+General_formatting-Basic_typography-Promo-Font_style = ;
+General_formatting-Basic_typography-Promo-Text_decoration = ;
+General_formatting-Basic_typography-Promo-Font_color = ;
+
+General_formatting-Basic_typography-Header_Title-Background_color = ;
+General_formatting-Basic_typography-Header_Title-Font_family = ;
+General_formatting-Basic_typography-Header_Title-Font_size = ;
+General_formatting-Basic_typography-Header_Title-Font_weight = ;
+General_formatting-Basic_typography-Header_Title-Font_style = ;
+General_formatting-Basic_typography-Header_Title-Text_decoration = ;
+General_formatting-Basic_typography-Header_Title-Font_color = ;
+
+General_formatting-Basic_typography-Heading_1-Background_color = ;
+General_formatting-Basic_typography-Heading_1-Font_family = ;
+General_formatting-Basic_typography-Heading_1-Font_size = ;
+General_formatting-Basic_typography-Heading_1-Font_weight = ;
+General_formatting-Basic_typography-Heading_1-Font_style = ;
+General_formatting-Basic_typography-Heading_1-Text_decoration = ;
+General_formatting-Basic_typography-Heading_1-Font_color = ;
+
+General_formatting-Basic_typography-Heading_1_Subtitle-Background_color = ;
+General_formatting-Basic_typography-Heading_1_Subtitle-Font_family = ;
+General_formatting-Basic_typography-Heading_1_Subtitle-Font_size = ;
+General_formatting-Basic_typography-Heading_1_Subtitle-Font_weight = ;
+General_formatting-Basic_typography-Heading_1_Subtitle-Font_style = ;
+General_formatting-Basic_typography-Heading_1_Subtitle-Text_decoration = ;
+General_formatting-Basic_typography-Heading_1_Subtitle-Font_color = ;
+
+General_formatting-Basic_typography-Heading_2-Background_color = ;
+General_formatting-Basic_typography-Heading_2-Font_family = ;
+General_formatting-Basic_typography-Heading_2-Font_size = ;
+General_formatting-Basic_typography-Heading_2-Font_weight = ;
+General_formatting-Basic_typography-Heading_2-Font_style = ;
+General_formatting-Basic_typography-Heading_2-Text_decoration = ;
+General_formatting-Basic_typography-Heading_2-Font_color = ;
+
+General_formatting-Basic_typography-Heading_3-Background_color = ;
+General_formatting-Basic_typography-Heading_3-Font_family = ;
+General_formatting-Basic_typography-Heading_3-Font_size = ;
+General_formatting-Basic_typography-Heading_3-Font_weight = ;
+General_formatting-Basic_typography-Heading_3-Font_style = ;
+General_formatting-Basic_typography-Heading_3-Text_decoration = ;
+General_formatting-Basic_typography-Heading_3-Font_color = ;
+
+General_formatting-Basic_typography-Heading_4-Background_color = ;
+General_formatting-Basic_typography-Heading_4-Font_family = ;
+General_formatting-Basic_typography-Heading_4-Font_size = ;
+General_formatting-Basic_typography-Heading_4-Font_weight = ;
+General_formatting-Basic_typography-Heading_4-Font_style = ;
+General_formatting-Basic_typography-Heading_4-Text_decoration = ;
+General_formatting-Basic_typography-Heading_4-Font_color = ;
+
+General_formatting-Basic_typography-Heading_4_Subtitle-Background_color = ;
+General_formatting-Basic_typography-Heading_4_Subtitle-Font_family = ;
+General_formatting-Basic_typography-Heading_4_Subtitle-Font_size = ;
+General_formatting-Basic_typography-Heading_4_Subtitle-Font_weight = ;
+General_formatting-Basic_typography-Heading_4_Subtitle-Font_style = ;
+General_formatting-Basic_typography-Heading_4_Subtitle-Text_decoration = ;
+General_formatting-Basic_typography-Heading_4_Subtitle-Font_color = ;
+
+General_formatting-Basic_typography-Heading_5-Background_color = ;
+General_formatting-Basic_typography-Heading_5-Font_family = ;
+General_formatting-Basic_typography-Heading_5-Font_size = ;
+General_formatting-Basic_typography-Heading_5-Font_weight = ;
+General_formatting-Basic_typography-Heading_5-Font_style = ;
+General_formatting-Basic_typography-Heading_5-Text_decoration = ;
+General_formatting-Basic_typography-Heading_5-Font_color = ;
+
+General_formatting-Basic_typography-Smaller-Background_color = ;
+General_formatting-Basic_typography-Smaller-Font_family = ;
+General_formatting-Basic_typography-Smaller-Font_size = ;
+General_formatting-Basic_typography-Smaller-Font_weight = ;
+General_formatting-Basic_typography-Smaller-Font_style = ;
+General_formatting-Basic_typography-Smaller-Text_decoration = ;
+General_formatting-Basic_typography-Smaller-Font_color = ;
+
+General_formatting-Basic_typography-Caption-Background_color = ;
+General_formatting-Basic_typography-Caption-Font_family = ;
+General_formatting-Basic_typography-Caption-Font_size = ;
+General_formatting-Basic_typography-Caption-Font_weight = ;
+General_formatting-Basic_typography-Caption-Font_style = ;
+General_formatting-Basic_typography-Caption-Text_decoration = ;
+General_formatting-Basic_typography-Caption-Font_color = ;
+
+General_formatting-Basic_typography-Quoted-Background_color = ;
+General_formatting-Basic_typography-Quoted-Font_family = ;
+General_formatting-Basic_typography-Quoted-Font_size = ;
+General_formatting-Basic_typography-Quoted-Font_weight = ;
+General_formatting-Basic_typography-Quoted-Font_style = ;
+General_formatting-Basic_typography-Quoted-Text_decoration = ;
+General_formatting-Basic_typography-Quoted-Font_color = ;
+
+General_formatting-Basic_typography-Date_and_time-Font_family = ;
+General_formatting-Basic_typography-Date_and_time-Font_size = ;
+General_formatting-Basic_typography-Date_and_time-Font_weight = ;
+General_formatting-Basic_typography-Date_and_time-Font_style = ;
+General_formatting-Basic_typography-Date_and_time-Text_decoration = ;
+General_formatting-Basic_typography-Date_and_time-Font_color = ;
+General_formatting-Basic_typography-Author-Font_family = ;
+General_formatting-Basic_typography-Author-Font_size = ;
+General_formatting-Basic_typography-Author-Font_weight = ;
+General_formatting-Basic_typography-Author-Font_style = ;
+General_formatting-Basic_typography-Author-Text_decoration = ;
+General_formatting-Basic_typography-Author-Font_color = ;
+General_formatting-Basic_typography-Location-Font_family = ;
+General_formatting-Basic_typography-Location-Font_size = ;
+General_formatting-Basic_typography-Location-Font_weight = ;
+General_formatting-Basic_typography-Location-Font_style = ;
+General_formatting-Basic_typography-Location-Text_decoration = ;
+General_formatting-Basic_typography-Location-Font_color = ;
+
+
+
+General_formatting-Dark_backgrounds_typography-Text-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Text-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Text-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Text-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Text-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Link-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Link-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Link-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Link-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Link-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Link-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Link_on_hover-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Link_on_hover-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Promo-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Promo-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Promo-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Promo-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Promo-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Promo-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Promo-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Header_Title-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Header_Title-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Header_Title-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Header_Title-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Header_Title-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Header_Title-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Header_Title-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Heading_1-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Heading_1-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Heading_1-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Heading_1-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Heading_1-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Heading_1-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Heading_1-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Heading_1_Subtitle-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Heading_1_Subtitle-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Heading_1_Subtitle-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Heading_1_Subtitle-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Heading_1_Subtitle-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Heading_1_Subtitle-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Heading_1_Subtitle-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Heading_2-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Heading_2-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Heading_2-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Heading_2-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Heading_2-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Heading_2-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Heading_2-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Heading_3-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Heading_3-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Heading_3-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Heading_3-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Heading_3-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Heading_3-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Heading_3-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Heading_4-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Heading_4-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Heading_4-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Heading_4-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Heading_4-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Heading_4-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Heading_4-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Heading_4_Subtitle-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Heading_4_Subtitle-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Heading_4_Subtitle-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Heading_4_Subtitle-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Heading_4_Subtitle-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Heading_4_Subtitle-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Heading_4_Subtitle-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Heading_5-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Heading_5-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Heading_5-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Heading_5-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Heading_5-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Heading_5-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Heading_5-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Smaller-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Smaller-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Smaller-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Smaller-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Smaller-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Smaller-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Smaller-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Caption-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Caption-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Caption-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Caption-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Caption-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Caption-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Caption-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Quoted-Background_color = ;
+General_formatting-Dark_backgrounds_typography-Quoted-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Quoted-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Quoted-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Quoted-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Quoted-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Quoted-Font_color = ;
+
+General_formatting-Dark_backgrounds_typography-Date_and_time-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Date_and_time-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Date_and_time-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Date_and_time-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Date_and_time-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Date_and_time-Font_color = ;
+General_formatting-Dark_backgrounds_typography-Author-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Author-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Author-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Author-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Author-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Author-Font_color = ;
+General_formatting-Dark_backgrounds_typography-Location-Font_family = ;
+General_formatting-Dark_backgrounds_typography-Location-Font_size = ;
+General_formatting-Dark_backgrounds_typography-Location-Font_weight = ;
+General_formatting-Dark_backgrounds_typography-Location-Font_style = ;
+General_formatting-Dark_backgrounds_typography-Location-Text_decoration = ;
+General_formatting-Dark_backgrounds_typography-Location-Font_color = ;
+
+
+
+General_formatting-Form-Field_labels-Font_family = ;
+General_formatting-Form-Field_labels-Font_size = ;
+General_formatting-Form-Field_labels-Font_weight = ;
+General_formatting-Form-Field_labels-Font_style = ;
+General_formatting-Form-Field_labels-Text_decoration = ;
+General_formatting-Form-Field_labels-Font_color = ;
+
+General_formatting-Form-Option_labels-Font_family = ;
+General_formatting-Form-Option_labels-Font_size = ;
+General_formatting-Form-Option_labels-Font_weight = ;
+General_formatting-Form-Option_labels-Font_style = ;
+General_formatting-Form-Option_labels-Font_color = ;
+
+General_formatting-Form-Caption-Font_family = ;
+General_formatting-Form-Caption-Font_size = ;
+General_formatting-Form-Caption-Font_weight = ;
+General_formatting-Form-Caption-Font_style = ;
+General_formatting-Form-Caption-Text_decoration = ;
+General_formatting-Form-Caption-Font_color = ;
+General_formatting-Form-Caption-Background_color = ;
+
+General_formatting-Form-Field_instructions-Font_family = ;
+General_formatting-Form-Field_instructions-Font_size = ;
+General_formatting-Form-Field_instructions-Font_weight = ;
+General_formatting-Form-Field_instructions-Font_style = ;
+General_formatting-Form-Field_instructions-Text_decoration = ;
+General_formatting-Form-Field_instructions-Font_color = ;
+
+General_formatting-Form-Form_instructions-Font_family = ;
+General_formatting-Form-Form_instructions-Font_size = ;
+General_formatting-Form-Form_instructions-Font_weight = ;
+General_formatting-Form-Form_instructions-Font_style = ;
+General_formatting-Form-Form_instructions-Text_decoration = ;
+General_formatting-Form-Form_instructions-Font_color = ;
+
+General_formatting-Form-Divider-Border_color = ;
+
+
+
+General_formatting-Table-Column_headings-Font_family = ;
+General_formatting-Table-Column_headings-Font_size = ;
+General_formatting-Table-Column_headings-Font_weight = ;
+General_formatting-Table-Column_headings-Font_style = ;
+General_formatting-Table-Column_headings-Text_decoration = ;
+General_formatting-Table-Column_headings-Font_color = ;
+General_formatting-Table-Column_headings-Background_color = ;
+
+General_formatting-Table-Table_row-Font_family = ;
+General_formatting-Table-Table_row-Font_size = ;
+General_formatting-Table-Table_row-Font_weight = ;
+General_formatting-Table-Table_row-Font_style = ;
+General_formatting-Table-Table_row-Text_decoration = ;
+General_formatting-Table-Table_row-Font_color = ;
+General_formatting-Table-Table_row-Background_color = ;
+General_formatting-Table-Table_row_on_hover-Background_color = ;
+General_formatting-Table-Table_links-Font_color = ;
+General_formatting-Table-Table_links_on_hover-Font_color = ;
+
+
+
+Button_styles-Style_1-Normal-Background_color = ;
+Button_styles-Style_1-Normal-Font_family = ;
+Button_styles-Style_1-Normal-Font_size = ;
+Button_styles-Style_1-Normal-Font_weight = ;
+Button_styles-Style_1-Normal-Font_style = ;
+Button_styles-Style_1-Normal-Text_decoration = ;
+Button_styles-Style_1-Normal-Font_color = ;
+
+Button_styles-Style_1-Hover-Background_color = ;
+Button_styles-Style_1-Hover-Font_family = ;
+Button_styles-Style_1-Hover-Font_size = ;
+Button_styles-Style_1-Hover-Font_weight = ;
+Button_styles-Style_1-Hover-Font_style = ;
+Button_styles-Style_1-Hover-Text_decoration = ;
+Button_styles-Style_1-Hover-Font_color = ;
+
+Button_styles-Style_2-Normal-Background_color = ;
+Button_styles-Style_2-Normal-Font_family = ;
+Button_styles-Style_2-Normal-Font_size = ;
+Button_styles-Style_2-Normal-Font_weight = ;
+Button_styles-Style_2-Normal-Font_style = ;
+Button_styles-Style_2-Normal-Text_decoration = ;
+Button_styles-Style_2-Normal-Font_color = ;
+
+Button_styles-Style_2-Hover-Background_color = ;
+Button_styles-Style_2-Hover-Font_family = ;
+Button_styles-Style_2-Hover-Font_size = ;
+Button_styles-Style_2-Hover-Font_weight = ;
+Button_styles-Style_2-Hover-Font_style = ;
+Button_styles-Style_2-Hover-Text_decoration = ;
+Button_styles-Style_2-Hover-Font_color = ;
+
+Button_styles-Style_3-Normal-Background_color = ;
+Button_styles-Style_3-Normal-Font_family = ;
+Button_styles-Style_3-Normal-Font_size = ;
+Button_styles-Style_3-Normal-Font_weight = ;
+Button_styles-Style_3-Normal-Font_style = ;
+Button_styles-Style_3-Normal-Text_decoration = ;
+Button_styles-Style_3-Normal-Font_color = ;
+
+Button_styles-Style_3-Hover-Background_color = ;
+Button_styles-Style_3-Hover-Font_family = ;
+Button_styles-Style_3-Hover-Font_size = ;
+Button_styles-Style_3-Hover-Font_weight = ;
+Button_styles-Style_3-Hover-Font_style = ;
+Button_styles-Style_3-Hover-Text_decoration = ;
+Button_styles-Style_3-Hover-Font_color = ;
+
+Button_styles-Style_4-Normal-Background_color = ;
+Button_styles-Style_4-Normal-Font_family = ;
+Button_styles-Style_4-Normal-Font_size = ;
+Button_styles-Style_4-Normal-Font_weight = ;
+Button_styles-Style_4-Normal-Font_style = ;
+Button_styles-Style_4-Normal-Text_decoration = ;
+Button_styles-Style_4-Normal-Font_color = ;
+
+Button_styles-Style_4-Hover-Background_color = ;
+Button_styles-Style_4-Hover-Font_family = ;
+Button_styles-Style_4-Hover-Font_size = ;
+Button_styles-Style_4-Hover-Font_weight = ;
+Button_styles-Style_4-Hover-Font_style = ;
+Button_styles-Style_4-Hover-Text_decoration = ;
+Button_styles-Style_4-Hover-Font_color = ;
+
+Button_styles-Style_5-Normal-Background_color = ;
+Button_styles-Style_5-Normal-Font_family = ;
+Button_styles-Style_5-Normal-Font_size = ;
+Button_styles-Style_5-Normal-Font_weight = ;
+Button_styles-Style_5-Normal-Font_style = ;
+Button_styles-Style_5-Normal-Text_decoration = ;
+Button_styles-Style_5-Normal-Font_color = ;
+
+Button_styles-Style_5-Hover-Background_color = ;
+Button_styles-Style_5-Hover-Font_family = ;
+Button_styles-Style_5-Hover-Font_size = ;
+Button_styles-Style_5-Hover-Font_weight = ;
+Button_styles-Style_5-Hover-Font_style = ;
+Button_styles-Style_5-Hover-Text_decoration = ;
+Button_styles-Style_5-Hover-Font_color = ;
+
+
+
+Log_in_gadgets-Text-Font_color = ;
+Log_in_gadgets-Input_fields-Font_color = ;
+Log_in_gadgets-Input_fields-Background_color = ;
+Log_in_gadgets-Labels-Font_color = ;
+Log_in_gadgets-Links-Font_color = ;
+Log_in_gadgets-Links_on_hover-Font_color = ;
+Log_in_gadgets-Button-Font_color = ;
+Log_in_gadgets-Button-Background_color = ;
+Log_in_gadgets-Button_on_hover-Font_color = ;
+Log_in_gadgets-Button_on_hover-Background_color = ;
+
+
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Normal-Font_family = ;
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Normal-Font_size = ;
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Normal-Font_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Normal-Font_weight = ;
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Normal-Font_style = ;
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Hover-Font_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Current-Font_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Current-Font_weight = ;
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Current-Font_style = ;
+Horizontal_menu-Style_for_light_backgrounds-Top_level-Current_on_hover-Font_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Normal-Background_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Normal-Font_family = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Normal-Font_size = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Normal-Font_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Normal-Font_weight = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Normal-Font_style = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Hover-Background_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Hover-Font_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Current-Background_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Current-Font_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Current-Font_weight = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Current-Font_style = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Current_on_hover-Background_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Current_on_hover-Font_color = ;
+Horizontal_menu-Style_for_light_backgrounds-Dropdown-Border-Background_color = ;
+
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Normal-Font_family = ;
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Normal-Font_size = ;
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Normal-Font_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Normal-Font_weight = ;
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Normal-Font_style = ;
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Hover-Font_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Current-Font_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Current-Font_weight = ;
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Current-Font_style = ;
+Horizontal_menu-Style_for_dark_backgrounds-Top_level-Current_on_hover-Font_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Normal-Background_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Normal-Font_family = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Normal-Font_size = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Normal-Font_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Normal-Font_weight = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Normal-Font_style = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Hover-Background_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Hover-Font_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Current-Background_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Current-Font_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Current-Font_weight = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Current-Font_style = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Current_on_hover-Background_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Current_on_hover-Font_color = ;
+Horizontal_menu-Style_for_dark_backgrounds-Dropdown-Border-Background_color = ;

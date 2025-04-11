@@ -1,0 +1,321 @@
+/******************************************************************************/
+/*	WaGadgetForum                                                             */
+/*		WaGadgetForumStateList                                                */
+/******************************************************************************/
+
+/* mode: WaGadgetForumStateList (forum summary) */
+/******************************************************************************/
+.WaGadgetForumStateList {
+	.forumCategoryOuterContainer {
+		margin: 0;
+
+		// text "Uncategorized"
+		h5 {
+			.h3;
+			margin-top: 0;
+			margin-bottom: 24px;
+		}
+	}
+
+	// header table
+	.boxHeaderOuterContainer {
+		table {
+			width: 100%;
+			table-layout: fixed;
+
+			td {
+				padding: 0 24px 0 0;
+				box-sizing: border-box;
+
+				h4 {
+					.h2;
+					margin-top: 0;
+					margin-bottom: 16px;
+					color: @Table-Heading-Color;
+				}
+			}
+
+			td.pageStateIconTD {
+				display: none;
+			}
+
+			td.threadTD {
+				width: 36%;
+			}
+
+			td.lastReplyTD {
+				width: 40%;
+			}
+
+			td.topicsCountTD {
+				width: 12%;
+				text-align: center;
+				padding-right: 0;
+			}
+
+			td.repliesCountTD {
+				width: 12%;
+				text-align: right;
+				padding-right: 0;
+			}
+		}
+	}
+
+	// main table
+	.boxBodyOuterContainer {
+		background: @Forum-Table-Bg;
+
+		table.forumListTable {
+			width: 100%;
+			border: none;
+			table-layout: fixed;
+			border-collapse: collapse;
+
+			tr.forumListRow {
+				border-top: 2px solid @Forum-Table-Border-Color;
+
+				td {
+					height: auto;
+					padding: 16px 24px 16px 0;
+					border-bottom: none;
+					vertical-align: top;
+					box-sizing: border-box;
+
+					&:first-child {
+						padding-right: 0;
+						padding-left: 24px;
+					}
+				}
+
+				&.highlight {
+					border-top: 2px solid @Forum-Table-Border-Color;
+
+					+ tr {
+						border-top: 2px solid @Forum-Table-Border-Color;
+					}
+				}
+
+				&:last-child {
+					border-bottom: 2px solid @Forum-Table-Border-Color;
+
+					&.highlight {
+						border-bottom: 2px solid @Forum-Table-Border-Color;
+					}
+				}
+
+				td.pageStateIconTD {
+					width: 4%;
+					vertical-align: top;
+					text-decoration: none !important;
+
+					.pageStateIcon {
+						.adminIconDiv,
+						.anybodyIconDiv,
+						.memberIconDiv {
+							width: auto;
+							height: auto;
+							background: none;
+							font: ~'normal 16px/normal WA-theme-icons';
+							vertical-align: top;
+							color: @Typography-BodyAlt-Color;
+						}
+
+						.anybodyIconDiv:before { content: '\e606'; }
+
+						.memberIconDiv:before { content: '\e607'; }
+
+						.adminIconDiv:before { content: '\e608'; }
+					}
+				}
+
+				td.threadTD {
+					width: 32%;
+					vertical-align: top;
+					padding-left: 8px;
+
+					.thread {
+						span.forumDescription {
+							display: block;
+							color: @Typography-BodyAlt-Color;
+							font-size: 14px;
+							font-style: italic;
+							font-weight: 500;
+						}
+					}
+				}
+
+				td.lastReplyTD {
+					width: 40%;
+
+					.lastReply {
+						span {
+							display: block;
+							color: @Typography-BodyAlt-Color;
+							font-size: 14px;
+							font-style: italic;
+							font-weight: 500;
+						}
+					}
+				}
+
+				td.topicsCountTD {
+					width: 12%;
+					padding-right: 0;
+					text-align: center;
+					text-decoration: none !important;
+				}
+
+				td.repliesCountTD {
+					width: 12%;
+					padding-right: 35px;
+					text-align: right;
+					text-decoration: none !important;
+				}
+			}
+
+			tr.highlight,
+			tr.highlight td {
+				background: @Forum-Table-Row-Highlight-Bg;
+				border-top: 2px solid @Forum-Table-Border-Color;
+			}
+
+			tr.highlight {
+				td.lastReplyTD .lastReply a,
+				td.repliesCountTD .repliesCount,
+				td.threadTD .thread a.forumTitle,
+				td.topicsCountTD .topicsCount {
+					color: @Forum-Table-Row-Highlight-Color;
+				}
+
+				td.pageStateIconTD .pageStateIcon .adminIconDiv,
+				td.pageStateIconTD .pageStateIcon .anybodyIconDiv,
+				td.pageStateIconTD .pageStateIcon .memberIconDiv {
+					color: @Typography-BodyAlt-Color;
+				}
+
+				td.lastReplyTD .lastReply a,
+				td.threadTD .thread a.forumTitle {
+					text-decoration: underline;
+				}
+
+				td.lastReplyTD .lastReply span,
+				td.threadTD .thread span.forumDescription {
+					color: @Forum-Table-Row-Highlight-Author-Color;
+				}
+			}
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device M
+@media screen and (max-width: @Device-M-MaxWidth) {
+	.WaGadgetForumStateList {
+		.boxBodyOuterContainer table.forumListTable tr.forumListRow {
+			td.pageStateIconTD {
+				padding-left: 8px;
+			}
+		}
+	}
+}
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	.WaGadgetForumStateList {
+		.forumCategoryOuterContainer {
+
+			// text "Uncategorized"
+			h5 {
+				margin: 16px 0;
+				font-size: 22px;
+			}
+		}
+
+		// header table
+		.boxHeaderOuterContainer {
+			table {
+				td {
+					&.threadTD {
+						width: 100%;
+					}
+
+					&.lastReplyTD,
+					&.repliesCountTD,
+					&.topicsCountTD {
+						display: none;
+					}
+				}
+			}
+		}
+
+		// main table
+		.boxBodyOuterContainer {
+			table.forumListTable {
+				width: 100%;
+				border-collapse: collapse;
+
+				tr.forumListRow {
+					font-size: 0;
+
+					td {
+						display: inline-block;
+						border: none;
+						padding: 0;
+
+						&.pageStateIconTD {
+							width: 32px;
+							padding-top: 12px;
+						}
+
+						&.threadTD {
+							width: ~'calc(100% - 32px)';
+							font-size: 16px;
+							font-weight: 500;
+							padding-top: 12px;
+							padding-right: 32px;
+						}
+
+						&.lastReplyTD {
+							display: block;
+							padding: 6px 32px 6px 40px;
+							width: 100%;
+							font-size: 16px;
+
+							.nomessages {
+								margin: 0;
+							}
+						}
+
+						&.repliesCountTD,
+						&.topicsCountTD {
+							width: auto;
+							padding: 6px 12px 12px;
+							font-size: 16px;
+
+							div:before {
+								font: ~'normal 16px/normal WA-theme-icons';
+								padding-right: 8px;
+							}
+						}
+
+						&.topicsCountTD {
+							padding: 6px 0 12px 40px;
+
+							.topicsCount:before { content: '\e620'; }
+						}
+
+						&.repliesCountTD {
+							padding: 6px 12px 12px 55px;
+
+							.repliesCount:before { content: '\e629'; }
+						}
+					}
+				}
+			}
+		}
+	}
+}

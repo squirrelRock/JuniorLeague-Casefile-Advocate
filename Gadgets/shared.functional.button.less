@@ -1,0 +1,51 @@
+// Common wizard button
+
+.functionalButton {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	min-width: 112px;
+	margin: 0;
+	padding: 8px 20px;
+	background: @FunctionButton-Bg;
+	border: none;
+	outline: none;
+	color: @FunctionButton-Color;
+	font: @FunctionButton-Font;
+	white-space: nowrap;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	-webkit-appearance: none;
+
+	&:hover {
+		background: @FunctionButton-Hover-Bg;
+		color: @FunctionButton-Hover-Color;
+	}
+
+	&:active {
+		background: @FunctionButton-Active-Bg;
+		color: @FunctionButton-Active-Color;
+	}
+
+	&[disabled],
+	&.aspNetDisabled,
+	.disabled {
+		.opacity(50);
+		cursor: default;
+		background: @FunctionButton-Bg;
+		color: @FunctionButton-Color;
+		border: none;
+
+		&:hover {
+			background: @FunctionButton-Bg;
+			color: @FunctionButton-Color;
+		}
+	}
+}
+
+.functionalLink {
+	min-width: 80px;
+}

@@ -1,0 +1,579 @@
+html {
+	font-size: 100.01%;
+}
+
+body {
+	color: @Typography-Body-Color;
+	font: @Typography-Body-Font;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+input[type=password],
+input[type=text],
+select,
+textarea {
+	display: inline-block;
+	margin: 0;
+	padding: 6px 12px 7px;
+	background: @Form-Input-Bg;
+	border: 1px solid @Form-Input-Border;
+	color: @Form-Input-Color;
+	font: @Form-Input-Font;
+}
+
+input[type=password]:focus,
+input[type=text]:focus,
+select:focus,
+textarea:focus {
+	border: 2px solid @Form-Input-Border-Focus;
+	padding: 5px 11px 6px;
+}
+
+input:-ms-input-placeholder {
+	color: grey;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	margin: 2px 0 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+input[disabled=disabled],
+select[disabled=disabled],
+textarea[disabled=disabled] {
+	background: @Form-Input-Disabled-Bg;
+	border: @Form-Input-Disabled-Border;
+}
+
+// default values for C&S vs StyledWrappers
+.promo,
+.header,
+.h1,
+.h1Alt,
+.h2,
+.h3,
+.h4,
+.h4Alt,
+.h5,
+.h6 {
+	background-color: transparent;
+	font-family: @Lato-FontFamily;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+// Headers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+}
+
+.promo,
+h1.promo {
+	margin: 1.21em 0 0.72em;
+	color: @Typography-Promo-Color;
+	font-family: @Raleway-FontFamily;
+	font-size: 33px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.18;
+	text-transform: uppercase;
+
+	html:not([class*="WaPlaceHolder"]) & {
+		@media screen and (max-width: @Device-XS-MaxWidth) {
+			font-size: 30px;
+			line-height: 1.167;
+		}
+	}
+}
+
+.h1,
+h1 {
+	margin: 1.42em 0 0.85em;
+	color: @Typography-HeaderTitle-Color;
+	font-family: @Typography-HeaderTitle-FontFamily;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: @Typography-HeaderTitle-Weight;
+	line-height: 1.29;
+	text-transform: @Typography-HeaderTitle-Transform;
+
+	html:not([class*="WaPlaceHolder"]) & {
+		@media screen and (max-width: @Device-XS-MaxWidth) {
+			font-size: 24px;
+			line-height: 1.2;
+		}
+	}
+}
+
+.header,
+h1.header {
+	margin: 1.42em 0 0.85em;
+	color: @Typography-Header1-Color;
+	font-family: @Typography-Header1-FontFamily;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: @Typography-Header1-Weight;
+	line-height: 1.29;
+	text-transform: @Typography-Header1-Transform;
+
+	html:not([class*="WaPlaceHolder"]) & {
+		@media screen and (max-width: @Device-XS-MaxWidth) {
+			font-size: 24px;
+			line-height: 1.17;
+		}
+	}
+}
+
+.h1Alt,
+h1.h1Alt {
+	margin: 2.5em 0 1.5em;
+	color: @Typography-Header1Alt-Color;
+	font-family: @DroidSerif-FontFamily;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.5;
+	text-transform: none;
+
+	html:not([class*="WaPlaceHolder"]) & {
+		@media screen and (max-width: @Device-XS-MaxWidth) {
+			font-size: 14px;
+			line-height: 1.57;
+		}
+	}
+}
+
+.h2,
+h2 {
+	margin: 1.66em 0 1em;
+	color: @Typography-Header2-Color;
+	font-family: @Typography-Header2-FontFamily;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.33;
+	text-transform: @Typography-Header2-Transform;
+
+	html:not([class*="WaPlaceHolder"]) & {
+		@media screen and (max-width: @Device-XS-MaxWidth) {
+			font-size: 22px;
+			line-height: 1.18;
+		}
+	}
+}
+
+.h3,
+h3 {
+	margin: 1.66em 0 1em;
+	color: @Typography-Header3-Color;
+	font-family: @Typography-Header3-FontFamily;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: @Typography-Header3-Weight;
+	line-height: 1.25;
+	text-transform: none;
+
+	html:not([class*="WaPlaceHolder"]) & {
+		@media screen and (max-width: @Device-XS-MaxWidth) {
+			font-size: 22px;
+			line-height: 1.18;
+		}
+	}
+}
+
+.h4,
+h4 {
+	margin: 1.66em 0 1em;
+	color: @Typography-Header4-Color;
+	font-family: @Typography-Header4-FontFamily;
+	font-size: 24px;
+	font-style: @Typography-Header4-Style;
+	font-weight: @Typography-Header4-Weight;
+	line-height: 1.33;
+	text-transform: none;
+
+	html:not([class*="WaPlaceHolder"]) & {
+		@media screen and (max-width: @Device-XS-MaxWidth) {
+			font-size: 22px;
+			line-height: 1.18;
+		}
+	}
+}
+
+.h4Alt,
+h4.h4Alt {
+	margin: 2.5em 0 1.5em;
+	color: @Typography-Header4Alt-Color;
+	font-family: @Raleway-FontFamily;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.5;
+	text-transform: none;
+
+	html:not([class*="WaPlaceHolder"]) & {
+		@media screen and (max-width: @Device-XS-MaxWidth) {
+			font-size: 14px;
+			line-height: 1.57;
+		}
+	}
+}
+
+
+.h5,
+h5 {
+	margin: 2.5em 0 1.5em;
+	color: @Typography-Header5-Color;
+	font-family: @Lato-FontFamily;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.5;
+	text-transform: none;
+
+	html:not([class*="WaPlaceHolder"]) & {
+		@media screen and (max-width: @Device-XS-MaxWidth) {
+			font-size: 16px;
+			line-height: 1.38;
+		}
+	}
+}
+
+.h6,
+h6 {
+	margin: 2.5em 0 1.5em;
+	color: @Typography-Header6-Color;
+	font-family: @Lato-FontFamily;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.25;
+	text-transform: none;
+}
+
+// Links
+a {
+	color: @Typography-Link-Color;
+	text-decoration: @Typography-Link-Decoration;
+}
+
+a:hover {
+	color: @Typography-Link-Color-Hover;
+	text-decoration: @Typography-Link-Decoration-Hover;
+}
+
+// Indent block
+blockquote { }
+
+// text format
+
+.contStyleSmallerMixin(@contStyleSmallerColor) {
+	background-color: transparent;
+	color: @contStyleSmallerColor;
+	font-family: @Lato-FontFamily;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	line-height: 1.57;
+}
+
+.quotedTextMixin(@quotedTextColor) {
+	margin: 1em 0;
+	padding-left: 23px;
+	background-color: transparent;
+	border-left: 4px solid @Typography-Quoted-Border-Color;
+	color: @quotedTextColor;
+	font-family: @Lato-FontFamily;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 1.5;
+}
+
+.contStyleCaptionMixin(@contStyleCaptionColor) {
+	background-color: transparent;
+	color: @contStyleCaptionColor;
+	font-family: @Lato-FontFamily;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: italic;
+	text-decoration: none;
+	line-height: 1.43;
+}
+
+.contStyleSmaller{
+	.contStyleSmallerMixin(@Typography-Body-Color);
+}
+
+.quotedText {
+	.quotedTextMixin(@Typography-Body-Color);
+}
+
+
+.contStyleCaption {
+	.contStyleCaptionMixin(@Typography-BodyAlt-Color);
+}
+
+// system format
+.sysFormatSmaller {
+	font-size: 14px;
+}
+
+.sysFormatGray {
+	color: #929191;
+}
+
+// dividers
+.WaContentDivider {
+	display: block;
+	width: 100%;
+	margin: 1em 0;
+}
+
+.WaContentDivider[class*=dividerStyle] {
+	height: 1px;
+}
+
+.WaContentDivider.divider_style_border_solid {
+	height: 0;
+	border-top: 1px solid #000;
+}
+
+.WaContentDivider.divider_style_border_dotted {
+	height: 0;
+	border-top: 1px dotted #000;
+}
+
+.WaContentDivider.divider_style_border_dashed {
+	height: 0;
+	border-top: 1px dashed #000;
+}
+
+.WaContentDivider.divider_style_border_double_solid {
+	height: 1px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.WaContentDivider.divider_style_border_double_solid_2_to_1 {
+	height: 1px;
+	border-top: 2px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.WaContentDivider.dividerStyle001 {
+	height: 16px;
+	margin: 1em 0;
+	background: @Divider-Style001-Color;
+}
+
+.WaContentDivider.dividerStyle002 {
+	height: 16px;
+	margin: 1em 0;
+	background: @Divider-Style002-Color;
+}
+
+.WaContentDivider.dividerStyle003 {
+	height: 16px;
+	margin: 1em 0;
+	background: @Divider-Style003-Color;
+}
+
+.WaContentDivider.dividerStyle004 {
+	height: 16px;
+	margin: 1em 0;
+	background: @Divider-Style004-Color;
+}
+
+.WaContentDivider.dividerStyle005 {
+	height: 16px;
+	margin: 1em 0;
+	background: @Divider-Style005-Color;
+}
+
+.WaContentDivider.dividerStyle006 {
+	height: 8px;
+	margin: 1em 0;
+	background: @Divider-Style001-Color;
+}
+
+.WaContentDivider.dividerStyle007 {
+	height: 8px;
+	margin: 1em 0;
+	background: @Divider-Style002-Color;
+}
+
+.WaContentDivider.dividerStyle008 {
+	height: 8px;
+	margin: 1em 0;
+	background: @Divider-Style003-Color;
+}
+
+.WaContentDivider.dividerStyle009 {
+	height: 8px;
+	margin: 1em 0;
+	background: @Divider-Style004-Color;
+}
+
+.WaContentDivider.dividerStyle010 {
+	height: 8px;
+	margin: 1em 0;
+	background: @Divider-Style005-Color;
+}
+
+// Typography
+.typographynottitle() {
+	// reset margin-bottom at last element
+	blockquote,
+	dl,
+	form,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	ol,
+	p,
+	pre,
+	ul {
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+.typography() {
+	&:after {
+		clear: both;
+		display: block;
+		visibility: hidden;
+		height: 0;
+		overflow: hidden;
+		font-size: 0;
+		content: '';
+	}
+
+	// reset margin-top at first element
+	blockquote,
+	dl,
+	form,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	ol,
+	p,
+	pre,
+	ul {
+		&:first-child {
+			margin-top: 0 !important;
+		}
+	}
+
+	// Lists
+	ul {
+		margin: 1em 0 1em 18px;
+		padding: 0;
+		list-style: disc;
+
+		li {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	ol {
+		margin: 1em 0 1em 24px;
+		padding: 0;
+
+		li {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	ol,
+	ul {
+		ol:first-child,
+		ol:last-child,
+		ul:first-child,
+		ul:last-child {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+	}
+
+	// strong
+	b { }
+
+	// italic
+	i { }
+
+	// Responsive img
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	// Table
+	.contStyleExcSimpleTable {
+		td,
+		th { }
+	}
+}
+
+.gadgetContentEditableArea {
+	position: relative;
+}
+
+[class*="WaGadget"]:not(.WaGadgetHeadline) {
+	[class*='EditableArea'] {
+		.typographynottitle;
+	}
+}
+
+[class*='EditableArea'] {
+	.typography;
+}
+
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	html:not([class*="WaPlaceHolder"]) {
+		body {
+			font-size: 16px;
+			line-height: 1.38;
+		}
+
+		.quotedText {
+			padding-left: 19px;
+		}
+
+		blockquote {
+			padding-left: 19px;
+		}
+	}
+}

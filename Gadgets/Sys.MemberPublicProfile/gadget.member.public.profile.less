@@ -1,0 +1,171 @@
+/******************************************************************************/
+/*	WaGadgetMemberPublicProfile                                               */
+/*		WaGadgetMemberPublicProfileStateMain                                  */
+/*		WaGadgetMemberPublicProfileStatePhotoAlbums                           */
+/*		WaGadgetMemberPublicProfileStatePhoto                                 */
+/******************************************************************************/
+
+.WaGadgetMemberPublicProfile {
+	overflow: visible;
+}
+
+/* mode: WaGadgetMemberPublicProfileStateMain ( public profile ) */
+/******************************************************************************/
+.WaGadgetMemberPublicProfileStateMain {
+
+	// back link
+	.pageTitleOuterContainer {
+		margin: 0 0 20px;
+	}
+
+	.profileHeaderContainer {
+		.sendMailButtonContainer {
+			margin-left: 24px;
+		}
+
+		input.typeButton {
+			.functionalButton;
+		}
+
+		h3 {
+			background-color: inherit;
+			color: inherit;
+			font: inherit;
+			text-decoration: inherit;
+
+		}
+	}
+
+	.bundlContact {
+		margin: 20px 0;
+
+		img {
+			display: none;
+		}
+	}
+
+	.memberDirectoryContainer {
+		h5 {
+			.h4;
+		}
+
+		[name=linkedContacts] {
+			letter-spacing: -0.3em;
+			text-decoration: none;
+		}
+	}
+}
+
+/* mode: WaGadgetMemberPublicProfileStatePhotoAlbums
+	( list photos in album profile ) */
+/******************************************************************************/
+.WaGadgetMemberPublicProfileStatePhotoAlbums {
+
+	// back link
+	#idPhotoAlbumHeaderContainer {
+		margin: 0 0 20px;
+	}
+
+	// title, date
+	#idPhotoAlbumTitleMainContainer {
+		.clearfix;
+		margin: 0 0 20px;
+
+		.titleLeftContainer {
+			float: left;
+		}
+
+		.titleRightContainer {
+			float: right;
+		}
+
+		// album name
+		h1.pageTitle {
+			margin: 0;
+			padding: 0;
+		}
+
+		// text created/updated date
+		.photoLabel {
+			.sysFormatSmaller;
+		}
+	}
+
+	// album name
+	.descriptionContainer {
+		margin: 0 0 20px;
+	}
+}
+
+/* mode: WaGadgetMemberPublicProfileStatePhoto ( current photo ) */
+/******************************************************************************/
+.WaGadgetMemberPublicProfileStatePhoto {
+
+	// back link
+	#idPhotoHeaderContainer {
+		margin: 0 0 20px;
+	}
+
+	// title
+	.pageTitleOuterContainer {
+		margin: 0 0 20px;
+
+		h1 {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	// nav menu
+	#idMenuHeaderContainer {
+		.clearfix;
+		.sysFormatSmaller;
+		margin: 0 0 20px;
+
+		.linkContainer {
+			display: inline-block;
+		}
+
+		.linkContainer + .linkContainer {
+			margin: 0 0 0 20px;
+		}
+	}
+
+	#idImageContainer {
+		text-align: center;
+
+		img {
+			display: inline-block;
+			max-width: 100%;
+			vertical-align: top;
+		}
+	}
+
+	// description
+	#idCaptionContainer {
+		width: 600px;
+		margin: 20px auto 0;
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device XS
+@media screen and (max-width: @Device-XS-MaxWidth) {
+	.WaGadgetMemberPublicProfileStateMain {
+		.profileHeaderContainer {
+			.sendMailButtonContainer {
+				margin-left: 0;
+				margin-top: 16px;
+				display: block;
+			}
+		}
+
+		.memberDirectoryContainer .membersTable h5 {
+			font-size: 16px !important;
+		}
+	}
+}

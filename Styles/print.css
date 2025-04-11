@@ -1,0 +1,35 @@
+/* Styles for print mode. Header, navigation, footer, separators are hidden. */
+@media print {
+	body {
+		background: none !important;
+		color: #333;
+		font-size: 14px !important;
+	}
+
+	/* service content */
+	body #WA_messagePopup,
+	body #idFooterPoweredByContainer,
+	body .switchToAdminContainer,
+	body .switchToAdminShadowContainer {
+		display: none;
+	}
+
+	/* minimize placeholder padding */
+	body .WaPlaceHolder {
+		margin: 0;
+		padding: 0;
+	}
+
+	body .WaPlaceHolder > div {
+		margin: 0;
+		padding: 20px 0;
+	}
+
+	.WaGadgetLoginButton,
+	.WaGadgetLoginForm,
+	.WaGadgetMenuHorizontal,
+	.WaGadgetMenuVertical,
+	.WaGadgetSiteSearch {
+		display: none;
+	}
+}

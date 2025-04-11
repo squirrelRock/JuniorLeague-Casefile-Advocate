@@ -1,0 +1,198 @@
+/* gadget: login box button */
+/******************************************************************************/
+.WaGadgetLoginButton {
+	overflow: visible;
+
+	// Authenticated
+	.loginContainer {
+		.loginContainerInner {
+			position: relative;
+		}
+	}
+
+	.loginPanel {
+		position: absolute;
+		top: 58px;
+		left: 0;
+		z-index: 5;
+		display: none;
+		visibility: hidden;
+		width: 172px;
+		margin: 0;
+		padding: 24px;
+		background: @Login-Panel-Bg;
+		border: 1px solid @Login-Panel-Border;
+		opacity: 0;
+		text-align: left;
+
+		&:before {
+			position: absolute;
+			top: -15px;
+			left: 24px;
+			width: 0;
+			height: 0;
+			margin: 0 0 0 -15px;
+			border-right: 15px solid transparent;
+			border-bottom: 15px solid @Login-Panel-Border;
+			border-left: 15px solid transparent;
+			content: '';
+		}
+
+		&:after {
+			position: absolute;
+			top: -14px;
+			left: 24px;
+			width: 0;
+			height: 0;
+			margin: 0 0 0 -15px;
+			border-right: 15px solid transparent;
+			border-bottom: 15px solid @Login-Panel-Bg;
+			border-left: 15px solid transparent;
+			content: '';
+		}
+	}
+
+	.alignRight .loginPanel {
+		right: 0;
+		left: auto;
+		margin-left: 0;
+
+		&:before {
+			right: 9px;
+			left: auto;
+		}
+
+		&:after {
+			right: 9px;
+			left: auto;
+		}
+	}
+
+	.alignCenter .loginPanel {
+		left: 50%;
+		margin-left: -181px;
+
+		&:before {
+			left: 50%;
+		}
+
+		&:after {
+			left: 50%;
+		}
+	}
+
+	.authenticated .loginPanel {
+		width: 315px;
+
+		a {
+			color: @Login-Link-Color;
+
+			&:hover {
+				color: @Login-Link-Color-Hover;
+			}
+		}
+
+		.loggedName {
+			margin: 0 0 8px;
+		}
+
+		.profileBox {
+			display: inline-block;
+			margin-right: 24px;
+			font-size: 16px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		_:-ms-lang(x), .profileBox { margin-right: 23px; }
+
+		.loginBoxLogout {
+			display: inline;
+			margin: 0;
+			padding: 0;
+			background: none;
+			border: 0;
+			color: @Login-Link-Color;
+			font-size: 16px;
+			font-family: @Lato-FontFamily;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+
+		.loginBoxLogout:hover {
+			color: @Login-Link-Color-Hover;
+			text-decoration: none;
+		}
+	}
+
+	.loginContainer.authenticated.loginContainer.authenticated .loginLink {
+		position: relative;
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		overflow: hidden;
+		background: @Login-Auth-Button-Bg;
+		color: @Login-Auth-Button-Color;
+		line-height: 400px;
+		vertical-align: top;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			font: normal 25px/50px 'WA-theme-icons';
+			text-align: center;
+			text-indent: 0;
+			content: '\e613';
+		}
+
+		&:hover, &.hover {
+			background: @Login-Auth-Button-Bg-Hover;
+			color: @Login-Auth-Button-Color-Hover;
+		}
+	}
+
+	.alignLeft,
+	.authenticated.alignLeft .loginPanel {
+		text-align: left;
+	}
+
+	.alignCenter,
+	.authenticated.alignCenter .loginPanel {
+		text-align: center;
+	}
+
+	.alignRight,
+	.authenticated.alignRight .loginPanel {
+		text-align: right;
+	}
+
+	.loginContainer.loginContainer .loginLink {
+		.functionalButton;
+		min-width: 50px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device S
+@media screen and (max-width: @Device-S-MaxWidth) {
+	body.LayoutMain {
+		.WaGadgetLoginButton {
+			display: none;
+		}
+	}
+}
