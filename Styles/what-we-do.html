@@ -1,0 +1,128 @@
+<style>
+
+
+.jl-info-wrapper {
+  background-color: #d32a40;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+}
+
+.jl-info-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.jl-info-column {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc((100% - 3rem) / 3);
+  min-width: 280px;
+}
+
+.jl-info-label {
+  background-color: #991023;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.jl-info-box {
+  background: #fff;
+  border-radius: 5px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.jl-info-box.center {
+  text-align: center;
+}
+
+.jl-action-word {
+  font-size: 22px;
+  color: #BF1E23;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.jl-button-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.jl-button {
+  background-color: #d32a40;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.jl-button:hover {
+  background-color: #991023;
+}
+
+@media (max-width: 1023px) {
+  .jl-info-container {
+    flex-direction: column;
+  }
+
+  .jl-info-column {
+    flex: 1 1 100%;
+  }
+}
+
+
+</style>
+
+
+
+
+
+
+
+<div class="jl-info-wrapper">
+    <div class="jl-info-container">
+  
+      <!-- WHAT column -->
+      <div class="jl-info-column">
+        <div class="jl-info-label">WHAT</div>
+        <div class="jl-info-box">
+          <p><strong>Junior League of Napa‑Sonoma</strong> trains and supports women to become effective leaders.</p>
+          <p>Members build practical skills, gain confidence, and develop their potential through hands‑on experience and mentorship.</p>
+        </div>
+      </div>
+  
+      <!-- WE column -->
+      <div class="jl-info-column">
+        <div class="jl-info-label">WE</div>
+        <div class="jl-info-box center">
+          <p class="jl-action-word">Lead</p>
+          <p class="jl-action-word">Advocate</p>
+          <p class="jl-action-word">Serve</p>
+        </div>
+        <div class="jl-button-wrapper">
+          <a class="jl-button" href="mailto:info@jlns.org">Email info@jlns.org</a>
+        </div>
+      </div>
+  
+      <!-- DO column -->
+      <div class="jl-info-column">
+        <div class="jl-info-label">DO</div>
+        <div class="jl-info-box">
+          <p>We lead initiatives that support the well‑being of women and children through education, civic engagement, and social justice.</p>
+          <p>Make lasting friendships, and have fun doing it!</p>
+        </div>
+      </div>
+  
+    </div>
+  </div>

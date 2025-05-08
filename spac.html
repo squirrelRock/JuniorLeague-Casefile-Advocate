@@ -1,0 +1,104 @@
+<style>
+    /* container for whole thing */
+    .jlns-spac-wrapper {
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+    }
+  
+    /* title  */
+    .jlns-spac-title {
+      display: inline-block;
+      background-color: #d32a40;
+      color: #fff;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      padding: 0.5rem 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    /* two‑col flex container */
+    .jlns-spac-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  
+   
+    .jlns-spac-section {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+
+    .jlns-spac-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+ 
+    .jlns-spac-section .text-block {
+      font-size: clamp(1rem, 1.5vw + 0.5rem, 1.125rem);
+      line-height: 1.6;
+      margin-top: 1rem;
+    }
+  
+ 
+    .jlns-spac-section.delegates .text-block {
+      text-align: center;
+    }
+  
+  
+    @media (max-width: 600px) {
+      .jlns-spac-container {
+        flex-direction: column;
+      }
+      .jlns-spac-title {
+        width: 100%;
+      }
+    }
+  </style>
+  
+  <div class="jlns-spac-wrapper">
+    <!-- Title -->
+    <div class="jlns-spac-title">
+      A JUNIOR LEAGUE OF NAPA‑SONOMA INITIATIVE PROGRAM
+    </div>
+  
+    <!-- Panels -->
+    <div class="jlns-spac-container">
+  
+      <!-- Left: intro + image -->
+      <div class="jlns-spac-section">
+        <img
+          src="/resources/Pictures/2025_JLNS/SPAC/2atCapitol.jpg"
+          alt="SPAC delegates at the Capitol"
+        >
+        <div class="text-block">
+          
+            
+                <p>Since 1971, the <strong>Junior Leagues of California State Public Affairs Committee (CalSPAC)</strong> has represented the interests of its member Leagues and their community projects to policymakers at the national, state, and local levels.</p>
+              
+                <p><strong>CalSPAC</strong> advocates for legislation favorable to its member Leagues’ projects and issues in: education, family support, health, anti‑human trafficking, and violence prevention.</p>
+              
+        </div>
+      </div>
+  
+      <!-- Right -->
+      <div class="jlns-spac-section delegates">
+        <img
+          src="/resources/Pictures/2025_JLNS/SPAC/SPAC-6a-women.jpg"
+          alt="Senior and Junior SPAC delegates"
+        >
+        <div class="text-block">
+
+            <p style="text-align:left;"><strong>The Junior League of Napa‑Sonoma</strong> is proud to be a member of CalSPAC, and every year JLNS selects a Junior and Senior SPAC delegate to represent our League with CalSPAC.</p>
+          <p><strong>Senior SPAC Delegate</strong> (2024–25) – Kara Clark</p>
+          <p><strong>Junior SPAC Delegate</strong> (2024–25) – Lori Hurlbert‑Johnson</p>
+        </div>
+      </div>
+  
+    </div>
+  </div>

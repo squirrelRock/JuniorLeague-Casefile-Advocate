@@ -1,0 +1,48 @@
+
+
+
+/* -- for message box pop-up */
+
+
+#contentBalancePanelId {
+    background-color: #D0EEF1 !important; 
+    color: #991023 !important; 
+    padding: .6rem; 
+    border: 1px solid #991023;
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  #contentBalancePanelId.opened {
+    background-color: #D0EEF1 !important; 
+  }
+  
+  #contentBalancePanelId a {
+    color: #991023 !important;
+    background-color: #ffffff !important;
+    font-size: 1rem;
+    text-decoration: underline !important; 
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  #WA_messagePopup a::before,
+  #WA_messagePopup a::after {
+    color: #555 !important;
+    font-size: .8rem !important;
+    background-color: #D0EEF1 !important; 
+    font-weight: normal !important;
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+  }
+  
+  #WA_messagePopup a {
+    color: #222 !important;
+    font-weight: bold;
+    font-size: .9rem;
+    background-color: #D0EEF1 !important; 
+    text-decoration: none !important;
+    padding-left: 0.5rem;
+  }
+  
+  
