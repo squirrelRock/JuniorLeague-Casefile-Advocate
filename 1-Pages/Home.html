@@ -1,0 +1,314 @@
+<!-- MISSION VISION VALUES -->
+
+<style>
+	.who-info-wrapper.clean {
+		background: #fff;
+		padding: 3rem 1rem;
+		box-sizing: border-box;
+		border-top: 4px solid #BF1E2E;
+		border-bottom: 4px solid #D32A40;
+	}
+
+	.who-info-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.who-info-text {
+		flex: 1 1 300px;
+		padding: 1rem;
+		box-sizing: border-box;
+	}
+
+	.who-info-text h2 {
+		display: inline-block;
+		color: #D32A40;
+		border-bottom: 4px solid #991023;
+		padding-bottom: 0.25em;
+		/* spacing between text and underline */
+		position: relative;
+	}
+
+	.who-info-text h2::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -0.25rem;
+		width: 300px;
+		height: 4px;
+		background: #991023;
+	}
+
+	.who-info-text p {
+		font-family: Arial, sans-serif;
+		color: #333;
+		font-size: clamp(1rem, 2.5vw, 1.125rem);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.who-info-image {
+		flex: 1 1 300px;
+		padding: 1rem;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	.who-info-image img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 5px;
+	}
+
+	@media (max-width: 1023px) {
+		.who-info-wrapper.clean {
+			padding-left: 0.5rem;
+			/* about 8px */
+			padding-right: 0.5rem;
+			box-sizing: border-box;
+		}
+
+		.who-info-row {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0;
+			margin-bottom: 1.5rem;
+		}
+
+		.who-info-text {
+			flex: 1 1 auto !important;
+			min-height: 0 !important;
+			height: auto !important;
+			padding: 0 0 1rem 0 !important;
+			margin: 0 !important;
+		}
+
+		.who-info-image {
+			flex: 1 1 auto !important;
+			min-height: 0 !important;
+			height: auto !important;
+			padding: 0 !important;
+			margin: 0 !important;
+		}
+
+		.who-info-text h2 {
+			margin-bottom: 0.75rem;
+		}
+
+		.who-info-text p {
+			margin: 0 0 0.75rem 0;
+		}
+
+		.who-info-image img {
+			margin: 0;
+			width: 100%;
+			height: auto;
+		}
+	}
+</style>
+
+<div class="who-info-wrapper clean">
+	<div class="who-info-row">
+		<div class="who-info-text">
+			<h2>OUR MISSION</h2>
+
+			<p>We are an organization of women whose mission is to advance women's leadership for meaningful community
+				impact through volunteer action, collaboration, and training. Our purpose is exclusively educational and
+				charitable.</p>
+		</div>
+
+		<div class="who-info-image">
+			<img src="/resources/Pictures/Who_We_Are%20Assets/monthly_meet16x9.jpg" alt="JLNS meeting"></div>
+		</div>
+
+		<div class="who-info-row">
+			<div class="who-info-text">
+				<h2>OUR VISION</h2>
+
+				<p>We are an active and diverse group of trained volunteers who are committed to positively impacting
+					the lives of children and families.</p>
+			</div>
+
+			<div class="who-info-image">
+				<img src="/resources/Pictures/Who_We_Are%20Assets/childrens_museum16x9.jpg" alt="MOG volunteers"></div>
+			</div>
+
+			<div class="who-info-row">
+				<div class="who-info-text">
+					<h2>OUR VALUES</h2>
+
+					<p>The Junior League welcomes all women who value our Mission. We are committed to inclusive
+						environments of diverse individuals, organizations, and communities.</p>
+				</div>
+
+				<div class="who-info-image">
+					<img src="/resources/Pictures/Who_We_Are%20Assets/galentines16x9.jpg" alt="Galentines event"></div>
+				</div>
+			</div>
+
+
+
+            <!---====== WOMEN AS CATALYSTS  ====== -->
+
+            <style>
+                /* the container */
+                .testimonial-section {
+                    margin: 40px auto;
+                    max-width: 1000px;
+                    padding: 0 20px;
+                    border-radius: 5px;
+                    background: white;
+                    text-align: center;
+                }
+            
+                /* headline */
+                .testimonial-heading {
+                    font-size: 30px;
+                    color: #d32a40;
+                    font-weight: bold;
+                    font-style: italic;
+                    margin-bottom: 10px;
+                }
+            
+                /* quote icon */
+                .testimonial-icon {
+                    font-size: 80px;
+                    color: #d32a40;
+                    margin: 20px auto 0px;
+                    line-height: 1;
+                }
+            
+                /* layout */
+                .testimonial-container {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    justify-content: center;
+                    align-items: stretch;
+                    flex-wrap: wrap;
+                    text-align: left;
+                }
+            
+                .testimonial-section {
+                    margin: 40px auto;
+                    max-width: 1120px;
+                    padding: 30px 24px;
+                    background: white;
+                    text-align: center;
+                }
+            
+                .testimonial {
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                    padding: 20px;
+                    flex: 1;
+                    min-width: 280px;
+                    max-width: 100%;
+                    position: relative;
+                }
+            
+                .testimonial blockquote {
+                    margin: 0 0 10px;
+                    padding-left: 20px;
+                    border-left: 3px solid #d32a40;
+                    font-style: italic;
+                }
+            
+                .testimonial cite {
+                    display: block;
+                    font-weight: bold;
+                    color: #d32a40;
+                }
+            
+                .testimonial-role {
+                    display: block;
+                    font-weight: normal;
+                    color: #555;
+                    font-size: 0.9rem;
+                }
+            
+                /* mobile */
+                @media (max-width: 1023px) {
+                    .testimonial-container {
+                        flex-direction: column;
+                    }
+                }
+            </style>
+            
+            <div class="testimonial-section">
+                <div class="testimonial-heading">
+                    Women As Catalysts For Lasting Community Change
+                </div>
+            
+                <div class="testimonial-icon">
+                    “
+                </div>
+            
+                <div class="testimonial-container">
+                    <!--   - testimonial 1 -->
+            
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>I joined JLNS when I moved to this area. I wanted to connect and give back to the community. I stay
+                                with JLNS because of the fun and the sense of fulfillment.</p>
+                        </blockquote><cite>Pauline <span class="testimonial-role">member since 2017</span></cite>
+                    </div><!--    testimonial 2 -->
+            
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>I've learned so much about local needs, and how to help meet them.</p>
+                        </blockquote><cite>Rachel <span class="testimonial-role">JLNS President, 2025-2026</span></cite>
+                    </div><!-- testimonial 3 -->
+            
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>At our Ride-a-Rig event, families get a fun learning experience where kids can see and touch cool
+                                vehicles. Ride-a-Rig ticket sales support our grants to community organizations, so we double our
+                                impact!</p>
+                        </blockquote><cite>Linda <span class="testimonial-role">Chair, Ride-a-Rig Committee</span></cite>
+                    </div>
+                </div>
+            </div>
+
+
+            <!---======EVENTS======= --->
+
+            <!--left -->
+
+            <a href="/events" class="clickable-image"><img src="/resources/Pictures/Home_Page_Images/MARCH%20DIAD.png" alt="Science Poster" width="200" height="250"></a>
+
+            <!-- right -->
+
+            <a href="/events" class="clickable-image"><img src="/resources/Pictures/Home_Page_Images/Fundraiser.png" alt="Fundraiser Poster" width="200" height="250"></a>
+
+
+
+            <!-- =====RIDE - A - RIG =======-->
+             <!--left-->
+             <div style="text-align: center; padding: 1rem; max-width: 800px; margin: 0 auto;">
+                <p style="color: #991023; font-size: 22px; font-weight: bold; margin-bottom: 1rem;">Join <span style="color:#d32a40;">JLNS</span> &amp; Help Us Make<br>
+                Ride-a-Rig Happen!</p>
+              
+                <p style="color: #d32a40; font-size: 20px; margin-bottom: 1rem;">Be a part of the team and make new friends and connections.</p>
+              
+                <p style="color: #991023; font-size: 20px; font-weight: bold;">It’s hands-on, meaningful, and a whole lot of fun!</p>
+              </div>
+
+              <!-- image middle -->
+              <p><img src="/resources/Pictures/RAR_Assets/2025RAR300x400.jpg" alt="ride-a-rig" ><br></p>
+
+              <!--right-->
+
+              <div style="text-align: center; padding: 1rem; max-width: 800px; margin: 0px auto;">
+                <p style="color: #991023; font-size: 22px; font-weight: bold; margin-bottom: 1rem;">Come Visit Ride-a-Rig!</p>
+              
+                <p style="font-size: 20px; margin-bottom: 1rem; line-height: 1.3; color: #D32A40;">Meet local first-responders, community organizations, and local businesses.</p>
+              
+                <p style="color: #991023; font-size: 20px; font-weight: bold; letter-spacing: .13rem; line-height: 1.3;">FUN FOR FAMILIES!</p>
+              
+                <p style="color: #d32a40; font-size: 20px;">A day full of wonder, wheels, and community spirit!</p>
+              </div>
