@@ -863,7 +863,7 @@ h1.homeLeft { /* homepage h1 */
   }
   
   
-  /* who we are banner */
+  /* ===== who we are banner========= */
   .banner-wrapper {
     position: relative;
     width: 60%;
@@ -902,7 +902,7 @@ h1.homeLeft { /* homepage h1 */
   
   .banner6 {
       position: relative;
-      background-image: url('/resources/Pictures/Who_We_Are%20Assets/Founders_SilouetteFix16x9.jpg');
+      background-image: url('/resources/Pictures/2025_JLNS/Who_We_Are/Founders_SilouetteFix16x9.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -913,7 +913,7 @@ h1.homeLeft { /* homepage h1 */
       z-index: 1;
     }
   
-  /* end who we are banner */
+  /*  ====== end who we are banner ========= */
   
           /*  */
   
