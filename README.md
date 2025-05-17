@@ -47,7 +47,6 @@ Root Directory
     ├── trio.html              # Layout used for initiatives section
     ├── standard_layouts.html  # Multiple layout blocks for content reuse
     ├── clickable_hover.html   # Hover-interactive elements
-    ├── diadBanner.html        # Example of an initiative page banner
     ├── cardTemplate.html      # Reusable styled content card
     └── custom-navbar.html     # Public-facing navigation bar
 ```
@@ -62,7 +61,6 @@ These code snippets are optional components used in multiple places on the site.
 	* 	**trio.html** – Used in the *Initiatives* section at the bottom of How We Help, Done in a Day, SPAC, GLOW, and Museum on the Go.
 	* 	**standard_layouts.html** – A library of multi-column responsive layout blocks.
 	* 	**clickable_hover.html** – no longer used - has Dues/Donate links 
-	* 	**diad.html** – Example of a page banner ( this one is used on the “Done in a Day” page.)
 	* 	**cardTemplate.html** – Reusable content card, styled and ready to drop in.
 	* 	**custom-navbar.html** – The public-facing site navigation bar.
 
