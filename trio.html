@@ -1,0 +1,184 @@
+<style>
+
+/* === INITIATIVES - TRIO ====. */
+/* 3-col initiatives. */
+  
+  /* trio section */
+  .trio-wrapper {
+    background-color: #f2f2f2;
+
+    padding: 3rem 1rem;
+    margin-top: 3rem;
+  }
+  
+  .trio-header-wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .trio-header-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+    color: #d32a40;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  .trio-header {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    color: #444;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+  
+  /* - initiative cards - */
+  .trio-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+   gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+  
+  .trio-card {
+    flex: 0 0 calc(33.33% - 10px);
+    background: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    
+  }
+
+
+.trio-card-body {
+  flex-grow: 1;
+}
+  
+  .trio-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .trio-card-title {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: bold;
+    color: #d32a40;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .trio-card p {
+    flex-grow: 1;
+    font-size: clamp(1rem, 1.5vw + 0.25rem, 1.125rem);
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  
+  
+  .trio-button {
+    margin-top: auto;
+    text-align: center;
+  }
+  
+  .trio-button a.jl-button {
+    background-color: #d32a40;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+  
+  }
+  
+  .trio-button a.jl-button:hover {
+    background-color: #b71c1c;
+  }
+
+  .trio-wrapper.trio-narrow-top {
+  margin-top: 20px;
+}
+  
+  
+  @media (max-width: 1023px) {
+      .trio-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .trio-card {
+    flex: 1 1 auto;
+  }
+  }
+  /* ========= END initiatives  ===== */
+  
+
+</style>
+
+<div class="trio-wrapper">
+  <div class="trio-header-wrapper">
+    <div class="trio-header-title">
+      More JLNS Initiatives
+    </div>
+
+    <p>You’re currently viewing <strong>MUSEUM ON THE GO</strong></p>
+
+    <p>Here are three more ways Junior League of Napa‑Sonoma is making an impact.</p>
+  </div>
+
+  <div class="trio-container">
+    <!-- SPAC -->
+
+    <div class="trio-card">
+      <img src="/resources/Pictures/2025_JLNS/SPAC/SPAC-6-women.jpg" alt="CalSPAC">
+
+      <div class="trio-card-title">
+        SPAC
+      </div>
+
+      <p>JLNS is part of <strong>CalSPAC</strong> and advocates for legislation in education, health, family support, and more.</p>
+
+      <div class="trio-button">
+        <a class="jl-button" href="/spac">Learn More</a>
+      </div>
+    </div><!-- Done in a Day -->
+
+    <div class="trio-card">
+      <img src="/resources/Pictures/2025_JLNS/Done_In_A_Day/OurVillageCloset/OVC-DIAD-sitting-2025.jpg" alt="Done in a Day">
+
+      <div class="trio-card-title">
+        Done in a Day
+      </div>
+
+      <p>Through hands-on one-day volunteer projects, JLNS members make an immediate difference in the community.</p>
+
+      <div class="trio-button">
+        <a class="jl-button" href="/done-in-a-day">Learn More</a>
+      </div>
+    </div><!-- GLOW -->
+
+    <div class="trio-card">
+      <img src="/resources/Pictures/2025_JLNS/16-9_Slideshow/JL-Napa-Sonoma-8.jpg" alt="GLOW">
+
+      <div class="trio-card-title">
+        G.L.O.W.
+      </div>
+
+      <p><strong><font color="#662D91">GLOW: Girls Leading Our World</font></strong> - is our signature girls' empowerment program</p>
+
+      <div class="trio-button">
+        <a class="jl-button" href="/glow">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
