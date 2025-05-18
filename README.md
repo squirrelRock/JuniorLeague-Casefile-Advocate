@@ -21,35 +21,37 @@ The project builds on Wild Apricot’s **Casefile Advocate** theme and incorpora
 ```
 Root Directory
 ├── Colors.cfg                  # Modified theme color definitions
-├── Head.tpl                   # Custom HTML head content
-├── MainTemplate.tpl           # Primary layout template
+├── Head.tpl                    # Custom HTML head content
+├── MainTemplate.tpl            # Primary layout template
+├── bootstrap.bundle.min.js     # Bootstrap JavaScript
+├── bootstrap.min.css           # Bootstrap CSS
 ├── /Styles/
-│   ├── constants.less         # Edited: variables
-│   └── layout.less            # Edited: breakpoints
+│   ├── constants.less          # Edited: variables
+│   └── layout.less             # Edited: breakpoints
 ├── /customCSS/
-│   ├── WA_CSS-SHEET.css       # Main custom CSS file (see notes below)
-│   ├── systemPages.css        # Overrides for Wild Apricot system pages
-│   └── navbar.css             # Custom navigation styling
+│   ├── WA_CSS-SHEET.css        # Main custom CSS file (see notes below)
+│   ├── navbar.css              # Custom navigation styling
+│   └── systemPages.css         # Overrides for Wild Apricot system pages
 ├── /1-Pages/
-│   ├── Home.html              # Home page content (top to bottom)
-│   ├── who-we-arePage.html
-│   ├── how-we-helpPage.html
-│   ├── ride-a-rigPage.html
-│   ├── memberHome-Page.html
-│   ├── joinPage.html
-│   ├── grantsPage.html
-│   ├── givePage.html
-│   ├── done-in-a-dayPage.html
-│   ├── SPAC-Page.html
 │   ├── GLOW-Page.html
-│   └── footer.html            # Public footer content
+│   ├── Home.html               # Home page content (top to bottom)
+│   ├── MOG.html
+│   ├── SPAC-Page.html
+│   ├── done-in-a-dayPage.html
+│   ├── footer.html             # Public footer content
+│   ├── givePage.html
+│   ├── grantsPage.html
+│   ├── how-we-helpPage.html
+│   ├── joinPage.html
+│   ├── memberHome-Page.html
+│   ├── ride-a-rigPage.html
+│   └── who-we-arePage.html
 └── /_reusable_code_snippets/
-    ├── trio.html              # Layout used for initiatives section
-    ├── standard_layouts.html  # Multiple layout blocks for content reuse
-    ├── clickable_hover.html   # Hover-interactive elements
-    ├── cardTemplate.html      # Reusable styled content card
-    └── custom-navbar.html     # Public-facing navigation bar
-```
+    ├── cardTemplate.html       # Reusable styled content card
+    ├── clickable_hover.html    # Hover-interactive elements
+    ├── custom-navbar.html      # Public-facing navigation bar
+    ├── standard_layouts.html   # Multiple layout blocks for content reuse
+    └── trio.html               # Layout used for initiatives section
 
 ### Page Content Architecture
 
@@ -57,7 +59,18 @@ The /1-Pages folder contains the complete source code for each public page, laid
 
 The website pages are set up with the Wild Apricot internal page builder with 1, 2, and 3 column ‘layouts’ inside which are placed ‘gadgets’ such as Content Areas.  The contents of these files fit directly into those structural components, preserving the custom visual presentation.
 
-These code snippets are optional components used in multiple places on the site. Each file is meant to be copied into a content area as needed for layout and style reuse:
+	•	Files in /Styles/ and /customCSS/ are overrides to the Wild Apricot theme styles. Place them in the appropriate theme folder and ensure they are referenced in MainTemplate.tpl or Head.tpl.
+
+	•	bootstrap.min.css and bootstrap.bundle.min.js were uploaded manually and are required for proper functioning of the navigation and dropdowns. Do not remove or rename these files.
+
+	•	/customCSS/navbar.css and custom-navbar.html control the site’s responsive navigation bar.
+
+
+----------------------- ---------------------------- -----------------------------
+
+	•	_reusable_code_snippets contains HTML blocks used across multiple pages for consistent layout and interaction design (e.g., card styles, hover effects, content rows).
+
+    These code snippets are optional components used in multiple places on the site. Each file is meant to be copied into a content area as needed for layout and style reuse:
 	* 	**trio.html** – Used in the *Initiatives* section at the bottom of How We Help, Done in a Day, SPAC, GLOW, and Museum on the Go.
 	* 	**standard_layouts.html** – A library of multi-column responsive layout blocks.
 	* 	**clickable_hover.html** – no longer used - has Dues/Donate links 

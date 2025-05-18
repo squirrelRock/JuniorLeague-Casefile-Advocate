@@ -1,0 +1,78 @@
+
+
+/*=================================*/
+  /* EVENTS template formatting */
+  .boxBodyOuterContainer {
+    background-color:#ebebeb !important;
+   padding-bottom: 20px;
+    border-bottom: .5px solid #991023 !important;
+  }
+  
+  .boxBodyContainer{
+   background-color:#ebebeb;
+  }
+
+
+  .boxInfo {
+ 
+   padding-bottom: 5px;
+    border-bottom: .5px solid #991023 !important;
+  }
+  
+  .boxesList {
+    margin-top: 20px;
+   padding-top: 10px;
+    border-top: 15px solid #aaa !important;
+  
+  }
+
+    div.boxBodyInfoContainer,
+  div.boxBodyOuterContainer,
+  div.boxBodyCornersContainer {
+    background-color: #ffffff !important;
+  }
+  
+  /* end events formatting */
+  /*================================*/
+  
+
+
+
+  /*=========================================*/
+  /*-------------- HOME PAGE ----------------*/
+
+
+
+  /* upcoming events - DOUBLE STRIPE */
+  #id_EETioaE,
+  #id_PUckFIT,
+  #id_WHO-JL-board,
+  #id_home-upcoming-stripes {
+    border-top: 10px solid #d32a40;
+    border-bottom: 10px solid #d32a40;
+    text-align: center;
+  }
+  
+  
+ /* ============================================== */
+  /* home page events clickable images */
+.clickable-image img {
+  width: 100%;     /* responsive width */
+  max-width: 95%;                 
+  height: auto;                   
+  display: block;                 
+  margin: 0 auto;                 
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.clickable-image:hover img {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+ 
+  
+  /* end clickable images */
+/* =================================================== */
