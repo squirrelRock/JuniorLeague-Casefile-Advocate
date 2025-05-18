@@ -102,7 +102,7 @@ To resolve this, we adjusted the breakpoints in layout.less to collapse the mid-
 @Device-XS-MaxWidth: 549px;  // was 320 - 479
 
 
-This approach allowed us to skip the problematic in-between breakpoints entirely, creating a more stable and readable layout across devices—especially for tables and multi-column content. It was a practical workaround to the limitations of the Wild Apricot layout engine and its rigid column and gadget structure.
+This approach allowed us to skip the problematic in-between breakpoints entirely. We created a more stable and readable layout across devices—especially for tables and multi-column content. It was a practical workaround to the limitations of the Wild Apricot layout engine and its rigid column and gadget structure.
 --------------------------------------------------------
 
 
@@ -112,3 +112,4 @@ Summary
 	•	CSS must be manually pasted into Wild Apricot’s custom theme CSS section
 	•	Reusable code snippets are modular and easy to integrate into content areas
 	•	Breakpoints were adjusted to improve layout on mid-size devices and ensure responsive display across screen sizes
+    
